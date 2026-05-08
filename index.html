@@ -844,7 +844,7 @@ nav.s {
 
 <script>
 // ═══════════════════════════════════════════
-//  GLOBAL BACKGROUND
+//  GLOBAL BACKGROUND — free bezier, time-based smooth
 // ═══════════════════════════════════════════
 const bgCv = document.getElementById('bg-canvas');
 const bgCtx = bgCv.getContext('2d');
@@ -853,71 +853,62 @@ function resizeBg(){ W = bgCv.width = window.innerWidth; H = bgCv.height = windo
 resizeBg();
 window.addEventListener('resize', resizeBg);
 
-// DNA-like entangled horizontal lines — irregular crossing
 const beams = [
-  // crosses high then dips low
-  { c:'rgba(30,75,220,',  lw:2.0, al:.48,
+  { c:'rgba(30,75,220,',  lw:1.8, al:.45,
     p:[ [-.05,.50], [.22,.28], [.55,.72], [1.05,.45] ],
-    dp:[ [0,.00018],[.00020,-.00025],[-.00018,.00022],[0,.00016] ] },
-  // dips then rises sharply
+    dp:[ [0,.0055],[.0060,-.0075],[-.0055,.0065],[0,.0050] ] },
   { c:'rgba(20,60,200,',  lw:1.4, al:.38,
     p:[ [-.05,.45], [.18,.70], [.60,.25], [1.05,.55] ],
-    dp:[ [0,-.00016],[.00022,.00018],[-.00020,-.00022],[0,.00020] ] },
-  // wide gentle S
-  { c:'rgba(40,90,235,',  lw:2.5, al:.30,
+    dp:[ [0,-.0050],[.0065,.0055],[-.0060,-.0065],[0,.0060] ] },
+  { c:'rgba(40,90,235,',  lw:2.2, al:.30,
     p:[ [-.05,.55], [.30,.35], [.68,.65], [1.05,.50] ],
-    dp:[ [0,.00022],[-.00018,.00020],[.00024,-.00018],[0,-.00014] ] },
-  // tight cross mid
+    dp:[ [0,.0065],[-.0055,.0060],[.0070,-.0055],[0,-.0045] ] },
   { c:'rgba(15,55,195,',  lw:1.2, al:.28,
     p:[ [-.05,.42], [.45,.58], [.50,.42], [1.05,.60] ],
-    dp:[ [0,-.00020],[.00016,.00024],[-.00022,-.00016],[0,.00018] ] },
-  // swoops below then above
+    dp:[ [0,-.0060],[.0050,.0070],[-.0065,-.0050],[0,.0055] ] },
   { c:'rgba(50,100,240,', lw:1.8, al:.35,
     p:[ [-.05,.48], [.15,.75], [.80,.28], [1.05,.52] ],
-    dp:[ [0,.00024],[.00018,-.00020],[-.00016,.00018],[0,-.00022] ] },
-  // subtle high arc
+    dp:[ [0,.0070],[.0055,-.0060],[-.0050,.0055],[0,-.0065] ] },
   { c:'rgba(25,65,210,',  lw:1.0, al:.25,
     p:[ [-.05,.38], [.35,.22], [.62,.58], [1.05,.40] ],
-    dp:[ [0,-.00014],[.00024,.00016],[-.00018,-.00024],[0,.00020] ] },
-  // deep low dip
+    dp:[ [0,-.0045],[.0070,.0050],[-.0055,-.0070],[0,.0060] ] },
   { c:'rgba(35,80,225,',  lw:1.6, al:.32,
     p:[ [-.05,.60], [.25,.80], [.72,.35], [1.05,.58] ],
-    dp:[ [0,.00016],[-.00022,-.00018],[.00020,.00024],[0,-.00016] ] },
-  // irregular zigzag feel
+    dp:[ [0,.0050],[-.0065,-.0055],[.0060,.0070],[0,-.0050] ] },
   { c:'rgba(45,95,238,',  lw:1.2, al:.22,
     p:[ [-.05,.52], [.40,.30], [.45,.70], [1.05,.48] ],
-    dp:[ [0,-.00022],[.00014,.00022],[-.00024,-.00014],[0,.00024] ] },
+    dp:[ [0,-.0065],[.0045,.0065],[-.0070,-.0045],[0,.0070] ] },
 ];
 
-let bgFrame = 0;
+let lastTs = null;
 
-function drawBg(){
-  bgFrame++;
+function drawBg(ts){
+  // time delta in seconds — cap at 50ms to avoid jumps on tab switch
+  const dt = lastTs ? Math.min((ts - lastTs) / 1000, 0.05) : 0.016;
+  lastTs = ts;
 
   bgCtx.fillStyle = '#000008';
   bgCtx.fillRect(0, 0, W, H);
 
-  // ambient glow bottom-left
-  const t = bgFrame * 0.0045;
-  const gx = W * (.15 + .06 * Math.sin(t));
-  const gy = H * (.75 + .06 * Math.cos(t * .8));
-  const gr = bgCtx.createRadialGradient(gx,gy,0, gx,gy, Math.max(W,H)*.85);
-  gr.addColorStop(0,   'rgba(10,35,170,0.45)');
-  gr.addColorStop(.4,  'rgba(6,20,120,0.18)');
+  // ambient glow
+  const t = ts * 0.001;
+  const gx = W * (.2 + .08 * Math.sin(t * .12));
+  const gy = H * (.5 + .08 * Math.cos(t * .10));
+  const gr = bgCtx.createRadialGradient(gx,gy,0, gx,gy, Math.max(W,H)*.8);
+  gr.addColorStop(0,   'rgba(10,35,170,0.4)');
+  gr.addColorStop(.4,  'rgba(6,20,120,0.15)');
   gr.addColorStop(1,   'rgba(0,0,0,0)');
   bgCtx.fillStyle = gr;
   bgCtx.fillRect(0, 0, W, H);
 
   beams.forEach(b => {
-    // move points only every 6th frame = truly slow
-    if(bgFrame % 1 === 0){
-      b.p.forEach((pt,i) => {
-        pt[0] += b.dp[i][0];
-        pt[1] += b.dp[i][1];
-        if(pt[0] < -.3 || pt[0] > 1.3) b.dp[i][0] *= -1;
-        if(pt[1] < -.2 || pt[1] > 1.2) b.dp[i][1] *= -1;
-      });
-    }
+    // move each control point by dp * dt (time-based = smooth on any device)
+    b.p.forEach((pt, i) => {
+      pt[0] += b.dp[i][0] * dt;
+      pt[1] += b.dp[i][1] * dt;
+      if(pt[0] < -.3 || pt[0] > 1.3) b.dp[i][0] *= -1;
+      if(pt[1] < -.15 || pt[1] > 1.15) b.dp[i][1] *= -1;
+    });
 
     const [p0,p1,p2,p3] = b.p.map(p => [p[0]*W, p[1]*H]);
     bgCtx.beginPath();
@@ -932,15 +923,15 @@ function drawBg(){
     grd.addColorStop(1,   b.c+'0)');
     bgCtx.strokeStyle = grd;
     bgCtx.lineWidth   = b.lw;
-    bgCtx.shadowBlur  = 80; bgCtx.shadowColor = b.c+'0.3)';  bgCtx.stroke();
-    bgCtx.shadowBlur  = 40; bgCtx.shadowColor = b.c+'0.5)';  bgCtx.stroke();
-    bgCtx.shadowBlur  = 12; bgCtx.shadowColor = b.c+'0.7)';  bgCtx.stroke();
+    bgCtx.shadowBlur  = 80; bgCtx.shadowColor = b.c+'0.3)'; bgCtx.stroke();
+    bgCtx.shadowBlur  = 40; bgCtx.shadowColor = b.c+'0.5)'; bgCtx.stroke();
+    bgCtx.shadowBlur  = 12; bgCtx.shadowColor = b.c+'0.7)'; bgCtx.stroke();
     bgCtx.shadowBlur  = 0;
   });
 
   requestAnimationFrame(drawBg);
 }
-drawBg();
+requestAnimationFrame(drawBg);
 
 // ═══════════════════════════════════════════
 //  CURSOR
