@@ -185,12 +185,13 @@ section.dark-panel{
 
 /* ── NEWS ── */
 .news-list{margin-top:36px}
-.news-row{display:grid;grid-template-columns:116px 68px 1fr 20px;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid var(--w15)}
+.news-row{display:block;padding:20px 0;border-bottom:1px solid var(--w15);position:relative}
 
 
-.nd{font-family:var(--ff-j);font-size:11px;color:var(--w5);letter-spacing:.04em}
-.nt{font-family:var(--ff-j);font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--white);border:1px solid var(--w3);padding:3px 7px;display:inline-block}
-.nn{font-size:14px;font-weight:300;line-height:1.4}
+.nd{font-family:var(--ff-j);font-size:11px;color:var(--w5);letter-spacing:.04em;display:block;margin-bottom:8px}
+.nt{font-family:var(--ff-j);font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--white);border:1px solid var(--w3);padding:3px 7px;display:inline-block;vertical-align:middle;margin-right:10px}
+.nn{font-size:14px;font-weight:300;line-height:1.4;display:inline;vertical-align:middle}
+.na{position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:13px}
 
 
 /* ── ACCESS ── */
@@ -259,15 +260,8 @@ footer{padding:30px 52px;border-top:1px solid var(--w15);display:flex;align-item
   .mem-grid { grid-template-columns: 1fr; }
 
   /* NEWS */
-  .news-row {
-    grid-template-columns: 1fr 60px;
-    grid-template-rows: auto auto;
-    gap: 8px 12px;
-  }
-  .nd { grid-column: 1; grid-row: 1; }
-  .nt { grid-column: 2; grid-row: 1; justify-self: end; }
-  .nn { grid-column: 1 / -1; grid-row: 2; }
-  .na { display: none; }
+  .news-row { padding: 16px 0; }
+  .na { display: block !important; }
 
   /* ACCESS */
   .acc-grid { grid-template-columns: 1fr; gap: 32px; }
@@ -593,7 +587,8 @@ nav.s {
   .co-item-wide { grid-column: 1; }
   .office-img { aspect-ratio: 16/9; }
 
-  .news-row { grid-template-columns: 110px 60px 1fr; gap: 10px; padding: 16px 0; }
+  .news-row { grid-template-columns: 100px 72px 1fr 16px; gap: 8px 10px; padding: 16px 0; }
+  .na { display: block !important; font-size: 11px; }
 
   #contact { padding: 64px 20px; }
   .c-btn-link { width: 100%; display: block; text-align: center; padding: 18px 20px; }
