@@ -2,10 +2,9 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Services — BLAZE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="株式会社BLAZEのサービス一覧。Oubo Pay（完全成果報酬型求人送客）、Cocopath（AI転職マッチング）、Hakadoru AI（AI業務自動化）、BLAZE Grid（人材コミュニティ）の詳細をご紹介します。">
-<meta property="og:title" content="Services — BLAZE">
+<meta property="og:title" content="Service | 株式会社BLAZE">
 <meta property="og:description" content="BLAZEが提供する4つの事業領域。採用・転職・AI自動化・人材コミュニティ。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://blaze-ltd.com/service/">
@@ -14,433 +13,389 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://blaze-ltd.com/ogp.png">
-<link rel="icon" href="/favicon-square.png" type="image/png">
+<meta name="robots" content="index, follow">
+<title>Service | 株式会社BLAZE</title>
+<link rel="canonical" href="https://blaze-ltd.com/service/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bg:#03050f;
-  --white:#ffffff;
   --accent:#4DFFDF;
+  --white:#ffffff;
+  --w8:rgba(255,255,255,0.8);
+  --w5:rgba(255,255,255,0.5);
+  --w3:rgba(255,255,255,0.3);
+  --w15:rgba(255,255,255,0.15);
+  --w08:rgba(255,255,255,0.08);
+  --w04:rgba(255,255,255,0.04);
   --ff-j:'Jost',sans-serif;
   --ff-n:'Noto Sans JP',sans-serif;
-  --w04:rgba(255,255,255,.04);
-  --w08:rgba(255,255,255,.08);
-  --w15:rgba(255,255,255,.15);
-  --w3:rgba(255,255,255,.3);
-  --w5:rgba(255,255,255,.5);
-  --w8:rgba(255,255,255,.8);
 }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-  background:var(--bg);
-  color:var(--white);
-  font-family:var(--ff-n);
-  font-size:15px;
-  font-weight:300;
-  line-height:1.7;
-  -webkit-font-smoothing:antialiased;
-}
+body{background:var(--bg);color:var(--white);font-family:var(--ff-n);overflow-x:hidden}
 
-/* canvas bg */
-#bg-cv{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.45}
+#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+nav,main,footer{position:relative;z-index:1}
 
 /* NAV */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  height:60px;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 52px;
-  background:rgba(3,5,15,.7);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--w08);
-}
-.nav-logo{font-family:var(--ff-j);font-size:16px;font-weight:700;letter-spacing:.1em;text-decoration:none;color:var(--white);display:flex;align-items:center;gap:8px}
-.nav-dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
-.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
-.nav-links a{font-family:var(--ff-j);font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--w5);text-decoration:none;transition:color .3s}
-.nav-links a:hover,.nav-links a.active{color:var(--white)}
-.nav-cta{font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--bg);background:var(--white);text-decoration:none;padding:9px 20px;transition:background .3s}
-.nav-cta:hover{background:var(--accent)}
+nav{position:fixed;top:0;left:0;right:0;display:flex;flex-direction:row;align-items:center;justify-content:space-between;padding:0 52px;height:72px;z-index:200;transition:background .4s}
+nav.s{background:rgba(3,5,15,0.85);backdrop-filter:blur(24px);border-bottom:1px solid var(--w15)}
+.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
+.logo img{height:72px;width:auto;display:block}
+.nav-links{display:flex;gap:32px;list-style:none;align-items:center}
+.nav-links a{font-family:var(--ff-j);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--w5);text-decoration:none;position:relative;padding-bottom:4px;transition:color .3s}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--white);transition:width .3s}
+.nav-links a:hover{color:var(--white)}
+.nav-links a:hover::after{width:100%}
 
-/* MAIN */
-main{position:relative;z-index:1;padding-top:60px}
+/* HAMBURGER */
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;z-index:300;flex-shrink:0}
+.ham span{display:block;width:22px;height:1.5px;background:var(--white);transition:transform .3s,opacity .3s}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 
-/* PAGE HEADER */
-.page-hd{
-  padding:80px 52px 64px;
-  border-bottom:1px solid var(--w15);
-}
-.ph-label{font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--w5);margin-bottom:16px}
-.ph-title{font-family:var(--ff-j);font-size:clamp(32px,4.5vw,60px);font-weight:700;line-height:1.1;letter-spacing:-.01em}
-.ph-title .thin{font-weight:300}
-.ph-sub{margin-top:20px;font-size:14px;font-weight:300;line-height:1.9;color:var(--w8);max-width:560px}
+/* MOBILE MENU */
+.mob-menu{position:fixed;inset:0;background:rgba(0,0,8,0.97);z-index:250;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:36px;opacity:0;pointer-events:none;transition:opacity .3s}
+.mob-menu.open{opacity:1;pointer-events:all}
+.mob-menu a{font-family:var(--ff-j);font-size:22px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--white);text-decoration:none;transition:color .3s}
+.mob-menu a:hover{color:rgba(30,75,220,0.8)}
+.mob-close{position:absolute;top:28px;right:28px;background:none;border:1px solid var(--w3);color:var(--white);font-size:18px;width:44px;height:44px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .3s}
+.mob-close:hover{border-color:var(--white)}
 
-/* SERVICE DETAIL SECTIONS */
-.svc-section{
-  padding:72px 52px;
-  border-bottom:1px solid var(--w15);
-}
-.svc-section:last-of-type{border-bottom:none}
-
-.svc-inner{display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start}
-
-.svc-meta{}
-.svc-meta-no{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--w3);margin-bottom:10px}
-.svc-meta-cat{font-family:var(--ff-j);font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:8px}
-.svc-meta-name{font-family:var(--ff-j);font-size:32px;font-weight:700;line-height:1.15;letter-spacing:.01em;margin-bottom:20px}
-.svc-meta-link{
-  display:inline-flex;align-items:center;gap:8px;
-  font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--bg);background:var(--white);text-decoration:none;padding:10px 20px;
-  transition:background .3s,transform .2s;
-}
-.svc-meta-link:hover{background:var(--accent);transform:translateY(-2px)}
-.svc-meta-tag{
-  display:inline-block;
-  font-family:var(--ff-j);font-size:9px;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--w5);border:1px solid var(--w15);padding:4px 8px;margin-top:16px;
-}
-
-.svc-body{}
-.svc-desc-lead{font-size:16px;font-weight:400;line-height:1.85;color:var(--w8);margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid var(--w15)}
-
-.svc-features{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--w15);margin-bottom:36px}
-.svc-feat{background:var(--bg);padding:24px 22px}
-.svc-feat-title{font-family:var(--ff-j);font-size:12px;font-weight:600;letter-spacing:.05em;margin-bottom:8px}
-.svc-feat-body{font-size:13px;line-height:1.8;color:var(--w8);font-weight:300}
-
-.svc-points{display:flex;flex-direction:column;gap:1px}
-.svc-point{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--w08)}
-.svc-point:last-child{border-bottom:none}
-.svc-point-num{font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.1em;color:var(--accent);flex-shrink:0;padding-top:2px;min-width:28px}
-.svc-point-text{font-size:13px;line-height:1.8;color:var(--w8);font-weight:300}
-
-/* CTA BLOCK */
-.svc-cta-block{
-  margin-top:48px;padding:36px;
-  border:1px solid var(--w15);
-  background:var(--w04);
-}
-.svc-cta-label{font-family:var(--ff-j);font-size:9px;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--w5);margin-bottom:10px}
-.svc-cta-text{font-size:14px;font-weight:300;line-height:1.8;color:var(--w8);margin-bottom:18px}
-
-/* FOOTER */
-footer{
-  padding:30px 52px;
-  border-top:1px solid var(--w15);
-  display:flex;align-items:center;justify-content:space-between;
-  background:rgba(3,5,15,.7);backdrop-filter:blur(12px);
-  position:relative;z-index:1;
-}
-.f-logo{font-family:var(--ff-j);font-size:16px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px}
-.f-links{display:flex;gap:18px;list-style:none}
-.f-links a{font-family:var(--ff-j);font-size:10px;color:var(--w5);text-decoration:none;letter-spacing:.05em;transition:color .3s}
-.f-links a:hover{color:var(--white)}
-.f-copy{font-family:var(--ff-j);font-size:10px;font-weight:300;color:var(--w3);letter-spacing:.04em}
-
-/* REVEAL */
+/* SHARED */
+.s-lbl{font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--w5);margin-bottom:12px}
+.s-ttl{font-family:var(--ff-j);font-size:clamp(26px,3.8vw,50px);font-weight:700;line-height:1.1;letter-spacing:-.01em}
+.divider{height:1px;background:var(--w15);margin:0 52px}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
 .reveal.on{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
 
-/* RESPONSIVE */
+/* PAGE HEADER */
+#page-hd{padding:150px 52px 80px;max-width:900px;margin:0 auto}
+.ph-sub{margin-top:22px;font-size:14px;font-weight:300;line-height:1.95;color:var(--w8);max-width:560px}
+
+/* SERVICE SECTIONS */
+.svc-section{padding:80px 52px;max-width:900px;margin:0 auto}
+.svc-head{display:flex;align-items:baseline;gap:18px;margin-bottom:8px}
+.svc-no{font-family:var(--ff-j);font-size:12px;font-weight:600;letter-spacing:.12em;color:var(--w3)}
+.svc-cat{font-family:var(--ff-j);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--w5)}
+.svc-name{font-family:var(--ff-j);font-size:clamp(24px,3vw,36px);font-weight:700;letter-spacing:.01em;margin-bottom:20px}
+.svc-lead{font-size:15px;font-weight:300;line-height:2;color:var(--w8);margin-bottom:36px;max-width:720px}
+.svc-link{display:inline-flex;align-items:center;gap:8px;font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--white);text-decoration:none;border:1px solid var(--w3);padding:10px 22px;transition:all .3s;margin-bottom:36px}
+.svc-link:hover{background:var(--white);color:var(--bg)}
+.svc-tag{display:inline-block;font-family:var(--ff-j);font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--w5);border:1px solid var(--w15);padding:4px 10px;margin-left:12px;vertical-align:middle}
+.svc-tag.new{color:var(--accent);border-color:rgba(77,255,223,.35)}
+
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--w15);margin-bottom:36px}
+.feat{background:var(--bg);padding:24px 22px;transition:background .3s}
+.feat:hover{background:var(--w04)}
+.feat-t{font-family:var(--ff-j);font-size:13px;font-weight:600;letter-spacing:.03em;margin-bottom:8px}
+.feat-p{font-size:13px;line-height:1.85;color:var(--w8);font-weight:300}
+
+.pts{max-width:720px}
+.pt{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--w08)}
+.pt:last-child{border-bottom:none}
+.pt-n{font-family:var(--ff-j);font-size:11px;font-weight:600;color:var(--accent);flex-shrink:0;padding-top:3px}
+.pt-t{font-size:13px;line-height:1.85;color:var(--w8);font-weight:300}
+
+/* CTA */
+#cta{padding:100px 52px;text-align:center}
+.c-sub{font-size:14px;font-weight:300;line-height:1.9;color:var(--w8);margin:18px auto 40px;max-width:460px}
+.c-btn-link{display:inline-block;font-family:var(--ff-j);font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--bg);background:var(--white);text-decoration:none;padding:16px 48px;transition:background .3s,transform .2s}
+.c-btn-link:hover{background:var(--accent);transform:translateY(-2px)}
+
+/* FOOTER */
+footer{padding:30px 52px;border-top:1px solid var(--w15);display:flex;align-items:center;background:rgba(3,5,15,0.7);backdrop-filter:blur(12px);position:relative}
+.f-logo{font-family:var(--ff-j);font-size:16px;font-weight:700;letter-spacing:.1em}
+.f-copy{font-family:var(--ff-j);font-size:10px;font-weight:300;color:var(--w3);letter-spacing:.04em}
+
+/* MOBILE */
 @media(max-width:768px){
-  nav{padding:0 20px}
+  nav{padding:0 20px;height:64px}
+  .logo img{height:48px}
   .nav-links{display:none}
-  .page-hd{padding:56px 20px 44px}
-  .svc-section{padding:48px 20px}
-  .svc-inner{grid-template-columns:1fr;gap:36px}
-  .svc-features{grid-template-columns:1fr}
-  footer{flex-direction:column;gap:16px;text-align:center;padding:28px 20px}
-  .f-links{justify-content:center}
+  .ham{display:flex}
+  #page-hd{padding:120px 20px 56px}
+  .svc-section{padding:56px 20px}
+  .divider{margin:0 20px}
+  .feat-grid{grid-template-columns:1fr}
+  #cta{padding:72px 20px}
+  footer{flex-direction:column;gap:12px;padding:24px 20px}
+  footer .f-copy{position:static !important;transform:none !important;text-align:center}
 }
 </style>
 </head>
+
 <body>
+<canvas id="bg-canvas"></canvas>
 
-<canvas id="bg-cv"></canvas>
-
-<nav>
-  <a href="/" class="nav-logo"><span class="nav-dot"></span>BLAZE</a>
+<nav id="nav">
+  <a href="/" class="logo">
+    <img src="../logo.png" alt="BLAZE">
+  </a>
   <ul class="nav-links">
     <li><a href="/#vision">Vision</a></li>
-    <li><a href="/service/" class="active">Service</a></li>
-    <li><a href="/company/">Company</a></li>
-    <li><a href="/news/">News</a></li>
-  </ul>
-  <a href="/#contact" class="nav-cta">Contact</a>
-</nav>
-
-<main>
-  <div class="page-hd">
-    <div class="ph-label">Our Services</div>
-    <h1 class="ph-title">事業展開<span class="thin"> / What We Build</span></h1>
-    <p class="ph-sub">BLAZEは採用・転職・AI自動化・人材コミュニティの4領域で、企業と個人の課題を解決します。既存の常識にとらわれない、独自のアプローチで市場に挑みます。</p>
-  </div>
-
-  <!-- 01 Oubo Pay -->
-  <section class="svc-section" id="oubo-pay">
-    <div class="svc-inner">
-      <div class="svc-meta reveal">
-        <div class="svc-meta-no">01</div>
-        <div class="svc-meta-cat">Performance</div>
-        <div class="svc-meta-name">Oubo Pay</div>
-        <a href="https://245486173.hs-sites-na2.com/oubo-pay" target="_blank" class="svc-meta-link">詳細を見る ↗</a>
-        <div class="svc-meta-tag">採用支援</div>
-      </div>
-      <div class="svc-body">
-        <p class="svc-desc-lead reveal d1">
-          Oubo Payは、完全成果報酬型の応募送客サービスです。求人情報を提供するだけで、媒体選定・広告運用・最適化まで一貫して対応。採用が成功した分だけお支払いいただくシンプルな料金体系で、採用コストのリスクをゼロにします。
-        </p>
-        <div class="svc-features reveal d1">
-          <div class="svc-feat">
-            <div class="svc-feat-title">完全成果報酬</div>
-            <div class="svc-feat-body">応募が発生した分だけ課金。初期費用・固定費不要で、採用コストのリスクを最小化します。</div>
-          </div>
-          <div class="svc-feat">
-            <div class="svc-feat-title">一気通貫の運用</div>
-            <div class="svc-feat-body">求人票の作成から媒体選定・配信・効果分析まで、すべてBLAZEが担当します。</div>
-          </div>
-          <div class="svc-feat">
-            <div class="svc-feat-title">複数媒体への同時配信</div>
-            <div class="svc-feat-body">主要求人媒体へ同時出稿し、最大限の応募数を確保。媒体ごとの管理は不要です。</div>
-          </div>
-          <div class="svc-feat">
-            <div class="svc-feat-title">継続的な最適化</div>
-            <div class="svc-feat-body">応募データをもとに求人票・ターゲティングを継続改善。採用精度が上がり続けます。</div>
-          </div>
-        </div>
-        <div class="svc-points reveal d2">
-          <div class="svc-point">
-            <span class="svc-point-num">01</span>
-            <span class="svc-point-text">求人情報を提供するだけでOK。媒体の知識も運用工数も不要です。</span>
-          </div>
-          <div class="svc-point">
-            <span class="svc-point-num">02</span>
-            <span class="svc-point-text">応募数・採用数に応じた完全成果報酬型。掲載だけでは費用が発生しません。</span>
-          </div>
-          <div class="svc-point">
-            <span class="svc-point-num">03</span>
-            <span class="svc-point-text">人材業界・IT・飲食・物流など、幅広い業種の採用実績があります。</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 02 Cocopath -->
-  <section class="svc-section" id="cocopath" style="background:rgba(255,255,255,.015)">
-    <div class="svc-inner">
-      <div class="svc-meta reveal">
-        <div class="svc-meta-no">02</div>
-        <div class="svc-meta-cat">Platform</div>
-        <div class="svc-meta-name">Cocopath</div>
-        <a href="https://cocoda.blaze-ltd.com" target="_blank" class="svc-meta-link">サービスを見る ↗</a>
-        <div class="svc-meta-tag">転職支援</div>
-      </div>
-      <div class="svc-body">
-        <p class="svc-desc-lead reveal d1">
-          Cocopathは、AI診断で転職可能性を可視化し、求職者に最適なエージェントをマッチングするプラットフォームです。転職市場の情報格差をなくし、個々人に合った最短ルートで理想の転職を実現します。
-        </p>
-        <div class="svc-features reveal d1">
-          <div class="svc-feat">
-            <div class="svc-feat-title">AI転職診断</div>
-            <div class="svc-feat-body">スキル・経験・希望条件をもとにAIが転職可能性を数値化。自分の市場価値を客観的に把握できます。</div>
-          </div>
-          <div class="svc-feat">
-            <div class="svc-feat-title">エージェントマッチング</div>
-            <div class="svc-feat-body">転職実績・専門領域・口コミをもとに、最適なエージェントを自動提案。無駄な面談を省きます。</div>
-          </div>
-          <div class="svc-feat">
-            <div class="svc-feat-title">転職活動の可視化</div>
-            <div class="svc-feat-body">選考状況・スケジュール・エージェントとのやり取りを一元管理。活動全体を見渡せます。</div>
-          </div>
-          <div class="svc-feat">
-            <div class="svc-feat-title">情報格差の解消</div>
-            <div class="svc-feat-body">エージェント業界の仕組みを透明化し、求職者が主体的に転職活動を進められる環境を提供します。</div>
-          </div>
-        </div>
-        <div class="svc-points reveal d2">
-          <div class="svc-point">
-            <span class="svc-point-num">01</span>
-            <span class="svc-point-text">5分の診断で自分に合ったエージェントが見つかる。転職活動のスタートを最短化します。</span>
-          </div>
-          <div class="svc-point">
-            <span class="svc-point-num">02</span>
-            <span class="svc-point-text">複数エージェントを比較して選べるため、相性の悪いエージェントに時間を取られません。</span>
-          </div>
-          <div class="svc-point">
-            <span class="svc-point-num">03</span>
-            <span class="svc-point-text">求職者側に完全無料。エージェントへの紹介フィーで運営するビジネスモデルです。</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 03 Hakadoru AI -->
-  <section class="svc-section" id="hakadoru-ai">
-    <div class="svc-inner">
-      <div class="svc-meta reveal">
-        <div class="svc-meta-no">03</div>
-        <div class="svc-meta-cat">AI Automation</div>
-        <div class="svc-meta-name">Hakadoru AI</div>
-        <a href="https://hakadoruai.blaze-ltd.com/" target="_blank" class="svc-meta-link">詳細を見る ↗</a>
-        <div class="svc-meta-tag">NEW — 2026.07</div>
-      </div>
-      <div class="svc-body">
-        <p class="svc-desc-lead reveal d1">
-          Hakadoru AIは、AIで業務を自動化するBtoBサービスです。ヒアリングから開発・運用まで一気通貫で対応。既存のシステムやフローはそのままに、御社の業務に合わせたカスタムAIツールを設計・導入します。
-        </p>
-        <div class="svc-features reveal d1">
-          <div class="svc-feat">
-            <div class="svc-feat-title">業務ヒアリングから設計</div>
-            <div class="svc-feat-body">現場のオペレーションを丁寧にヒアリングし、自動化できる箇所を特定。費用対効果の高い順に優先順位をつけます。</div>
-          </div>
-          <div class="svc-feat">
-            <div class="svc-feat-title">カスタムAI開発</div>
-            <div class="svc-feat-body">汎用ツールではなく、御社の業務フローに特化したAIツールを開発。現場がすぐ使えるUIで提供します。</div>
-          </div>
-          <div class="svc-feat">
-            <div class="svc-feat-title">既存システム連携</div>
-            <div class="svc-feat-body">SalesforceやkintoneなどのSaaS、独自システムとのAPI連携にも対応。乗り換えコストゼロで導入できます。</div>
-          </div>
-          <div class="svc-feat">
-            <div class="svc-feat-title">導入後の運用サポート</div>
-            <div class="svc-feat-body">リリース後も継続的に改善・運用をサポート。業務の変化に合わせてAIツールをアップデートします。</div>
-          </div>
-        </div>
-        <div class="svc-points reveal d2">
-          <div class="svc-point">
-            <span class="svc-point-num">01</span>
-            <span class="svc-point-text">書類作成・データ入力・問い合わせ対応など、繰り返し業務を自動化してコア業務に集中できます。</span>
-          </div>
-          <div class="svc-point">
-            <span class="svc-point-num">02</span>
-            <span class="svc-point-text">AI知識不要。BLAZEがすべて設計・開発するため、社内リソースは最小限で済みます。</span>
-          </div>
-          <div class="svc-point">
-            <span class="svc-point-num">03</span>
-            <span class="svc-point-text">小規模な自動化から始めて段階的に拡大できる、スモールスタート対応のプランも用意しています。</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 04 BLAZE Grid -->
-  <section class="svc-section" id="blaze-grid" style="background:rgba(255,255,255,.015)">
-    <div class="svc-inner">
-      <div class="svc-meta reveal">
-        <div class="svc-meta-no">04</div>
-        <div class="svc-meta-cat">Community</div>
-        <div class="svc-meta-name">BLAZE Grid</div>
-        <div class="svc-meta-tag">Coming Soon</div>
-      </div>
-      <div class="svc-body">
-        <p class="svc-desc-lead reveal d1">
-          BLAZE Gridは、転職市場にいない優秀な人材コミュニティです。求人媒体や転職エージェントには登録していない潜在層へ直接アクセスできる、企業向けの独自ネットワーク。採用の常識を変えるプラットフォームとして開発中です。
-        </p>
-        <div class="svc-features reveal d1">
-          <div class="svc-feat">
-            <div class="svc-feat-title">潜在層へのダイレクトアクセス</div>
-            <div class="svc-feat-body">転職活動をしていないが、良い機会があれば動ける人材層にリーチ。競合他社が接触できない候補者を発掘します。</div>
-          </div>
-          <div class="svc-feat">
-            <div class="svc-feat-title">コミュニティ型採用</div>
-            <div class="svc-feat-body">単発のスカウトではなく、コミュニティへの継続的な参加を通じて企業と人材が長期的な関係を構築します。</div>
-          </div>
-          <div class="svc-feat">
-            <div class="svc-feat-title">独自のネットワーク</div>
-            <div class="svc-feat-body">BLAZEが独自に構築・キュレーションした人材ネットワーク。一般媒体では出会えない層との接点を提供します。</div>
-          </div>
-          <div class="svc-feat">
-            <div class="svc-feat-title">採用コストの最適化</div>
-            <div class="svc-feat-body">エージェント手数料や高額な媒体費用に依存しない採用チャネルを確立。中長期的なコスト削減を実現します。</div>
-          </div>
-        </div>
-        <div class="svc-points reveal d2">
-          <div class="svc-point">
-            <span class="svc-point-num">01</span>
-            <span class="svc-point-text">現在クローズドβ版を開発中。採用課題をお持ちの企業様はお問い合わせください。</span>
-          </div>
-          <div class="svc-point">
-            <span class="svc-point-num">02</span>
-            <span class="svc-point-text">IT・スタートアップ・経営人材など、特定スキルセットの潜在層コミュニティから順次公開予定です。</span>
-          </div>
-          <div class="svc-point">
-            <span class="svc-point-num">03</span>
-            <span class="svc-point-text">先行登録企業には優先的なコミュニティアクセスと初期特別プランを提供します。</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT CTA -->
-  <section style="padding:80px 52px;text-align:center;position:relative;z-index:1;">
-    <div class="ph-label" style="text-align:center">Contact</div>
-    <h2 style="font-family:var(--ff-j);font-size:clamp(24px,3.5vw,42px);font-weight:700;line-height:1.15;margin-top:12px;">サービスについて<span style="font-weight:300">相談する</span></h2>
-    <p style="font-size:14px;font-weight:300;line-height:1.9;color:var(--w8);margin:18px auto 40px;max-width:440px;">各サービスの詳細・料金・導入事例など、お気軽にお問い合わせください。</p>
-    <a href="/#contact" style="display:inline-flex;align-items:center;gap:8px;font-family:var(--ff-j);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bg);background:var(--white);text-decoration:none;padding:16px 36px;transition:background .3s,transform .2s;">
-      お問い合わせ ↗
-    </a>
-  </section>
-</main>
-
-<footer>
-  <div class="f-logo"><span class="nav-dot"></span>BLAZE</div>
-  <ul class="f-links">
     <li><a href="/service/">Service</a></li>
     <li><a href="/company/">Company</a></li>
     <li><a href="/news/">News</a></li>
-    <li><a href="/privacy/">Privacy</a></li>
     <li><a href="/#contact">Contact</a></li>
   </ul>
-  <span class="f-copy">&copy; 2026 BLAZE Inc.</span>
+  <div class="ham" id="ham" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="toggleMenu()">✕</button>
+  <a href="/#vision">Vision</a>
+  <a href="/service/">Service</a>
+  <a href="/company/">Company</a>
+  <a href="/news/">News</a>
+  <a href="/#contact">Contact</a>
+</div>
+
+<main>
+
+<!-- PAGE HEADER -->
+<section id="page-hd">
+  <div class="s-lbl reveal">Our Business</div>
+  <h1 class="s-ttl reveal d1">事業展開</h1>
+  <p class="ph-sub reveal d2">BLAZEは採用・転職・AI自動化・人材コミュニティの4領域で、企業と個人の課題を解決します。既存の常識にとらわれない独自のアプローチで市場に挑みます。</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- 01 Oubo Pay -->
+<section class="svc-section" id="oubo-pay">
+  <div class="svc-head reveal"><span class="svc-no">01</span><span class="svc-cat">Performance</span></div>
+  <h2 class="svc-name reveal">Oubo Pay<span class="svc-tag">採用支援</span></h2>
+  <p class="svc-lead reveal d1">
+    Oubo Payは、完全成果報酬型の応募送客サービスです。求人情報を提供するだけで、媒体選定・広告運用・最適化まで一貫して対応。採用が成功した分だけお支払いいただくシンプルな料金体系で、採用コストのリスクをゼロにします。
+  </p>
+  <a href="https://245486173.hs-sites-na2.com/oubo-pay" target="_blank" class="svc-link reveal d1">詳細を見る ↗</a>
+  <div class="feat-grid reveal d2">
+    <div class="feat">
+      <div class="feat-t">完全成果報酬</div>
+      <p class="feat-p">応募が発生した分だけ課金。初期費用・固定費不要で、採用コストのリスクを最小化します。</p>
+    </div>
+    <div class="feat">
+      <div class="feat-t">一気通貫の運用</div>
+      <p class="feat-p">求人票の作成から媒体選定・配信・効果分析まで、すべてBLAZEが担当します。</p>
+    </div>
+    <div class="feat">
+      <div class="feat-t">複数媒体への同時配信</div>
+      <p class="feat-p">主要求人媒体へ同時出稿し、最大限の応募数を確保。媒体ごとの管理は不要です。</p>
+    </div>
+    <div class="feat">
+      <div class="feat-t">継続的な最適化</div>
+      <p class="feat-p">応募データをもとに求人票・ターゲティングを継続改善。採用精度が上がり続けます。</p>
+    </div>
+  </div>
+  <div class="pts reveal d3">
+    <div class="pt"><span class="pt-n">01</span><span class="pt-t">求人情報を提供するだけでOK。媒体の知識も運用工数も不要です。</span></div>
+    <div class="pt"><span class="pt-n">02</span><span class="pt-t">応募数・採用数に応じた完全成果報酬型。掲載だけでは費用が発生しません。</span></div>
+    <div class="pt"><span class="pt-n">03</span><span class="pt-t">人材業界・IT・飲食・物流など、幅広い業種の採用実績があります。</span></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 02 Cocopath -->
+<section class="svc-section" id="cocopath">
+  <div class="svc-head reveal"><span class="svc-no">02</span><span class="svc-cat">Platform</span></div>
+  <h2 class="svc-name reveal">Cocopath<span class="svc-tag">転職支援</span></h2>
+  <p class="svc-lead reveal d1">
+    Cocopathは、AI診断で転職可能性を可視化し、求職者に最適なエージェントをマッチングするプラットフォームです。転職市場の情報格差をなくし、個々人に合った最短ルートで理想の転職を実現します。
+  </p>
+  <a href="https://cocoda.blaze-ltd.com" target="_blank" class="svc-link reveal d1">サービスを見る ↗</a>
+  <div class="feat-grid reveal d2">
+    <div class="feat">
+      <div class="feat-t">AI転職診断</div>
+      <p class="feat-p">スキル・経験・希望条件をもとにAIが転職可能性を数値化。自分の市場価値を客観的に把握できます。</p>
+    </div>
+    <div class="feat">
+      <div class="feat-t">エージェントマッチング</div>
+      <p class="feat-p">転職実績・専門領域・口コミをもとに、最適なエージェントを自動提案。無駄な面談を省きます。</p>
+    </div>
+    <div class="feat">
+      <div class="feat-t">転職活動の可視化</div>
+      <p class="feat-p">選考状況・スケジュール・エージェントとのやり取りを一元管理。活動全体を見渡せます。</p>
+    </div>
+    <div class="feat">
+      <div class="feat-t">情報格差の解消</div>
+      <p class="feat-p">エージェント業界の仕組みを透明化し、求職者が主体的に転職活動を進められる環境を提供します。</p>
+    </div>
+  </div>
+  <div class="pts reveal d3">
+    <div class="pt"><span class="pt-n">01</span><span class="pt-t">5分の診断で自分に合ったエージェントが見つかる。転職活動のスタートを最短化します。</span></div>
+    <div class="pt"><span class="pt-n">02</span><span class="pt-t">複数エージェントを比較して選べるため、相性の悪いエージェントに時間を取られません。</span></div>
+    <div class="pt"><span class="pt-n">03</span><span class="pt-t">求職者側に完全無料。エージェントへの紹介フィーで運営するビジネスモデルです。</span></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 03 Hakadoru AI -->
+<section class="svc-section" id="hakadoru-ai">
+  <div class="svc-head reveal"><span class="svc-no">03</span><span class="svc-cat">AI Automation</span></div>
+  <h2 class="svc-name reveal">Hakadoru AI<span class="svc-tag new">NEW — 2026.07</span></h2>
+  <p class="svc-lead reveal d1">
+    Hakadoru AIは、AIで業務を自動化するBtoBサービスです。ヒアリングから開発・運用まで一気通貫で対応。既存のシステムやフローはそのままに、御社の業務に合わせたカスタムAIツールを設計・導入します。
+  </p>
+  <a href="https://hakadoruai.blaze-ltd.com/" target="_blank" class="svc-link reveal d1">詳細を見る ↗</a>
+  <div class="feat-grid reveal d2">
+    <div class="feat">
+      <div class="feat-t">業務ヒアリングから設計</div>
+      <p class="feat-p">現場のオペレーションを丁寧にヒアリングし、自動化できる箇所を特定。費用対効果の高い順に優先順位をつけます。</p>
+    </div>
+    <div class="feat">
+      <div class="feat-t">カスタムAI開発</div>
+      <p class="feat-p">汎用ツールではなく、御社の業務フローに特化したAIツールを開発。現場がすぐ使えるUIで提供します。</p>
+    </div>
+    <div class="feat">
+      <div class="feat-t">既存システム連携</div>
+      <p class="feat-p">SalesforceやkintoneなどのSaaS、独自システムとのAPI連携にも対応。乗り換えコストゼロで導入できます。</p>
+    </div>
+    <div class="feat">
+      <div class="feat-t">導入後の運用サポート</div>
+      <p class="feat-p">リリース後も継続的に改善・運用をサポート。業務の変化に合わせてAIツールをアップデートします。</p>
+    </div>
+  </div>
+  <div class="pts reveal d3">
+    <div class="pt"><span class="pt-n">01</span><span class="pt-t">書類作成・データ入力・問い合わせ対応など、繰り返し業務を自動化してコア業務に集中できます。</span></div>
+    <div class="pt"><span class="pt-n">02</span><span class="pt-t">AI知識不要。BLAZEがすべて設計・開発するため、社内リソースは最小限で済みます。</span></div>
+    <div class="pt"><span class="pt-n">03</span><span class="pt-t">小規模な自動化から始めて段階的に拡大できる、スモールスタート対応のプランも用意しています。</span></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 04 BLAZE Grid -->
+<section class="svc-section" id="blaze-grid">
+  <div class="svc-head reveal"><span class="svc-no">04</span><span class="svc-cat">Community</span></div>
+  <h2 class="svc-name reveal">BLAZE Grid<span class="svc-tag">Coming Soon</span></h2>
+  <p class="svc-lead reveal d1">
+    BLAZE Gridは、転職市場にいない優秀な人材コミュニティです。求人媒体や転職エージェントには登録していない潜在層へ直接アクセスできる、企業向けの独自ネットワーク。採用の常識を変えるプラットフォームとして開発中です。
+  </p>
+  <div class="feat-grid reveal d2">
+    <div class="feat">
+      <div class="feat-t">潜在層へのダイレクトアクセス</div>
+      <p class="feat-p">転職活動をしていないが、良い機会があれば動ける人材層にリーチ。競合他社が接触できない候補者を発掘します。</p>
+    </div>
+    <div class="feat">
+      <div class="feat-t">コミュニティ型採用</div>
+      <p class="feat-p">単発のスカウトではなく、コミュニティへの継続的な参加を通じて企業と人材が長期的な関係を構築します。</p>
+    </div>
+    <div class="feat">
+      <div class="feat-t">独自のネットワーク</div>
+      <p class="feat-p">BLAZEが独自に構築・キュレーションした人材ネットワーク。一般媒体では出会えない層との接点を提供します。</p>
+    </div>
+    <div class="feat">
+      <div class="feat-t">採用コストの最適化</div>
+      <p class="feat-p">エージェント手数料や高額な媒体費用に依存しない採用チャネルを確立。中長期的なコスト削減を実現します。</p>
+    </div>
+  </div>
+  <div class="pts reveal d3">
+    <div class="pt"><span class="pt-n">01</span><span class="pt-t">現在クローズドβ版を開発中。採用課題をお持ちの企業様はお問い合わせください。</span></div>
+    <div class="pt"><span class="pt-n">02</span><span class="pt-t">IT・スタートアップ・経営人材など、特定スキルセットの潜在層コミュニティから順次公開予定です。</span></div>
+    <div class="pt"><span class="pt-n">03</span><span class="pt-t">先行登録企業には優先的なコミュニティアクセスと初期特別プランを提供します。</span></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="s-lbl" style="display:inline-block;margin-bottom:12px">Contact</div>
+  <h2 class="s-ttl">サービスについて相談する</h2>
+  <p class="c-sub">各サービスの詳細・料金・導入事例など、お気軽にお問い合わせください。</p>
+  <a href="https://share-na2.hsforms.com/1tOpmNzYoS_-4gTEgeSR3LA425mcd" target="_blank" class="c-btn-link">お問い合わせはこちら</a>
+</section>
+
+</main>
+
+<footer>
+  <div class="f-logo"></div>
+  <p class="f-copy" style="position:absolute;left:50%;transform:translateX(-50%);letter-spacing:.18em;white-space:nowrap;">© 2026 BLAZE Inc. ALL RIGHTS RESERVED.</p>
 </footer>
 
 <script>
-// Canvas background (same as main HP)
-(function(){
-  const cv=document.getElementById('bg-cv');
-  const ctx=cv.getContext('2d');
-  let W,H,pts=[];
-  function resize(){W=cv.width=innerWidth;H=cv.height=innerHeight;init()}
-  function init(){
-    pts=[];
-    const n=Math.floor(W*H/22000);
-    for(let i=0;i<n;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.18,r:Math.random()*1.5+.5})
-  }
-  function draw(){
-    ctx.clearRect(0,0,W,H);
-    pts.forEach(p=>{
-      p.x+=p.vx;p.y+=p.vy;
-      if(p.x<0||p.x>W)p.vx*=-1;
-      if(p.y<0||p.y>H)p.vy*=-1;
-      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle='rgba(77,255,223,.25)';ctx.fill();
-    });
-    pts.forEach((a,i)=>{
-      for(let j=i+1;j<pts.length;j++){
-        const b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);
-        if(d<120){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle=`rgba(77,255,223,${.06*(1-d/120)})`;ctx.lineWidth=.5;ctx.stroke()}
-      }
-    });
-    requestAnimationFrame(draw);
-  }
-  window.addEventListener('resize',resize);
-  resize();draw();
-})();
+const bgCv = document.getElementById('bg-canvas');
+const bgCtx = bgCv.getContext('2d');
+let W, H;
+function resizeBg(){ W = bgCv.width = window.innerWidth; H = bgCv.height = window.innerHeight; }
+resizeBg();
+window.addEventListener('resize', resizeBg);
 
-// Scroll reveal
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')});
-},{threshold:.15});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+const beams = [
+  { c:'rgba(30,75,220,', lw:1.8, al:.45, phase:0.0, ox:[-.05,.22,.55,1.05], oy:[.50,.28,.72,.45], ax:[0,.12,.10,0], ay:[.08,.14,.12,.07], fx:[0,.41,.37,0], fy:[.29,.38,.43,.31] },
+  { c:'rgba(20,60,200,', lw:1.4, al:.38, phase:1.3, ox:[-.05,.18,.60,1.05], oy:[.45,.70,.25,.55], ax:[0,.10,.13,0], ay:[.09,.12,.10,.08], fx:[0,.35,.44,0], fy:[.33,.40,.36,.38] },
+  { c:'rgba(40,90,235,', lw:2.2, al:.30, phase:2.5, ox:[-.05,.30,.68,1.05], oy:[.55,.35,.65,.50], ax:[0,.11,.09,0], ay:[.07,.13,.11,.09], fx:[0,.43,.39,0], fy:[.37,.34,.41,.35] },
+  { c:'rgba(15,55,195,', lw:1.2, al:.28, phase:3.8, ox:[-.05,.45,.50,1.05], oy:[.42,.58,.42,.60], ax:[0,.09,.12,0], ay:[.10,.11,.09,.08], fx:[0,.38,.45,0], fy:[.32,.42,.38,.33] },
+  { c:'rgba(50,100,240,',lw:1.8, al:.35, phase:5.1, ox:[-.05,.15,.80,1.05], oy:[.48,.75,.28,.52], ax:[0,.13,.08,0], ay:[.11,.10,.13,.09], fx:[0,.46,.36,0], fy:[.40,.35,.44,.37] },
+];
+
+function drawBg(ts){
+  bgCtx.fillStyle = '#000008';
+  bgCtx.fillRect(0, 0, W, H);
+  const t = ts * 0.001;
+  const gx = W * (.2 + .08 * Math.sin(t * .12));
+  const gy = H * (.5 + .08 * Math.cos(t * .10));
+  const gr = bgCtx.createRadialGradient(gx,gy,0, gx,gy, Math.max(W,H)*.8);
+  gr.addColorStop(0, 'rgba(10,35,170,0.4)');
+  gr.addColorStop(.4,'rgba(6,20,120,0.15)');
+  gr.addColorStop(1, 'rgba(0,0,0,0)');
+  bgCtx.fillStyle = gr;
+  bgCtx.fillRect(0, 0, W, H);
+  beams.forEach(b => {
+    const ph = b.phase;
+    const pts = [
+      [b.ox[0]*W, (b.oy[0]+b.ay[0]*Math.sin(t*b.fy[0]+ph+0.0))*H],
+      [(b.ox[1]+b.ax[1]*Math.sin(t*b.fx[1]+ph+1.0))*W, (b.oy[1]+b.ay[1]*Math.sin(t*b.fy[1]+ph+0.5))*H],
+      [(b.ox[2]+b.ax[2]*Math.sin(t*b.fx[2]+ph+2.0))*W, (b.oy[2]+b.ay[2]*Math.sin(t*b.fy[2]+ph+1.5))*H],
+      [b.ox[3]*W, (b.oy[3]+b.ay[3]*Math.sin(t*b.fy[3]+ph+0.8))*H],
+    ];
+    const [p0,p1,p2,p3] = pts;
+    bgCtx.beginPath();
+    bgCtx.moveTo(p0[0],p0[1]);
+    bgCtx.bezierCurveTo(p1[0],p1[1],p2[0],p2[1],p3[0],p3[1]);
+    const grd = bgCtx.createLinearGradient(p0[0],p0[1],p3[0],p3[1]);
+    grd.addColorStop(0, b.c+'0)');
+    grd.addColorStop(.2,b.c+b.al+')');
+    grd.addColorStop(.5,b.c+(b.al*1.3).toFixed(2)+')');
+    grd.addColorStop(.8,b.c+b.al+')');
+    grd.addColorStop(1, b.c+'0)');
+    bgCtx.strokeStyle = grd;
+    bgCtx.lineWidth = b.lw;
+    bgCtx.shadowBlur = 24;
+    bgCtx.shadowColor = b.c+'0.6)';
+    bgCtx.stroke();
+    bgCtx.shadowBlur = 0;
+  });
+  requestAnimationFrame(drawBg);
+}
+requestAnimationFrame(drawBg);
+
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('s', scrollY > 40));
+
+const obs = new IntersectionObserver(
+  es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); }),
+  { threshold: .1 }
+);
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+function toggleMenu(){
+  document.getElementById('ham').classList.toggle('open');
+  document.getElementById('mobMenu').classList.toggle('open');
+}
 </script>
 </body>
 </html>
