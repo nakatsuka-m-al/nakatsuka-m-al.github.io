@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="株式会社BLAZEの最新情報。サービスリリース・メディア掲載・お知らせの一覧です。">
+<meta property="og:title" content="News | 株式会社BLAZE">
+<meta property="og:description" content="株式会社BLAZEの最新情報一覧。サービスリリース・メディア掲載・お知らせ。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blaze-ltd.com/news/">
+<meta property="og:image" content="https://blaze-ltd.com/ogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blaze-ltd.com/ogp.png">
+<meta name="robots" content="index, follow">
+<title>News | 株式会社BLAZE</title>
+<link rel="canonical" href="https://blaze-ltd.com/news/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#03050f;
+  --accent:#4DFFDF;
+  --white:#ffffff;
+  --w8:rgba(255,255,255,0.8);
+  --w5:rgba(255,255,255,0.5);
+  --w3:rgba(255,255,255,0.3);
+  --w15:rgba(255,255,255,0.15);
+  --w08:rgba(255,255,255,0.08);
+  --w04:rgba(255,255,255,0.04);
+  --ff-j:'Jost',sans-serif;
+  --ff-n:'Noto Sans JP',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:var(--ff-n);overflow-x:hidden}
+#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+nav,main,footer{position:relative;z-index:1}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:80px;display:flex;align-items:center;justify-content:space-between;padding:0 52px;transition:background .3s,backdrop-filter .3s,height .3s}
+nav.s{background:rgba(3,5,15,.85);backdrop-filter:blur(14px);height:64px;border-bottom:1px solid var(--w08)}
+.logo img{height:56px;display:block}
+.nav-links{display:flex;gap:36px;list-style:none}
+.nav-links a{font-family:var(--ff-j);font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);text-decoration:none;transition:color .3s;position:relative}
+.nav-links a:hover{color:var(--white)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.ham span{width:22px;height:1.5px;background:var(--white);transition:all .3s}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob-menu{position:fixed;inset:0;z-index:99;background:rgba(3,5,15,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;opacity:0;pointer-events:none;transition:opacity .3s}
+.mob-menu.open{opacity:1;pointer-events:auto}
+.mob-menu a{font-family:var(--ff-j);font-size:20px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--white);text-decoration:none}
+.mob-close{position:absolute;top:24px;right:24px;background:none;border:none;color:var(--white);font-size:22px;cursor:pointer}
+
+.s-lbl{font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--w5);margin-bottom:12px}
+.s-ttl{font-family:var(--ff-j);font-size:clamp(26px,3.8vw,50px);font-weight:700;line-height:1.1;letter-spacing:-.01em}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.reveal.on{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+#news-page{padding:180px 52px 110px;max-width:920px}
+.news-list{margin-top:52px}
+.news-row{display:block;padding:22px 0;border-bottom:1px solid var(--w15);position:relative;transition:background .3s}
+a.news-row:hover{background:var(--w04)}
+.nd{font-family:var(--ff-j);font-size:11px;color:var(--w5);letter-spacing:.04em;display:block;margin-bottom:8px}
+.nt{font-family:var(--ff-j);font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--white);border:1px solid var(--w3);padding:3px 7px;display:inline-block;vertical-align:middle;margin-right:10px}
+.nn{font-size:14px;font-weight:300;line-height:1.6;display:inline;vertical-align:middle}
+.na{position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:13px;opacity:.5}
+
+.back-link{display:inline-flex;align-items:center;gap:8px;font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);text-decoration:none;margin-top:48px;transition:color .3s}
+.back-link:hover{color:var(--white)}
+
+footer{padding:30px 52px;border-top:1px solid var(--w15);display:flex;align-items:center;background:rgba(3,5,15,0.7);backdrop-filter:blur(12px);position:relative}
+.f-copy{font-family:var(--ff-j);font-size:10px;font-weight:300;color:var(--w3)}
+
+@media(max-width:768px){
+  nav{padding:0 20px;height:64px}
+  .logo img{height:48px}
+  .nav-links{display:none}
+  .ham{display:flex}
+  #news-page{padding:130px 20px 72px}
+  .news-row{padding:16px 0}
+  footer{flex-direction:column;gap:12px;padding:24px 20px}
+  footer .f-copy{position:static !important;transform:none !important;text-align:center}
+}
+</style>
+</head>
+
+<body>
+<canvas id="bg-canvas"></canvas>
+
+<nav id="nav">
+  <a href="/" class="logo">
+    <img src="../logo.png" alt="BLAZE">
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#vision">Vision</a></li>
+    <li><a href="/service/">Service</a></li>
+    <li><a href="/company/">Company</a></li>
+    <li><a href="/news/">News</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <div class="ham" id="ham" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="toggleMenu()">✕</button>
+  <a href="/#vision"   onclick="toggleMenu()">Vision</a>
+  <a href="/service/"  onclick="toggleMenu()">Service</a>
+  <a href="/company/"  onclick="toggleMenu()">Company</a>
+  <a href="/news/"     onclick="toggleMenu()">News</a>
+  <a href="/#contact"  onclick="toggleMenu()">Contact</a>
+</div>
+
+<main>
+<section id="news-page">
+  <div class="s-lbl reveal">News</div>
+  <h1 class="s-ttl reveal d1">最新情報</h1>
+
+  <div class="news-list">
+    <a href="https://hakadoruai.blaze-ltd.com/" target="_blank" class="news-row reveal d1" style="text-decoration:none;color:inherit;cursor:pointer;">
+      <span class="nd">2026.07.22</span><span class="nt">Release</span>
+      <span class="nn">AI業務自動化ツール「Hakadoru AI」をリリース</span>
+      <span class="na">→</span>
+    </a>
+    <a href="https://kei-do.com/interview2/02600/" target="_blank" class="news-row reveal d1" style="text-decoration:none;color:inherit;cursor:pointer;">
+      <span class="nd">2026.07.15</span><span class="nt">Notice</span>
+      <span class="nn">経営メディア「経道」に代表取締役 中塚のインタビューが掲載</span>
+      <span class="na">→</span>
+    </a>
+    <a href="https://prtimes.jp/main/html/rd/p/000000005.000181457.html" target="_blank" class="news-row reveal d2" style="text-decoration:none;color:inherit;cursor:pointer;">
+      <span class="nd">2026.07.08</span><span class="nt">Release</span>
+      <span class="nn">AIキャリアアシスタント「Cocopath（ココパス）」をリリース</span>
+      <span class="na">→</span>
+    </a>
+    <div class="news-row reveal d2">
+      <span class="nd">2026.07.01</span><span class="nt">Notice</span>
+      <span class="nn">有料職業紹介事業の許認可を取得（許可番号：13−ユ−319735）</span>
+    </div>
+    <a href="https://prtimes.jp/main/html/rd/p/000000003.000181457.html" target="_blank" class="news-row reveal d3" style="text-decoration:none;color:inherit;cursor:pointer;">
+      <span class="nd">2026.05.18</span><span class="nt">Release</span>
+      <span class="nn">営業特化型・AI自動生成ツール「ResuPro AI for Sales」をリリース</span>
+      <span class="na">→</span>
+    </a>
+    <a href="https://prtimes.jp/main/html/rd/p/000000002.000181457.html" target="_blank" class="news-row reveal d3" style="text-decoration:none;color:inherit;cursor:pointer;">
+      <span class="nd">2026.04.10</span><span class="nt">Release</span>
+      <span class="nn">完全成果報酬型の応募送客サービス「Oubo Pay」リリース</span>
+      <span class="na">→</span>
+    </a>
+    <div class="news-row reveal d4">
+      <span class="nd">2026.04.01</span><span class="nt">Release</span>
+      <span class="nn">ホームページリリース</span>
+    </div>
+    <div class="news-row reveal d4">
+      <span class="nd">2026.02.01</span><span class="nt">Notice</span>
+      <span class="nn">株式会社BLAZEを創業</span>
+    </div>
+  </div>
+
+  <a href="/" class="back-link">← トップへ戻る</a>
+</section>
+</main>
+
+<footer>
+  <p class="f-copy" style="position:absolute;left:50%;transform:translateX(-50%);letter-spacing:.18em;white-space:nowrap;">© 2026 BLAZE Inc. ALL RIGHTS RESERVED.</p>
+</footer>
+
+<script>
+const bgCv = document.getElementById('bg-canvas');
+const bgCtx = bgCv.getContext('2d');
+let W, H;
+function resizeBg(){ W = bgCv.width = window.innerWidth; H = bgCv.height = window.innerHeight; }
+resizeBg();
+window.addEventListener('resize', resizeBg);
+
+const beams = [
+  { c:'rgba(30,75,220,', lw:1.8, al:.45, phase:0.0, ox:[-.05,.22,.55,1.05], oy:[.50,.28,.72,.45], ax:[0,.12,.10,0], ay:[.08,.14,.12,.07], fx:[0,.41,.37,0], fy:[.29,.38,.43,.31] },
+  { c:'rgba(20,60,200,', lw:1.4, al:.38, phase:1.3, ox:[-.05,.18,.60,1.05], oy:[.45,.70,.25,.55], ax:[0,.10,.13,0], ay:[.09,.12,.10,.08], fx:[0,.35,.44,0], fy:[.33,.40,.36,.38] },
+  { c:'rgba(40,90,235,', lw:2.2, al:.30, phase:2.5, ox:[-.05,.30,.68,1.05], oy:[.55,.35,.65,.50], ax:[0,.11,.09,0], ay:[.07,.13,.11,.09], fx:[0,.43,.39,0], fy:[.37,.34,.41,.35] },
+  { c:'rgba(15,55,195,', lw:1.2, al:.28, phase:3.8, ox:[-.05,.45,.50,1.05], oy:[.42,.58,.42,.60], ax:[0,.09,.12,0], ay:[.10,.11,.09,.08], fx:[0,.38,.45,0], fy:[.32,.42,.38,.33] },
+  { c:'rgba(50,100,240,',lw:1.8, al:.35, phase:5.1, ox:[-.05,.15,.80,1.05], oy:[.48,.75,.28,.52], ax:[0,.13,.08,0], ay:[.11,.10,.13,.09], fx:[0,.46,.36,0], fy:[.40,.35,.44,.37] },
+];
+
+function drawBg(ts){
+  bgCtx.fillStyle = '#000008';
+  bgCtx.fillRect(0, 0, W, H);
+  const t = ts * 0.001;
+  const gx = W * (.2 + .08 * Math.sin(t * .12));
+  const gy = H * (.5 + .08 * Math.cos(t * .10));
+  const gr = bgCtx.createRadialGradient(gx,gy,0, gx,gy, Math.max(W,H)*.8);
+  gr.addColorStop(0, 'rgba(10,35,170,0.4)');
+  gr.addColorStop(.4,'rgba(6,20,120,0.15)');
+  gr.addColorStop(1, 'rgba(0,0,0,0)');
+  bgCtx.fillStyle = gr;
+  bgCtx.fillRect(0, 0, W, H);
+  beams.forEach(b => {
+    const ph = b.phase;
+    const pts = [
+      [b.ox[0]*W, (b.oy[0]+b.ay[0]*Math.sin(t*b.fy[0]+ph+0.0))*H],
+      [(b.ox[1]+b.ax[1]*Math.sin(t*b.fx[1]+ph+1.0))*W, (b.oy[1]+b.ay[1]*Math.sin(t*b.fy[1]+ph+0.5))*H],
+      [(b.ox[2]+b.ax[2]*Math.sin(t*b.fx[2]+ph+2.0))*W, (b.oy[2]+b.ay[2]*Math.sin(t*b.fy[2]+ph+1.5))*H],
+      [b.ox[3]*W, (b.oy[3]+b.ay[3]*Math.sin(t*b.fy[3]+ph+0.8))*H],
+    ];
+    const [p0,p1,p2,p3] = pts;
+    bgCtx.beginPath();
+    bgCtx.moveTo(p0[0],p0[1]);
+    bgCtx.bezierCurveTo(p1[0],p1[1],p2[0],p2[1],p3[0],p3[1]);
+    const grd = bgCtx.createLinearGradient(p0[0],p0[1],p3[0],p3[1]);
+    grd.addColorStop(0, b.c+'0)');
+    grd.addColorStop(.2,b.c+b.al+')');
+    grd.addColorStop(.5,b.c+(b.al*1.3).toFixed(2)+')');
+    grd.addColorStop(.8,b.c+b.al+')');
+    grd.addColorStop(1, b.c+'0)');
+    bgCtx.strokeStyle = grd;
+    bgCtx.lineWidth = b.lw;
+    bgCtx.shadowBlur = 24;
+    bgCtx.shadowColor = b.c+'0.6)';
+    bgCtx.stroke();
+    bgCtx.shadowBlur = 0;
+  });
+  requestAnimationFrame(drawBg);
+}
+requestAnimationFrame(drawBg);
+
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('s', scrollY > 40));
+
+const obs = new IntersectionObserver(
+  es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); }),
+  { threshold: .1 }
+);
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+function toggleMenu(){
+  document.getElementById('ham').classList.toggle('open');
+  document.getElementById('mobMenu').classList.toggle('open');
+}
+</script>
+</body>
+</html>
