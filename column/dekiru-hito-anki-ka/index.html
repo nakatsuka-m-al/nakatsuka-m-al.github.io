@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H67Y48Q10E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H67Y48Q10E');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="トップ営業の暗黙知を、チーム全員が使える型に変換する具体的な手順を解説します。本人へのインタビューが機能しない理由、行動観察による抽出、型の記述形式、押し付けにならない展開の仕方まで。">
+<meta property="og:title" content="できる人のやり方を言語化して型にする手順">
+<meta property="og:description" content="トップ営業の暗黙知を、チーム全員が使える型に変換する具体的な手順を解説します。本人へのインタビューが機能しない理由、行動観察による抽出、型の記述形式、押し付けにならない展開の仕方まで。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blaze-ltd.com/column/dekiru-hito-anki-ka/">
+<meta property="og:image" content="https://blaze-ltd.com/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blaze-ltd.com/ogp.png">
+<meta name="robots" content="index, follow">
+<title>できる人のやり方を言語化して型にする手順</title>
+<link rel="canonical" href="https://blaze-ltd.com/column/dekiru-hito-anki-ka/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"できる人のやり方を言語化して型にする手順","description":"トップ営業の暗黙知を、チーム全員が使える型に変換する具体的な手順を解説します。本人へのインタビューが機能しない理由、行動観察による抽出、型の記述形式、押し付けにならない展開の仕方まで。","datePublished":"2026-08-27","dateModified":"2026-08-27","mainEntityOfPage":"https://blaze-ltd.com/column/dekiru-hito-anki-ka/","image":"https://blaze-ltd.com/ogp.png","author":{"@type":"Organization","name":"株式会社BLAZE","url":"https://blaze-ltd.com"},"publisher":{"@type":"Organization","name":"株式会社BLAZE","url":"https://blaze-ltd.com","logo":{"@type":"ImageObject","url":"https://blaze-ltd.com/logo.png"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://blaze-ltd.com"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://blaze-ltd.com/column/"},{"@type":"ListItem","position":3,"name":"営業育成・事業成長","item":"https://blaze-ltd.com/column/sales/"},{"@type":"ListItem","position":4,"name":"できる人のやり方を言語化して型にする手順","item":"https://blaze-ltd.com/column/dekiru-hito-anki-ka/"}]}]}</script>
+<style>
+:root{
+  --bg:#03050f; --surface:#080c1c; --accent:#4DFFDF; --white:#fff;
+  --tx:rgba(255,255,255,.92); --tx2:rgba(255,255,255,.72);
+  --w5:rgba(255,255,255,.5); --w3:rgba(255,255,255,.3);
+  --w15:rgba(255,255,255,.15); --w08:rgba(255,255,255,.08); --w04:rgba(255,255,255,.04);
+  --ff-j:'Jost',sans-serif; --ff-n:'Noto Sans JP',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.wrap,.hd,.cats,.list,#nav,footer,.mob-menu{position:relative;z-index:1}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:var(--ff-n);font-weight:400;line-height:1.9;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+
+/* ヘッダーは #nav に限定して指定する。
+   目次も意味的に <nav> で書いているため、型セレクタにすると巻き込まれる */
+#nav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 52px;height:72px;z-index:200;transition:background .4s}
+#nav.s{background:rgba(3,5,15,.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--w15)}
+.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
+.logo img{height:72px;width:auto;display:block}
+.nav-links{display:flex;gap:30px;list-style:none;align-items:center}
+.nav-links a{font-family:var(--ff-j);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--w5);text-decoration:none;transition:color .3s}
+.nav-links a:hover{color:var(--white)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;z-index:300}
+.ham span{display:block;width:22px;height:1.5px;background:var(--white);transition:transform .3s,opacity .3s}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob-menu{position:fixed;inset:0;background:rgba(0,0,8,.97);z-index:250;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;opacity:0;pointer-events:none;transition:opacity .3s}
+.mob-menu.open{opacity:1;pointer-events:all}
+.mob-menu a{font-family:var(--ff-j);font-size:21px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--white);text-decoration:none}
+.mob-close{position:absolute;top:26px;right:26px;background:none;border:1px solid var(--w3);color:var(--white);font-size:18px;width:44px;height:44px;cursor:pointer}
+
+/* ── 記事 ── */
+.wrap{max-width:760px;margin:0 auto;padding:130px 24px 90px}
+.crumb{font-size:12px;color:var(--w5);margin-bottom:22px;line-height:1.7}
+.crumb a{color:var(--w5);text-decoration:none}
+.crumb a:hover{color:var(--white)}
+.a-cat{display:inline-block;font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(77,255,223,.35);padding:5px 11px;margin-bottom:18px}
+h1{font-size:clamp(24px,3.4vw,34px);font-weight:700;line-height:1.5;letter-spacing:.01em;margin-bottom:18px;text-wrap:balance}
+.a-meta{font-size:12px;color:var(--w5);letter-spacing:.04em;padding-bottom:26px;border-bottom:1px solid var(--w15)}
+.a-lead{font-size:15px;line-height:2.05;color:var(--tx2);margin:30px 0 0}
+
+.toc{background:var(--surface);border:1px solid var(--w15);padding:24px 26px;margin:38px 0}
+.toc-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:14px}
+.toc ol{list-style:none;counter-reset:t}
+.toc li{counter-increment:t;font-size:14px;line-height:1.9;padding-left:30px;position:relative}
+.toc li::before{content:counter(t,decimal-leading-zero);position:absolute;left:0;font-family:var(--ff-j);font-size:11px;font-weight:600;color:var(--w3);top:4px}
+.toc a{color:var(--tx2);text-decoration:none}
+.toc a:hover{color:var(--accent)}
+
+article h2{font-size:21px;font-weight:700;line-height:1.6;margin:56px 0 20px;padding-left:14px;border-left:3px solid var(--accent);scroll-margin-top:90px}
+article h3{font-size:17px;font-weight:600;line-height:1.6;margin:36px 0 14px;color:var(--white)}
+article p{font-size:15px;line-height:2.05;margin-bottom:20px;color:var(--tx)}
+article ul,article ol{margin:0 0 22px 1.4em}
+article li{font-size:15px;line-height:1.95;margin-bottom:9px}
+article strong{font-weight:700;color:var(--white)}
+article a.plink{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+
+.tbl{width:100%;border-collapse:collapse;margin:8px 0 26px;font-size:14px;display:block;overflow-x:auto}
+.tbl th,.tbl td{border:1px solid var(--w15);padding:11px 13px;text-align:left;line-height:1.7}
+.tbl th{background:var(--w04);font-weight:600;white-space:nowrap}
+
+.note{background:var(--w04);border-left:3px solid var(--w3);padding:18px 20px;margin:26px 0;font-size:14px;line-height:1.95;color:var(--tx2)}
+
+.faq{margin:50px 0 0}
+.faq-i{border-bottom:1px solid var(--w15);padding:20px 0}
+.faq-q{font-size:15px;font-weight:600;margin-bottom:10px;line-height:1.7}
+.faq-q::before{content:'Q.';font-family:var(--ff-j);color:var(--accent);margin-right:8px;font-weight:700}
+.faq-a{font-size:14px;line-height:1.95;color:var(--tx2)}
+
+.recap{background:var(--surface);border:1px solid var(--w15);padding:26px 28px;margin:50px 0 0}
+.recap-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:14px}
+.recap ul{margin:0 0 0 1.2em}
+.recap li{font-size:14px;line-height:1.9;margin-bottom:10px;color:var(--tx2)}
+
+/* ── セグメント別CTA ── */
+.cta{border:1px solid rgba(77,255,223,.3);background:linear-gradient(180deg,rgba(77,255,223,.05),transparent);padding:34px 30px;margin:56px 0 0;text-align:center}
+.cta-t{font-family:var(--ff-j);font-size:19px;font-weight:700;line-height:1.5;margin-bottom:12px}
+.cta-s{font-size:14px;line-height:1.95;color:var(--tx2);margin-bottom:22px}
+.cta-b{display:inline-block;font-family:var(--ff-j);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bg);background:var(--white);text-decoration:none;padding:14px 34px;transition:background .3s,transform .2s}
+.cta-b:hover{background:var(--accent);transform:translateY(-2px)}
+
+.rel{margin:60px 0 0;border-top:1px solid var(--w15);padding-top:34px}
+.rel-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:16px}
+.rel a{display:block;font-size:14px;line-height:1.75;color:var(--tx2);text-decoration:none;padding:11px 0;border-bottom:1px solid var(--w08)}
+.rel a:hover{color:var(--accent)}
+
+/* ── 一覧ページ ── */
+.hd{max-width:1000px;margin:0 auto;padding:140px 24px 0}
+.hd .s-lbl{font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--w5);margin-bottom:12px}
+.hd h1{font-family:var(--ff-j);font-size:clamp(26px,3.8vw,46px);line-height:1.15}
+.hd p{font-size:14px;line-height:1.95;color:var(--tx2);margin-top:18px;max-width:600px}
+.cats{max-width:1000px;margin:44px auto 0;padding:0 24px;display:flex;flex-wrap:wrap;gap:10px}
+.cats a{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);text-decoration:none;border:1px solid var(--w15);padding:9px 18px;transition:all .3s}
+.cats a:hover,.cats a.on{background:var(--white);color:var(--bg);border-color:var(--white)}
+.list{max-width:1000px;margin:0 auto;padding:46px 24px 100px;display:grid;gap:1px;background:var(--w15);border:1px solid var(--w15);border-radius:0}
+.list{background:transparent;border:none;gap:0}
+.card{display:block;text-decoration:none;padding:26px 4px;border-bottom:1px solid var(--w15);transition:background .3s}
+.card:hover{background:var(--w04)}
+.card-c{font-family:var(--ff-j);font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
+.card-t{font-size:16px;font-weight:600;line-height:1.65;margin-bottom:9px;color:var(--white)}
+.card-d{font-size:13px;line-height:1.85;color:var(--tx2)}
+.empty{padding:60px 4px;color:var(--w5);font-size:14px}
+
+footer{padding:30px 52px;border-top:1px solid var(--w15);text-align:center}
+.f-copy{font-family:var(--ff-j);font-size:10px;font-weight:300;color:var(--w3);letter-spacing:.18em}
+
+@media(max-width:768px){
+  #nav{padding:0 20px;height:64px}
+  .logo img{height:48px}
+  .nav-links{display:none}
+  .ham{display:flex}
+  .wrap{padding:110px 20px 70px}
+  .hd{padding:110px 20px 0}
+  .cats,.list{padding-left:20px;padding-right:20px}
+  article h2{font-size:19px;margin:44px 0 16px}
+  footer{padding:26px 20px}
+}
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+
+<nav id="nav">
+  <a href="/" class="logo"><img src="/logo.png" alt="BLAZE"></a>
+  <ul class="nav-links">
+    <li><a href="/service/">Service</a></li>
+    <li><a href="/company/">Company</a></li>
+    <li><a href="/column/">Column</a></li>
+    <li><a href="/news/">News</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+  <div class="ham" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="toggleMenu()">✕</button>
+  <a href="/service/" onclick="toggleMenu()">Service</a>
+  <a href="/company/" onclick="toggleMenu()">Company</a>
+  <a href="/column/"  onclick="toggleMenu()">Column</a>
+  <a href="/news/"    onclick="toggleMenu()">News</a>
+  <a href="/contact/" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="wrap">
+  <p class="crumb"><a href="/">ホーム</a> ／ <a href="/column/">コラム</a> ／ <a href="/column/sales/">営業育成・事業成長</a></p>
+  <span class="a-cat">Sales Leadership</span>
+  <h1>できる人のやり方を言語化して型にする手順</h1>
+  <p class="a-meta">最終更新 2026-08-27</p>
+  <p class="a-lead">どの営業チームにも、突出して売れる人がいます。そして多くの管理職が「あの人のやり方を全員ができれば」と考え、本人に共有会を頼みます。結果はたいてい同じです。トップ営業は「お客様のことを第一に考えることですかね」と語り、聞いた側は感心して、翌日から何も変わらない。これは本人が出し惜しみしているのではありません。できる人ほど、自分が何をやっているかを自覚していないのです。この記事では、暗黙知を観察から抽出し、使える型として記述し、チームに定着させるまでの手順を解説します。</p>
+
+  <nav class="toc"><p class="toc-t">目次</p><ol><li><a href="#s1">なぜ本人に聞いても出てこないのか</a></li><li><a href="#s2">手順①：差分が出ている場面を特定する</a></li><li><a href="#s3">手順②：行動を観察し、分岐を見つける</a></li><li><a href="#s4">手順③：型として記述する｜手順書ではなく判断基準</a></li><li><a href="#s5">手順④：展開する｜押し付けずに浸透させる</a></li><li><a href="#s6">抽出の実務：1つの型化プロジェクトの流れ</a></li><li><a href="#s7">型化を文化にする</a></li></ol></nav>
+
+  <article>
+<h2 id="s1">なぜ本人に聞いても出てこないのか</h2>
+<p>トップ営業へのインタビューが機能しない理由は、スキルの性質にあります。</p>
+<p>高度に熟達した技能は、本人の中で自動化されています。意識して手順を踏まなくても、状況を見た瞬間に適切な行動が出る。自転車に乗れる人が「どうやってバランスを取っているか」を説明できないのと同じで、<strong>熟達とは、説明できなくなることでもある</strong>のです。</p>
+<p>さらに、本人が語る「成功の理由」は、実際の成功要因とずれていることが多い。人は自分の行動を、後付けの物語で説明します。「熱意が伝わったんだと思います」と語る本人が、実際には初回商談での課題の特定が誰よりも速く正確だった、ということは珍しくありません。本人の語りは、本当の差分を覆い隠す包装紙になりがちです。</p>
+<p>だから、暗黙知の抽出は「聞く」ではなく「<strong>観る</strong>」から始める必要があります。本人の説明ではなく、本人の行動を一次情報にする。インタビューは、観察で立てた仮説を検証する二次的な手段として使います。この順序の逆転が、型化の成否を分けます。</p>
+<h2 id="s2">手順①：差分が出ている場面を特定する</h2>
+<p>観察を始める前に、どこを観るかを絞ります。トップ営業の一日をまるごと観察しても、情報が多すぎて差分は見えません。</p>
+<p>まず数字で当たりをつけます。営業プロセスを「行動量 × 商談化率 × 提案転換率 × 受注率 × 単価」に分解し、トップとチーム平均を比べる。すると、その人の強さがプロセスのどこに集中しているかが見えます。行動量は平均並みなのに商談化率が倍なら、差分は初回接触から商談化までのどこかにあります。</p>
+<p>差分の場所が絞れたら、その場面に観察を集中します。商談化率に差があるなら、初回商談だけを数件観る。受注率に差があるなら、提案とクロージングの場面を観る。</p>
+<p class="note">このとき、比較対象を用意すると差分の解像度が上がります。同じ場面について、トップの商談と平均的なメンバーの商談を続けて観る。単独で観ると「普通にうまい」としか見えないものが、並べて観ると「この瞬間の行動が違う」と特定できます。オンライン商談の録画が蓄積されている組織なら、この比較観察は非常に低コストで実行できます。</p>
+<h2 id="s3">手順②：行動を観察し、分岐を見つける</h2>
+<p>場面を絞ったら、行動レベルの観察に入ります。観るべきは、雰囲気や人柄ではなく、<strong>再現可能な行動と判断</strong>です。</p>
+<p>観察の観点を挙げます。</p>
+<ul><li><strong>順序</strong> — 何をどの順番でやっているか。課題を聞いてから商品を語るのか、逆か。価格をいつ出すのか</li><li><strong>問い</strong> — どんな質問を、どんな言葉で投げているか。相手の答えにどう重ねているか</li><li><strong>分岐</strong> — 顧客の反応によって、行動をどう変えているか。「予算が未定」と言われたときに何をするか</li><li><strong>省略</strong> — 他の人がやっているのに、この人はやっていないことは何か。省略もまた技術</li><li><strong>準備</strong> — 商談前に何を調べ、何を用意しているか。差分は商談の外にあることも多い</li></ul>
+<p>特に重要なのが「分岐」です。凡庸な営業とトップの差は、定型の進行ではなく、想定外への対応に最も現れます。顧客が渋った瞬間、話が逸れた瞬間、競合の名前が出た瞬間。そこで何を観て、何を選んでいるか。この判断の分岐こそが、型化すべき暗黙知の本体です。</p>
+<p>観察で仮説が立ったら、ここで初めてインタビューをします。ただし聞き方は「コツは何ですか」ではなく、具体的な場面の再生です。「あの商談で、顧客が『検討します』と言った直後、あえて次回の日程を切り出さなかったですよね。あれは何を見て判断したんですか?」。場面が具体的であれば、本人も自分の判断を遡って言語化できます。</p>
+<h2 id="s4">手順③：型として記述する｜手順書ではなく判断基準</h2>
+<p>抽出した暗黙知を、チームが使える形式に記述します。ここでの最大の失敗は、<strong>台本化</strong>です。</p>
+<p>トップのトークを一言一句書き起こして「この通りに話せ」とすると、二つの問題が起きます。第一に、言葉は人格と結びついているため、他人が同じ台詞を言うと不自然になります。第二に、台本は分岐に対応できません。顧客が台本通りに反応しなかった瞬間、台本営業は崩れます。</p>
+<p>型として記述すべきは、台詞ではなく<strong>構造と判断基準</strong>です。記述の形式として、次の3層が実用的です。</p>
+<table class="tbl"><tr><th>層</th><th>内容</th><th>例</th></tr><tr><td>目的</td><td>その場面で何を達成するか</td><td>初回商談の目的は受注ではなく、顧客の意思決定構造の把握</td></tr><tr><td>チェックポイント</td><td>その場面で必ず押さえる要素</td><td>予算の有無・決裁ルート・導入時期・現状の代替手段の4点</td></tr><tr><td>分岐の基準</td><td>よくある状況での判断の型</td><td>「予算未定」と言われたら金額ではなく予算化のプロセスを聞く</td></tr></table>
+<p>この形式なら、話す言葉は各自の人格に委ねながら、押さえるべき構造と判断は共有できます。「型を守れ」ではなく「この4点を必ず取れ。取り方は自分の言葉で」。守るべき芯と、自由にしてよい表面を分けることが、型を窮屈にしない記述の要点です。</p>
+<h2 id="s5">手順④：展開する｜押し付けずに浸透させる</h2>
+<p>型ができたら、チームへの展開です。ここにも設計が要ります。文書を配って「読んでおいて」では、型は使われません。</p>
+<p><strong>本人を型の伝道師にしない</strong>。意外に思われるかもしれませんが、トップ営業本人に型の普及を任せるのは、うまくいかないことが多い。本人にとって型は無意識にできることなので、できない人がどこで詰まるかが分からないからです。教える役は、型を意識的に習得した二番手の方が適任なことがよくあります。</p>
+<p><strong>ロープレで体験させる</strong>。型は読んで分かるものではなく、やって身につくものです。型のチェックポイントを使った場面練習を数回転させ、「型を使ったらヒアリングが楽になった」という体験を作ります。</p>
+<p><strong>実戦で検証し、型を更新する</strong>。展開した型が実際に数字を動かしたかを、商談化率などの指標で確認します。効かなければ、抽出が間違っていたか、記述が粗かったかを見直す。また、メンバーが型を使う中で見つけた改良は、型に還流させます。<strong>型は完成品ではなく、チームで育てる共有資産</strong>という位置づけが、型を陳腐化から守ります。</p>
+<p>この一連の手順は、トップ営業本人にも利益があります。自分の暗黙知が言語化されると、本人の再現性も上がり、スランプからの回復が速くなります。また「チームの型の源泉」という貢献は、プレイヤーとしての成績とは別の、組織における新しい価値になります。型化はトップの技を奪う行為ではなく、トップの価値を個人の成績から組織の資産へ拡張する行為です。そう位置づけて本人に協力を仰ぐことが、最初の観察許可を得る際にも効いてきます。</p>
+<h2 id="s6">抽出の実務：1つの型化プロジェクトの流れ</h2>
+<p>手順を、実際のプロジェクトとして時系列に並べ直しておきます。目安は1テーマ4〜6週間です。</p>
+<p><strong>第1週：対象の特定と合意</strong>。プロセス指標を分解し、差分の大きい場面をひとつ選びます。トップ営業本人に目的(チームの資産化・本人の評価への反映)を説明し、観察の許可を得ます。同時に、比較対象となる平均的な商談の録画や同席の予定も押さえます。</p>
+<p><strong>第2〜3週：観察と仮説</strong>。対象場面の商談を、トップ2〜3件、比較対象2〜3件観察します。順序・問い・分岐・省略・準備の観点でメモを取り、「この行動が差分ではないか」という仮説を2〜3個に絞ります。週の終わりに本人へ場面再生型のインタビューを行い、仮説の裏の判断基準を言語化します。</p>
+<p><strong>第4週：記述とレビュー</strong>。目的・チェックポイント・分岐基準の3層で型を記述します。1〜2ページに収めること。本人と、教え役候補の二番手にレビューしてもらい、「これで実際の商談を再現できるか」を確認します。</p>
+<p><strong>第5〜6週：試行と検証</strong>。メンバー2〜3人に型を渡し、ロープレで一度体験させてから実商談で試してもらいます。使ってみての詰まりを聞き、記述を修正。その後チーム全体に展開し、対象指標(商談化率など)の推移を月次で追います。</p>
+<p>この流れを四半期に1テーマ回すだけで、1年後には4つの型が積み上がります。大がかりなナレッジマネジメント施策よりも、この小さな反復の方が、現場に残る資産を確実に作ります。</p>
+<h2 id="s7">型化を文化にする</h2>
+<p>一度の型化プロジェクトで終わらせず、組織の習慣にするための補足です。</p>
+<p><strong>小さく高頻度に回す</strong>。「トップ営業の全技術を型化する」という大プロジェクトは、たいてい途中で止まります。「今月は初回商談の冒頭10分だけ」のように、場面を絞った小さな型化を繰り返す方が、成果物が積み上がります。</p>
+<p><strong>トップ以外からも抽出する</strong>。型化の対象はエースだけではありません。特定の業界だけ異様に強いメンバー、失注後の再訪問がうまいメンバー。局所的な強みは誰にでもあり、それぞれが型化の素材です。全員が「型の提供者」になり得る運用は、チームの学び合いの文化そのものを作ります。</p>
+<p><strong>退職・異動の前に抽出する</strong>。人が抜けるとき、組織はその人の暗黙知を丸ごと失います。異動や退職が決まったメンバーの引き継ぎ期間に、担当情報だけでなく「その人のやり方」の抽出を組み込む。これは組織の記憶を守る保険です。</p>
+<p>属人化はどの営業組織でも課題に挙がりますが、属人化の解消とは、できる人を平均に引き下ろすことではありません。できる人の中に埋まっている構造を掘り出し、全員の土台に変えること。観察から始まるこの地道な手順が、チームの平均値を、そして底値を引き上げていきます。</p>
+<div class="faq"><h2 id="faq">よくある質問</h2><div class="faq-i"><p class="faq-q">トップ営業が観察や型化への協力を嫌がります</p><p class="faq-a">「技を盗まれる」という警戒か、「観察される」ことへの心理的抵抗のどちらかが多いです。前者には、型化が本人の評価を下げるものではなく、チームへの貢献として評価に加わることを明示してください。後者には、ダメ出し目的の観察ではないこと、良い部分の抽出であることを伝え、最初は録画の共有など負担の軽い形から始めるのが有効です。</p></div><div class="faq-i"><p class="faq-q">型化しても「自分のやり方でやりたい」というメンバーがいます</p><p class="faq-a">型の強制範囲を明確にしてください。推奨するのは「チェックポイント(押さえるべき要素)は必須、話法は自由」という線引きです。そのうえで、本人のやり方で数字が出ているなら尊重し、出ていないなら「まず型を3商談試してから判断しよう」と実験として提案します。型と個性は対立ではなく、型は個性を乗せる土台です。</p></div><div class="faq-i"><p class="faq-q">うちのチームには、型化するほど突出した人がいません</p><p class="faq-a">チーム内に限る必要はありません。プロセス指標を分解すれば、「平均は普通だが商談化率だけは高い人」のような局所的な強みは見つかります。また、失注案件と受注案件の比較という形でも、勝ちパターンの抽出は可能です。突出した個人ではなく、うまくいった案件を観察対象にする方法です。</p></div><div class="faq-i"><p class="faq-q">型を作りましたが、数ヶ月で使われなくなりました</p><p class="faq-a">型が業務の導線に組み込まれていない可能性が高いです。文書として存在するだけの型は忘れられます。商談準備のテンプレートにチェックポイントを埋め込む、週次のロープレの題材にする、振り返りの観点にする、など日常業務の中で型に触れる接点を設計してください。また、型が現場の実態に合わなくなっている場合は、更新の仕組み(四半期での見直し)が必要です。</p></div></div>
+<div class="recap"><p class="recap-t">この記事のまとめ</p><ul><li>できる人ほど自分のやり方を説明できない。熟達とは自動化であり、本人の語りは実際の差分とずれる</li><li>抽出は「聞く」ではなく「観る」から。インタビューは観察仮説の検証手段に位置づける</li><li>手順①：プロセス指標の分解で差分の場面を特定し、比較観察で解像度を上げる</li><li>手順②：順序・問い・分岐・省略・準備を観察する。特に想定外への分岐が暗黙知の本体</li><li>手順③：台本ではなく、目的・チェックポイント・分岐基準の3層で記述する。芯は共有、表面は自由</li><li>手順④：教える役は二番手が適任なことも。ロープレで体験させ、実戦で検証し、型を更新し続ける</li><li>型化はトップの技を奪うことではなく、個人の成績を組織の資産へ拡張すること</li></ul></div>
+  </article>
+
+  <div class="cta"><p class="cta-t">営業管理職の育成について相談する</p><p class="cta-s">プレイングマネージャーの時間配分から部下育成の型まで、営業組織を率いる立場に必要なスキルを体系化した研修プログラムをご案内します。</p><a class="cta-b" href="/contact/?from=column-sales">営業管理職研修を相談する</a></div>
+  <div class="rel"><p class="rel-t">関連記事</p><a href="/column/shinnin-manager-90nichi/">新任営業管理職が最初の90日にやるべきこと</a><a href="/column/seichou-dankai-kakawari/">成長段階に応じた関わり方の変え方</a><a href="/column/roleplay-sekkei/">ロープレが機能しない理由と、効く設計の条件</a><a href="/column/playing-manager-jikan-haibun/">プレイングマネージャーの時間配分｜自分の数字とチームの数字を両立させる方法</a><a href="/column/player-manager-ikou/">プレイヤーからマネージャーへの移行で捨てるべきもの</a></div>
+</div>
+
+<footer>
+  <p class="f-copy">&copy; 2026 BLAZE Inc. ALL RIGHTS RESERVED.</p>
+</footer>
+
+<script>
+const bgCv = document.getElementById('bg-canvas');
+const bgCtx = bgCv.getContext('2d');
+let W, H;
+function resizeBg(){ W = bgCv.width = window.innerWidth; H = bgCv.height = window.innerHeight; }
+resizeBg();
+window.addEventListener('resize', resizeBg);
+
+const beams = [
+  { c:'rgba(30,75,220,', lw:1.8, al:.45, phase:0.0, ox:[-.05,.22,.55,1.05], oy:[.50,.28,.72,.45], ax:[0,.12,.10,0], ay:[.08,.14,.12,.07], fx:[0,.41,.37,0], fy:[.29,.38,.43,.31] },
+  { c:'rgba(20,60,200,', lw:1.4, al:.38, phase:1.3, ox:[-.05,.18,.60,1.05], oy:[.45,.70,.25,.55], ax:[0,.10,.13,0], ay:[.09,.12,.10,.08], fx:[0,.35,.44,0], fy:[.33,.40,.36,.38] },
+  { c:'rgba(40,90,235,', lw:2.2, al:.30, phase:2.5, ox:[-.05,.30,.68,1.05], oy:[.55,.35,.65,.50], ax:[0,.11,.09,0], ay:[.07,.13,.11,.09], fx:[0,.43,.39,0], fy:[.37,.34,.41,.35] },
+  { c:'rgba(15,55,195,', lw:1.2, al:.28, phase:3.8, ox:[-.05,.45,.50,1.05], oy:[.42,.58,.42,.60], ax:[0,.09,.12,0], ay:[.10,.11,.09,.08], fx:[0,.38,.45,0], fy:[.32,.42,.38,.33] },
+  { c:'rgba(50,100,240,',lw:1.8, al:.35, phase:5.1, ox:[-.05,.15,.80,1.05], oy:[.48,.75,.28,.52], ax:[0,.13,.08,0], ay:[.11,.10,.13,.09], fx:[0,.46,.36,0], fy:[.40,.35,.44,.37] },
+];
+
+function drawBg(ts){
+  bgCtx.fillStyle = '#000008';
+  bgCtx.fillRect(0, 0, W, H);
+  const t = ts * 0.001;
+  const gx = W * (.2 + .08 * Math.sin(t * .12));
+  const gy = H * (.5 + .08 * Math.cos(t * .10));
+  const gr = bgCtx.createRadialGradient(gx,gy,0, gx,gy, Math.max(W,H)*.8);
+  gr.addColorStop(0, 'rgba(10,35,170,0.4)');
+  gr.addColorStop(.4,'rgba(6,20,120,0.15)');
+  gr.addColorStop(1, 'rgba(0,0,0,0)');
+  bgCtx.fillStyle = gr;
+  bgCtx.fillRect(0, 0, W, H);
+  beams.forEach(b => {
+    const ph = b.phase;
+    const pts = [
+      [b.ox[0]*W, (b.oy[0]+b.ay[0]*Math.sin(t*b.fy[0]+ph+0.0))*H],
+      [(b.ox[1]+b.ax[1]*Math.sin(t*b.fx[1]+ph+1.0))*W, (b.oy[1]+b.ay[1]*Math.sin(t*b.fy[1]+ph+0.5))*H],
+      [(b.ox[2]+b.ax[2]*Math.sin(t*b.fx[2]+ph+2.0))*W, (b.oy[2]+b.ay[2]*Math.sin(t*b.fy[2]+ph+1.5))*H],
+      [b.ox[3]*W, (b.oy[3]+b.ay[3]*Math.sin(t*b.fy[3]+ph+0.8))*H],
+    ];
+    const [p0,p1,p2,p3] = pts;
+    bgCtx.beginPath();
+    bgCtx.moveTo(p0[0],p0[1]);
+    bgCtx.bezierCurveTo(p1[0],p1[1],p2[0],p2[1],p3[0],p3[1]);
+    const grd = bgCtx.createLinearGradient(p0[0],p0[1],p3[0],p3[1]);
+    grd.addColorStop(0, b.c+'0)');
+    grd.addColorStop(.2,b.c+b.al+')');
+    grd.addColorStop(.5,b.c+(b.al*1.3).toFixed(2)+')');
+    grd.addColorStop(.8,b.c+b.al+')');
+    grd.addColorStop(1, b.c+'0)');
+    bgCtx.strokeStyle = grd;
+    bgCtx.lineWidth = b.lw;
+    bgCtx.shadowBlur = 24;
+    bgCtx.shadowColor = b.c+'0.6)';
+    bgCtx.stroke();
+    bgCtx.shadowBlur = 0;
+  });
+  requestAnimationFrame(drawBg);
+}
+requestAnimationFrame(drawBg);
+
+window.addEventListener('scroll', function(){
+  document.getElementById('nav').classList.toggle('s', window.scrollY > 40);
+});
+function toggleMenu(){
+  document.getElementById('ham').classList.toggle('open');
+  document.getElementById('mobMenu').classList.toggle('open');
+}
+</script>
+</body>
+</html>
