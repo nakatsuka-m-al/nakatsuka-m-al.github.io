@@ -68,6 +68,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://blaze-ltd.com/column/shinnin-manager-90nichi/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://blaze-ltd.com/column/playing-manager-jikan-haibun/</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -75,6 +81,12 @@
   </url>
   <url>
     <loc>https://blaze-ltd.com/column/player-manager-ikou/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blaze-ltd.com/column/manager-hyouka-kijun/</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -93,6 +105,12 @@
   </url>
   <url>
     <loc>https://blaze-ltd.com/column/makaseru-hanni-kimekata/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blaze-ltd.com/column/kaigitai-minaoshi/</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

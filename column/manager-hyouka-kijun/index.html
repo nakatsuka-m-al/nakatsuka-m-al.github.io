@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H67Y48Q10E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H67Y48Q10E');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="営業管理職をチーム売上だけで評価すると、引き取り・短期偏重・育成の放棄が合理的な行動になります。売上に加えて、組織の再現性・育成の進捗・翌期の仕込みをどう評価に組み込むか、指標の設計例とともに解説します。">
+<meta property="og:title" content="営業管理職を何で評価すべきか｜プレイヤー評価との違い">
+<meta property="og:description" content="営業管理職をチーム売上だけで評価すると、引き取り・短期偏重・育成の放棄が合理的な行動になります。売上に加えて、組織の再現性・育成の進捗・翌期の仕込みをどう評価に組み込むか、指標の設計例とともに解説します。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blaze-ltd.com/column/manager-hyouka-kijun/">
+<meta property="og:image" content="https://blaze-ltd.com/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blaze-ltd.com/ogp.png">
+<meta name="robots" content="index, follow">
+<title>営業管理職を何で評価すべきか｜プレイヤー評価との違い</title>
+<link rel="canonical" href="https://blaze-ltd.com/column/manager-hyouka-kijun/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"営業管理職を何で評価すべきか｜プレイヤー評価との違い","description":"営業管理職をチーム売上だけで評価すると、引き取り・短期偏重・育成の放棄が合理的な行動になります。売上に加えて、組織の再現性・育成の進捗・翌期の仕込みをどう評価に組み込むか、指標の設計例とともに解説します。","datePublished":"2026-08-27","dateModified":"2026-08-27","mainEntityOfPage":"https://blaze-ltd.com/column/manager-hyouka-kijun/","image":"https://blaze-ltd.com/ogp.png","author":{"@type":"Organization","name":"株式会社BLAZE","url":"https://blaze-ltd.com"},"publisher":{"@type":"Organization","name":"株式会社BLAZE","url":"https://blaze-ltd.com","logo":{"@type":"ImageObject","url":"https://blaze-ltd.com/logo.png"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://blaze-ltd.com"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://blaze-ltd.com/column/"},{"@type":"ListItem","position":3,"name":"営業育成・事業成長","item":"https://blaze-ltd.com/column/sales/"},{"@type":"ListItem","position":4,"name":"営業管理職を何で評価すべきか｜プレイヤー評価との違い","item":"https://blaze-ltd.com/column/manager-hyouka-kijun/"}]}]}</script>
+<style>
+:root{
+  --bg:#03050f; --surface:#080c1c; --accent:#4DFFDF; --white:#fff;
+  --tx:rgba(255,255,255,.92); --tx2:rgba(255,255,255,.72);
+  --w5:rgba(255,255,255,.5); --w3:rgba(255,255,255,.3);
+  --w15:rgba(255,255,255,.15); --w08:rgba(255,255,255,.08); --w04:rgba(255,255,255,.04);
+  --ff-j:'Jost',sans-serif; --ff-n:'Noto Sans JP',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.wrap,.hd,.cats,.list,#nav,footer,.mob-menu{position:relative;z-index:1}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:var(--ff-n);font-weight:400;line-height:1.9;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+
+/* ヘッダーは #nav に限定して指定する。
+   目次も意味的に <nav> で書いているため、型セレクタにすると巻き込まれる */
+#nav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 52px;height:72px;z-index:200;transition:background .4s}
+#nav.s{background:rgba(3,5,15,.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--w15)}
+.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
+.logo img{height:72px;width:auto;display:block}
+.nav-links{display:flex;gap:30px;list-style:none;align-items:center}
+.nav-links a{font-family:var(--ff-j);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--w5);text-decoration:none;transition:color .3s}
+.nav-links a:hover{color:var(--white)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;z-index:300}
+.ham span{display:block;width:22px;height:1.5px;background:var(--white);transition:transform .3s,opacity .3s}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob-menu{position:fixed;inset:0;background:rgba(0,0,8,.97);z-index:250;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;opacity:0;pointer-events:none;transition:opacity .3s}
+.mob-menu.open{opacity:1;pointer-events:all}
+.mob-menu a{font-family:var(--ff-j);font-size:21px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--white);text-decoration:none}
+.mob-close{position:absolute;top:26px;right:26px;background:none;border:1px solid var(--w3);color:var(--white);font-size:18px;width:44px;height:44px;cursor:pointer}
+
+/* ── 記事 ── */
+.wrap{max-width:760px;margin:0 auto;padding:130px 24px 90px}
+.crumb{font-size:12px;color:var(--w5);margin-bottom:22px;line-height:1.7}
+.crumb a{color:var(--w5);text-decoration:none}
+.crumb a:hover{color:var(--white)}
+.a-cat{display:inline-block;font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(77,255,223,.35);padding:5px 11px;margin-bottom:18px}
+h1{font-size:clamp(24px,3.4vw,34px);font-weight:700;line-height:1.5;letter-spacing:.01em;margin-bottom:18px;text-wrap:balance}
+.a-meta{font-size:12px;color:var(--w5);letter-spacing:.04em;padding-bottom:26px;border-bottom:1px solid var(--w15)}
+.a-lead{font-size:15px;line-height:2.05;color:var(--tx2);margin:30px 0 0}
+
+.toc{background:var(--surface);border:1px solid var(--w15);padding:24px 26px;margin:38px 0}
+.toc-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:14px}
+.toc ol{list-style:none;counter-reset:t}
+.toc li{counter-increment:t;font-size:14px;line-height:1.9;padding-left:30px;position:relative}
+.toc li::before{content:counter(t,decimal-leading-zero);position:absolute;left:0;font-family:var(--ff-j);font-size:11px;font-weight:600;color:var(--w3);top:4px}
+.toc a{color:var(--tx2);text-decoration:none}
+.toc a:hover{color:var(--accent)}
+
+article h2{font-size:21px;font-weight:700;line-height:1.6;margin:56px 0 20px;padding-left:14px;border-left:3px solid var(--accent);scroll-margin-top:90px}
+article h3{font-size:17px;font-weight:600;line-height:1.6;margin:36px 0 14px;color:var(--white)}
+article p{font-size:15px;line-height:2.05;margin-bottom:20px;color:var(--tx)}
+article ul,article ol{margin:0 0 22px 1.4em}
+article li{font-size:15px;line-height:1.95;margin-bottom:9px}
+article strong{font-weight:700;color:var(--white)}
+article a.plink{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+
+.tbl{width:100%;border-collapse:collapse;margin:8px 0 26px;font-size:14px;display:block;overflow-x:auto}
+.tbl th,.tbl td{border:1px solid var(--w15);padding:11px 13px;text-align:left;line-height:1.7}
+.tbl th{background:var(--w04);font-weight:600;white-space:nowrap}
+
+.note{background:var(--w04);border-left:3px solid var(--w3);padding:18px 20px;margin:26px 0;font-size:14px;line-height:1.95;color:var(--tx2)}
+
+.faq{margin:50px 0 0}
+.faq-i{border-bottom:1px solid var(--w15);padding:20px 0}
+.faq-q{font-size:15px;font-weight:600;margin-bottom:10px;line-height:1.7}
+.faq-q::before{content:'Q.';font-family:var(--ff-j);color:var(--accent);margin-right:8px;font-weight:700}
+.faq-a{font-size:14px;line-height:1.95;color:var(--tx2)}
+
+.recap{background:var(--surface);border:1px solid var(--w15);padding:26px 28px;margin:50px 0 0}
+.recap-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:14px}
+.recap ul{margin:0 0 0 1.2em}
+.recap li{font-size:14px;line-height:1.9;margin-bottom:10px;color:var(--tx2)}
+
+/* ── セグメント別CTA ── */
+.cta{border:1px solid rgba(77,255,223,.3);background:linear-gradient(180deg,rgba(77,255,223,.05),transparent);padding:34px 30px;margin:56px 0 0;text-align:center}
+.cta-t{font-family:var(--ff-j);font-size:19px;font-weight:700;line-height:1.5;margin-bottom:12px}
+.cta-s{font-size:14px;line-height:1.95;color:var(--tx2);margin-bottom:22px}
+.cta-b{display:inline-block;font-family:var(--ff-j);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bg);background:var(--white);text-decoration:none;padding:14px 34px;transition:background .3s,transform .2s}
+.cta-b:hover{background:var(--accent);transform:translateY(-2px)}
+
+.rel{margin:60px 0 0;border-top:1px solid var(--w15);padding-top:34px}
+.rel-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:16px}
+.rel a{display:block;font-size:14px;line-height:1.75;color:var(--tx2);text-decoration:none;padding:11px 0;border-bottom:1px solid var(--w08)}
+.rel a:hover{color:var(--accent)}
+
+/* ── 一覧ページ ── */
+.hd{max-width:1000px;margin:0 auto;padding:140px 24px 0}
+.hd .s-lbl{font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--w5);margin-bottom:12px}
+.hd h1{font-family:var(--ff-j);font-size:clamp(26px,3.8vw,46px);line-height:1.15}
+.hd p{font-size:14px;line-height:1.95;color:var(--tx2);margin-top:18px;max-width:600px}
+.cats{max-width:1000px;margin:44px auto 0;padding:0 24px;display:flex;flex-wrap:wrap;gap:10px}
+.cats a{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);text-decoration:none;border:1px solid var(--w15);padding:9px 18px;transition:all .3s}
+.cats a:hover,.cats a.on{background:var(--white);color:var(--bg);border-color:var(--white)}
+.list{max-width:1000px;margin:0 auto;padding:46px 24px 100px;display:grid;gap:1px;background:var(--w15);border:1px solid var(--w15);border-radius:0}
+.list{background:transparent;border:none;gap:0}
+.card{display:block;text-decoration:none;padding:26px 4px;border-bottom:1px solid var(--w15);transition:background .3s}
+.card:hover{background:var(--w04)}
+.card-c{font-family:var(--ff-j);font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
+.card-t{font-size:16px;font-weight:600;line-height:1.65;margin-bottom:9px;color:var(--white)}
+.card-d{font-size:13px;line-height:1.85;color:var(--tx2)}
+.empty{padding:60px 4px;color:var(--w5);font-size:14px}
+
+footer{padding:30px 52px;border-top:1px solid var(--w15);text-align:center}
+.f-copy{font-family:var(--ff-j);font-size:10px;font-weight:300;color:var(--w3);letter-spacing:.18em}
+
+@media(max-width:768px){
+  #nav{padding:0 20px;height:64px}
+  .logo img{height:48px}
+  .nav-links{display:none}
+  .ham{display:flex}
+  .wrap{padding:110px 20px 70px}
+  .hd{padding:110px 20px 0}
+  .cats,.list{padding-left:20px;padding-right:20px}
+  article h2{font-size:19px;margin:44px 0 16px}
+  footer{padding:26px 20px}
+}
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+
+<nav id="nav">
+  <a href="/" class="logo"><img src="/logo.png" alt="BLAZE"></a>
+  <ul class="nav-links">
+    <li><a href="/service/">Service</a></li>
+    <li><a href="/company/">Company</a></li>
+    <li><a href="/column/">Column</a></li>
+    <li><a href="/news/">News</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+  <div class="ham" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="toggleMenu()">✕</button>
+  <a href="/service/" onclick="toggleMenu()">Service</a>
+  <a href="/company/" onclick="toggleMenu()">Company</a>
+  <a href="/column/"  onclick="toggleMenu()">Column</a>
+  <a href="/news/"    onclick="toggleMenu()">News</a>
+  <a href="/contact/" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="wrap">
+  <p class="crumb"><a href="/">ホーム</a> ／ <a href="/column/">コラム</a> ／ <a href="/column/sales/">営業育成・事業成長</a></p>
+  <span class="a-cat">Sales Leadership</span>
+  <h1>営業管理職を何で評価すべきか｜プレイヤー評価との違い</h1>
+  <p class="a-meta">最終更新 2026-08-27</p>
+  <p class="a-lead">営業管理職の評価は、多くの会社で「チームの売上達成率」一本です。分かりやすく、反論しにくい。しかしこの評価設計は、管理職に「自分で売って埋める」「短期の数字を優先する」「育成を後回しにする」という行動を合理的に選ばせます。つまり、会社が管理職に期待する行動と、評価が促す行動が逆を向いているのです。この記事では、チーム売上だけの評価が生む歪みを整理し、管理職の仕事の本質に沿った評価指標の設計方法を解説します。</p>
+
+  <nav class="toc"><p class="toc-t">目次</p><ol><li><a href="#s1">チーム売上だけの評価が生む3つの歪み</a></li><li><a href="#s2">管理職の仕事の本質から評価軸を導く</a></li><li><a href="#s3">指標の設計例：3側面をどう測るか</a></li><li><a href="#s4">評価の重みづけ：フェーズで変える</a></li><li><a href="#s5">運用の実務：期初の合意と期中の観測</a></li><li><a href="#s6">評価される側としての動き方</a></li></ol></nav>
+
+  <article>
+<h2 id="s1">チーム売上だけの評価が生む3つの歪み</h2>
+<p>評価制度は、建前が何であれ、実際には行動の設計図として機能します。チーム売上達成率だけで管理職を評価すると、次の3つの行動が「合理的」になります。</p>
+<p><strong>歪み①：引き取りが正当化される</strong>。チーム売上には、管理職自身の受注も含まれます。メンバーに任せて受注率が下がるより、自分で売った方が達成率は上がる。評価上、引き取りは常に正解です。しかし引き取りが続いた組織で何が起きるかは、別の記事で詳しく述べた通りです。管理職への依存が深まり、メンバーは育たず、組織はその人の稼働の上限を超えられなくなります。</p>
+<p><strong>歪み②：期をまたぐ投資が損になる</strong>。育成、仕組みづくり、パイプラインの仕込み。これらの成果は数ヶ月から1年後に現れます。単期の達成率で評価される管理職にとって、今期の時間を来期の成果に投じるのは、評価上の損失です。結果、どの期も「今期の数字」に全リソースが投じられ、組織は自転車操業から抜けられません。</p>
+<p><strong>歪み③：無理筋の達成が美談になる</strong>。期末の値引き乱発、翌期案件の前倒し計上、メンバーへの過剰な圧力。達成率だけを見る評価は、達成の中身を問いません。翌期の単価下落や離職として請求書が届く頃には、評価はもう確定しています。</p>
+<p class="note">重要なのは、これらが管理職の人格の問題ではないことです。評価設計が促す方向に行動が寄るのは、組織の自然法則です。歪んだ行動を責める前に、評価の設計を疑う必要があります。</p>
+<h2 id="s2">管理職の仕事の本質から評価軸を導く</h2>
+<p>では何で評価すべきか。出発点は「管理職に何を期待しているか」の言語化です。</p>
+<p>プレイヤーの仕事は「自分で成果を出すこと」でした。管理職の仕事は「<strong>自分がいなくても成果が出る状態を作ること</strong>」です。この定義に立つと、評価すべき対象は売上そのものではなく、売上を生む構造がどれだけ強くなったかになります。</p>
+<p>構造の強さは、次の3つの側面に分解できます。</p>
+<ol><li><strong>今期の成果</strong> — チームとして目標を達成したか。これは引き続き評価の柱。ただし「管理職自身の受注を除いた達成率」を併記する</li><li><strong>再現性の向上</strong> — 成果が特定個人に依存せず出せるようになっているか。育成の進捗、委任の進捗、プロセスの標準化</li><li><strong>翌期以降の仕込み</strong> — 期末時点のパイプライン、顧客基盤の健全性、チームの状態（離職リスク、エンゲージメント）</li></ol>
+<p>この3側面は「今期・構造・未来」と言い換えられます。売上一本の評価は「今期」しか見ていません。管理職の仕事の大半は「構造」と「未来」に属しているのに、そこが評価されないから、仕事の重心が今期に偏るのです。</p>
+<h2 id="s3">指標の設計例：3側面をどう測るか</h2>
+<p>3側面を実際の指標に落とす例を示します。すべてを採用する必要はなく、組織の課題に合わせて各側面から1〜2個を選ぶ形で十分です。</p>
+<table class="tbl"><tr><th>側面</th><th>指標例</th><th>何が分かるか</th></tr><tr><td>今期の成果</td><td>チーム達成率／管理職自身の受注を除いた達成率</td><td>チームの実力と、管理職依存度の両方</td></tr><tr><td>再現性</td><td>メンバーの単独受注件数・金額の推移</td><td>委任と育成が受注まで到達しているか</td></tr><tr><td>再現性</td><td>目標達成メンバーの人数比率</td><td>特定エースへの依存ではなく、底上げができているか</td></tr><tr><td>再現性</td><td>管理職の主担当案件数の推移</td><td>抱え込みから脱しつつあるか</td></tr><tr><td>未来</td><td>期末時点のパイプライン金額（対目標比）</td><td>翌期の数字の仕込みができているか</td></tr><tr><td>未来</td><td>自発的離職率・キーメンバーの定着</td><td>無理な達成で組織を消耗させていないか</td></tr><tr><td>未来</td><td>後任候補の有無と育成段階</td><td>組織の持続性に投資しているか</td></tr></table>
+<p>特に推したいのは「<strong>管理職自身の受注を除いたチーム達成率</strong>」です。ひとつの数字で、チームの実力と管理職依存度を同時に映します。この数字が期を追って改善しているなら、管理職は正しく仕事をしています。全体達成率が高くてもこの数字が横ばいなら、管理職が埋めているだけです。</p>
+<p>「目標達成メンバーの人数比率」も見逃せません。チーム達成率100%には、エース1人が200%で他全員が未達のケースと、全員が100%前後のケースがあります。前者は脆く、後者は強い。達成率だけではこの差が見えません。</p>
+<h3>測りにくいものを無理に数値化しない</h3>
+<p>育成やチームの状態は、数値化しようとすると指標が歪みがちです。たとえば「1on1実施率」を評価に入れると、形だけの1on1が量産されます。測りにくいものは、無理に数字にせず、事実の記述で評価する方が健全です。「この1年でメンバーAが大型案件を単独で回せるようになった。その過程で管理職が何をしたか」を、本人と上長が事実ベースで確認する。定性評価は主観的と嫌われがちですが、歪んだ定量評価より、よほど実態を捉えます。</p>
+<h2 id="s4">評価の重みづけ：フェーズで変える</h2>
+<p>3側面の重みは、固定ではなくチームのフェーズで変えるのが実務的です。</p>
+<p><strong>立ち上げ期</strong>（チーム新設、管理職着任直後）は、今期の成果の比重を高くします。まず数字を作れることを示さないと、組織内の信用が立たず、その後の構造づくりも進められません。目安として今期6：構造3：未来1程度。</p>
+<p><strong>移行期</strong>（委任と育成を本格化させる時期）は、構造の比重を上げます。この時期は移行に伴う数字の谷が想定されるため、今期の比重が高いままだと、移行そのものが評価上の自殺行為になります。今期4：構造4：未来2。移行計画を上長と合意したうえで、この重みに切り替えます。</p>
+<p><strong>安定期</strong>（委任が進み、チームが自走し始めた時期）は、未来の比重を上げます。次の管理職の育成、新市場の開拓、隣接チームへの貢献。今期3：構造3：未来4。この段階の管理職を今期の数字で縛り続けるのは、育った能力の浪費です。</p>
+<p>重みの変更は、期初の目標設定の場で明示的に合意します。フェーズの認識が管理職と上長でずれたまま期末を迎えるのが、評価面談が紛糾する典型的な原因です。</p>
+<h2 id="s5">運用の実務：期初の合意と期中の観測</h2>
+<p>指標を設計しても、運用が期末の一発勝負では機能しません。管理職評価の運用は、期初・期中・期末の3点で設計します。</p>
+<p><strong>期初：指標と重みの合意</strong>。今期のチーム目標と併せて、構造・未来の指標と目標値、3側面の重みを文書で合意します。ここで「移行期なので数字の谷を許容する」といったフェーズ認識も明文化しておきます。期初の30分の合意が、期末の評価面談の紛糾を防ぐ最大の保険です。</p>
+<p><strong>期中：月次での観測</strong>。構造と未来の指標は、期末に初めて見るものではありません。月次の1on1で「メンバー単独受注の進捗」「パイプラインの推移」を今期の数字と同じ画面で確認します。期中に観測されない指標は、実質的に評価されていないのと同じで、行動への影響力を失います。</p>
+<p><strong>期末：事実の記述を突き合わせる</strong>。数値指標は淡々と確認し、時間は定性面——育成の具体的なエピソード、仕組みづくりの内容、来期に向けた組織の状態——の対話に使います。管理職本人に「この1年で組織の何が変わったか」を先に書いてもらい、上長の認識と突き合わせる形式が、面談の質を大きく上げます。</p>
+<p>運用でもうひとつ重要なのは、<strong>評価者である上長自身の理解</strong>です。構造や未来の指標を導入しても、上長が結局「で、数字は?」としか聞かないなら、制度は紙の上の飾りです。管理職評価の変更は、その上の階層——部長や役員——の評価観の変更とセットで初めて機能します。導入時には評価者側への説明と訓練を省かないでください。</p>
+<h2 id="s6">評価される側としての動き方</h2>
+<p>最後に、視点を変えます。あなたが管理職で、会社の評価制度が「チーム売上一本」のまま変わらない場合、どう動くべきか。</p>
+<p>制度の変更を待つ必要はありません。<strong>自分の上長との間で、実質的な評価軸を先回りして提案する</strong>ことができます。期初に、今期の目標と併せて「管理職自身の受注を除いた達成率」「メンバー単独受注の目標」「期末パイプラインの目標」を自分から提示し、期中の報告もその構成で行う。制度が変わらなくても、上長の頭の中の評価軸は変えられます。</p>
+<p>この動きには副次効果があります。構造と未来の指標を自分から提示する管理職は、上長から見て「組織を経営視点で見ている人材」に映ります。それは次のポジション——部長、事業責任者——への評価材料そのものです。</p>
+<p>また、自分がメンバーを評価する立場でもあることを忘れないでください。管理職が売上一本で評価される歪みをここまで論じてきましたが、同じ歪みを自分がメンバーに対して再生産していないか。挑戦や学習を評価に織り込んでいるか。評価設計への感度は、まず自分の手の届く範囲から実践できます。</p>
+<p>評価は、組織が何を大事にしているかの最も正直な表明です。管理職の評価に「構造」と「未来」が入っていない組織は、口で何を言おうと、短期の数字しか大事にしていません。逆に言えば、評価設計を変えることは、組織の時間軸を変える最も確実な方法のひとつです。</p>
+<p>採用の場面でも同じことが言えます。優秀な営業管理職ほど、転職先を選ぶ際に評価制度を見ています。「チーム売上一本」の会社は、彼らの目には「引き取りを強いられ、育成が報われない会社」に映ります。管理職評価の設計は、社内の行動設計であると同時に、どんな管理職人材を惹きつけられるかという採用力の問題でもあるのです。</p>
+<div class="faq"><h2 id="faq">よくある質問</h2><div class="faq-i"><p class="faq-q">プレイングマネージャーの場合、個人目標とチーム評価はどう両立させますか?</p><p class="faq-a">個人目標とチーム目標を単純合算せず、別枠で管理してください。合算すると「自分の受注でチーム未達を埋める」行動が常に可能になり、実質プレイヤー評価に戻ります。個人枠は個人枠として達成を見つつ、チーム評価には「自身の受注を除いた達成率」を使う。この分離が、プレイングマネージャー評価の要点です。</p></div><div class="faq-i"><p class="faq-q">小さい会社で評価制度自体がありません。何から始めるべきですか?</p><p class="faq-a">制度がないのは、むしろ設計の自由がある状態です。まず経営者と管理職の間で「今期・構造・未来」の3側面それぞれに1指標ずつ、計3つだけ合意することから始めてください。精緻な制度より、少数の指標を期初に合意し期末に振り返る習慣の方が、行動への影響は大きいです。</p></div><div class="faq-i"><p class="faq-q">「自身の受注を除いた達成率」を導入したら、管理職が全く売らなくなりませんか?</p><p class="faq-a">全体のチーム達成率も柱として残すため、管理職が売る動機は残ります。変わるのは「自分で売る」と「メンバーが売れるようにする」の限界効用の比較です。また立ち上げ期のチームでは管理職の受注が必要な局面もあるため、フェーズに応じた重みづけと併用してください。</p></div><div class="faq-i"><p class="faq-q">パイプラインを評価に入れると、水増しされませんか?</p><p class="faq-a">されます。対策は、金額だけでなく質の定義をセットにすることです。フェーズ定義（提案済み・見積提出済みなど客観的な状態）を揃え、商談化の基準を統一し、四半期ごとに実受注への転換率を検証する。転換率が異常に低いパイプラインは、その時点で水増しが露呈します。</p></div><div class="faq-i"><p class="faq-q">メンバーの離職率を評価に入れるのは酷ではありませんか?</p><p class="faq-a">離職率を単独で減点材料にすると、問題のある人材の抱え込みや、退職希望者への慰留圧力という別の歪みを生みます。使うなら「キーメンバーの予期しない離職」に限定するか、離職そのものではなく退職面談から見える組織要因を定性的に扱う方が健全です。</p></div></div>
+<div class="recap"><p class="recap-t">この記事のまとめ</p><ul><li>チーム売上一本の評価は、引き取り・短期偏重・無理筋の達成を合理的な行動にしてしまう</li><li>管理職の仕事は「自分がいなくても成果が出る状態を作ること」。評価対象は売上を生む構造の強化</li><li>評価軸は「今期の成果・再現性・翌期以降の仕込み」の3側面で設計する</li><li>最も推せる指標は「管理職自身の受注を除いたチーム達成率」。実力と依存度を同時に映す</li><li>測りにくい育成は無理に数値化せず、事実の記述で評価する方が歪みが少ない</li><li>3側面の重みは立ち上げ期・移行期・安定期のフェーズで変え、期初に上長と合意する</li><li>制度が変わらなくても、自分から実質的な評価軸を上長に提案することで運用は変えられる</li></ul></div>
+  </article>
+
+  <div class="cta"><p class="cta-t">営業管理職の育成について相談する</p><p class="cta-s">プレイングマネージャーの時間配分から部下育成の型まで、営業組織を率いる立場に必要なスキルを体系化した研修プログラムをご案内します。</p><a class="cta-b" href="/contact/?from=column-sales">営業管理職研修を相談する</a></div>
+  <div class="rel"><p class="rel-t">関連記事</p><a href="/column/shinnin-manager-90nichi/">新任営業管理職が最初の90日にやるべきこと</a><a href="/column/playing-manager-jikan-haibun/">プレイングマネージャーの時間配分｜自分の数字とチームの数字を両立させる方法</a><a href="/column/player-manager-ikou/">プレイヤーからマネージャーへの移行で捨てるべきもの</a><a href="/column/manager-annai-jikan-kakuho/">マネジメント時間を仕組みで確保する4つの方法</a><a href="/column/manager-anken-jougen/">管理職が自分で持つ案件数に上限を設ける理由</a></div>
+</div>
+
+<footer>
+  <p class="f-copy">&copy; 2026 BLAZE Inc. ALL RIGHTS RESERVED.</p>
+</footer>
+
+<script>
+const bgCv = document.getElementById('bg-canvas');
+const bgCtx = bgCv.getContext('2d');
+let W, H;
+function resizeBg(){ W = bgCv.width = window.innerWidth; H = bgCv.height = window.innerHeight; }
+resizeBg();
+window.addEventListener('resize', resizeBg);
+
+const beams = [
+  { c:'rgba(30,75,220,', lw:1.8, al:.45, phase:0.0, ox:[-.05,.22,.55,1.05], oy:[.50,.28,.72,.45], ax:[0,.12,.10,0], ay:[.08,.14,.12,.07], fx:[0,.41,.37,0], fy:[.29,.38,.43,.31] },
+  { c:'rgba(20,60,200,', lw:1.4, al:.38, phase:1.3, ox:[-.05,.18,.60,1.05], oy:[.45,.70,.25,.55], ax:[0,.10,.13,0], ay:[.09,.12,.10,.08], fx:[0,.35,.44,0], fy:[.33,.40,.36,.38] },
+  { c:'rgba(40,90,235,', lw:2.2, al:.30, phase:2.5, ox:[-.05,.30,.68,1.05], oy:[.55,.35,.65,.50], ax:[0,.11,.09,0], ay:[.07,.13,.11,.09], fx:[0,.43,.39,0], fy:[.37,.34,.41,.35] },
+  { c:'rgba(15,55,195,', lw:1.2, al:.28, phase:3.8, ox:[-.05,.45,.50,1.05], oy:[.42,.58,.42,.60], ax:[0,.09,.12,0], ay:[.10,.11,.09,.08], fx:[0,.38,.45,0], fy:[.32,.42,.38,.33] },
+  { c:'rgba(50,100,240,',lw:1.8, al:.35, phase:5.1, ox:[-.05,.15,.80,1.05], oy:[.48,.75,.28,.52], ax:[0,.13,.08,0], ay:[.11,.10,.13,.09], fx:[0,.46,.36,0], fy:[.40,.35,.44,.37] },
+];
+
+function drawBg(ts){
+  bgCtx.fillStyle = '#000008';
+  bgCtx.fillRect(0, 0, W, H);
+  const t = ts * 0.001;
+  const gx = W * (.2 + .08 * Math.sin(t * .12));
+  const gy = H * (.5 + .08 * Math.cos(t * .10));
+  const gr = bgCtx.createRadialGradient(gx,gy,0, gx,gy, Math.max(W,H)*.8);
+  gr.addColorStop(0, 'rgba(10,35,170,0.4)');
+  gr.addColorStop(.4,'rgba(6,20,120,0.15)');
+  gr.addColorStop(1, 'rgba(0,0,0,0)');
+  bgCtx.fillStyle = gr;
+  bgCtx.fillRect(0, 0, W, H);
+  beams.forEach(b => {
+    const ph = b.phase;
+    const pts = [
+      [b.ox[0]*W, (b.oy[0]+b.ay[0]*Math.sin(t*b.fy[0]+ph+0.0))*H],
+      [(b.ox[1]+b.ax[1]*Math.sin(t*b.fx[1]+ph+1.0))*W, (b.oy[1]+b.ay[1]*Math.sin(t*b.fy[1]+ph+0.5))*H],
+      [(b.ox[2]+b.ax[2]*Math.sin(t*b.fx[2]+ph+2.0))*W, (b.oy[2]+b.ay[2]*Math.sin(t*b.fy[2]+ph+1.5))*H],
+      [b.ox[3]*W, (b.oy[3]+b.ay[3]*Math.sin(t*b.fy[3]+ph+0.8))*H],
+    ];
+    const [p0,p1,p2,p3] = pts;
+    bgCtx.beginPath();
+    bgCtx.moveTo(p0[0],p0[1]);
+    bgCtx.bezierCurveTo(p1[0],p1[1],p2[0],p2[1],p3[0],p3[1]);
+    const grd = bgCtx.createLinearGradient(p0[0],p0[1],p3[0],p3[1]);
+    grd.addColorStop(0, b.c+'0)');
+    grd.addColorStop(.2,b.c+b.al+')');
+    grd.addColorStop(.5,b.c+(b.al*1.3).toFixed(2)+')');
+    grd.addColorStop(.8,b.c+b.al+')');
+    grd.addColorStop(1, b.c+'0)');
+    bgCtx.strokeStyle = grd;
+    bgCtx.lineWidth = b.lw;
+    bgCtx.shadowBlur = 24;
+    bgCtx.shadowColor = b.c+'0.6)';
+    bgCtx.stroke();
+    bgCtx.shadowBlur = 0;
+  });
+  requestAnimationFrame(drawBg);
+}
+requestAnimationFrame(drawBg);
+
+window.addEventListener('scroll', function(){
+  document.getElementById('nav').classList.toggle('s', window.scrollY > 40);
+});
+function toggleMenu(){
+  document.getElementById('ham').classList.toggle('open');
+  document.getElementById('mobMenu').classList.toggle('open');
+}
+</script>
+</body>
+</html>
