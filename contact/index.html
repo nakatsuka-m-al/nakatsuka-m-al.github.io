@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H67Y48Q10E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H67Y48Q10E');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="株式会社BLAZEへのお問い合わせフォーム。採用支援・営業管理職研修・AI業務自動化・アライアンスなど、各種ご相談を承っております。">
+<meta property="og:title" content="お問い合わせ | 株式会社BLAZE">
+<meta property="og:description" content="採用支援・営業管理職研修・AI業務自動化など、各種ご相談を承っております。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blaze-ltd.com/contact/">
+<meta property="og:image" content="https://blaze-ltd.com/ogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blaze-ltd.com/ogp.png">
+<meta name="robots" content="index, follow">
+<title>お問い合わせ | 株式会社BLAZE</title>
+<link rel="canonical" href="https://blaze-ltd.com/contact/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#03050f;
+  --accent:#4DFFDF;
+  --white:#ffffff;
+  --w8:rgba(255,255,255,0.8);
+  --w5:rgba(255,255,255,0.5);
+  --w3:rgba(255,255,255,0.3);
+  --w15:rgba(255,255,255,0.15);
+  --w08:rgba(255,255,255,0.08);
+  --w04:rgba(255,255,255,0.04);
+  --ff-j:'Jost',sans-serif;
+  --ff-n:'Noto Sans JP',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:var(--ff-n);overflow-x:hidden}
+#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+nav,main,footer{position:relative;z-index:1}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:80px;display:flex;align-items:center;justify-content:space-between;padding:0 52px;transition:background .3s,backdrop-filter .3s,height .3s}
+nav.s{background:rgba(3,5,15,.85);backdrop-filter:blur(14px);height:64px;border-bottom:1px solid var(--w08)}
+.logo img{height:56px;display:block}
+.nav-links{display:flex;gap:36px;list-style:none}
+.nav-links a{font-family:var(--ff-j);font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);text-decoration:none;transition:color .3s;position:relative}
+.nav-links a:hover{color:var(--white)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.ham span{width:22px;height:1.5px;background:var(--white);transition:all .3s}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob-menu{position:fixed;inset:0;z-index:99;background:rgba(3,5,15,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;opacity:0;pointer-events:none;transition:opacity .3s}
+.mob-menu.open{opacity:1;pointer-events:auto}
+.mob-menu a{font-family:var(--ff-j);font-size:20px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--white);text-decoration:none}
+.mob-close{position:absolute;top:24px;right:24px;background:none;border:none;color:var(--white);font-size:22px;cursor:pointer}
+
+.s-lbl{font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--w5);margin-bottom:12px}
+.s-ttl{font-family:var(--ff-j);font-size:clamp(26px,3.8vw,50px);font-weight:700;line-height:1.1;letter-spacing:-.01em}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.reveal.on{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+#news-page{padding:180px 52px 110px;max-width:920px;margin:0 auto}
+.news-list{margin-top:52px}
+.news-row{display:block;padding:22px 0;border-bottom:1px solid var(--w15);position:relative;transition:background .3s}
+a.news-row:hover{background:var(--w04)}
+.nd{font-family:var(--ff-j);font-size:11px;color:var(--w5);letter-spacing:.04em;display:block;margin-bottom:8px}
+.nt{font-family:var(--ff-j);font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--white);border:1px solid var(--w3);padding:3px 7px;display:inline-block;vertical-align:middle;margin-right:10px}
+.nn{font-size:14px;font-weight:300;line-height:1.6;display:inline;vertical-align:middle}
+.na{position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:13px;opacity:.5}
+
+.back-link{display:inline-flex;align-items:center;gap:8px;font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);text-decoration:none;margin-top:48px;transition:color .3s}
+.back-link:hover{color:var(--white)}
+
+footer{padding:30px 52px;border-top:1px solid var(--w15);display:flex;align-items:center;background:rgba(3,5,15,0.7);backdrop-filter:blur(12px);position:relative}
+.f-copy{font-family:var(--ff-j);font-size:10px;font-weight:300;color:var(--w3)}
+
+@media(max-width:768px){
+  nav{padding:0 20px;height:64px}
+  .logo img{height:48px}
+  .nav-links{display:none}
+  .ham{display:flex}
+  #news-page{padding:130px 20px 72px}
+  .news-row{padding:16px 0}
+  footer{flex-direction:column;gap:12px;padding:24px 20px}
+  footer .f-copy{position:static !important;transform:none !important;text-align:center}
+}
+
+/* ── CONTACT PAGE ── */
+#contact{text-align:center;padding:150px 52px 110px;max-width:900px;margin:0 auto}
+.c-sub{font-size:14px;font-weight:300;line-height:1.9;color:var(--w8);margin:18px auto 40px;max-width:460px}
+.c-form{max-width:500px;margin:0 auto;display:flex;flex-direction:column;gap:11px;text-align:left}
+.c-row{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.c-field{display:flex;flex-direction:column;gap:5px}
+.c-field label{font-family:var(--ff-j);font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5)}
+.c-field input,.c-field textarea{background:rgba(255,255,255,0.05);border:1px solid var(--w15);color:var(--white);font-family:var(--ff-n);font-size:13px;padding:12px 14px;outline:none;resize:none;transition:border-color .3s;backdrop-filter:blur(4px)}
+.c-field input:focus,.c-field textarea:focus{border-color:var(--w5)}
+.c-btn{font-family:var(--ff-j);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--bg);background:var(--white);border:none;padding:16px;width:100%;cursor:pointer;margin-top:4px;transition:background .3s,transform .2s}
+.c-btn:hover{background:var(--accent);transform:translateY(-2px)}
+.c-btn:disabled{opacity:.45;cursor:not-allowed;transform:none;background:var(--white)}
+.c-field select{background-color:rgba(255,255,255,0.05);border:1px solid var(--w15);color:var(--white);font-family:var(--ff-n);font-size:13px;padding:12px 14px;outline:none;transition:border-color .3s;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='rgba(255,255,255,0.45)' stroke-width='1.4' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.c-field select:focus{border-color:var(--w5)}
+.c-field select option{background:#0a1024;color:var(--white)}
+.c-req{color:var(--accent);margin-left:3px}
+.c-consent{display:flex;align-items:flex-start;gap:9px;margin-top:8px;font-size:12px;line-height:1.7;color:var(--w8);text-align:left;cursor:pointer}
+.c-consent input{width:15px;height:15px;margin-top:2px;flex-shrink:0;accent-color:var(--accent);cursor:pointer}
+.c-consent a{color:var(--w8);text-decoration:underline;text-underline-offset:3px}
+.c-hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0}
+.c-msg{display:none;margin-top:12px;font-size:13px;line-height:1.8;padding:13px 15px;text-align:left;border:1px solid rgba(255,120,120,.45);background:rgba(255,120,120,.08);color:#ffb3b3}
+.c-msg.on{display:block}
+.c-msg a{color:#ffb3b3;text-decoration:underline;text-underline-offset:3px}
+.c-done{display:none;max-width:500px;margin:0 auto;padding:44px 28px;border:1px solid var(--w15);background:var(--w04);text-align:center}
+.c-done.on{display:block}
+.c-done-t{font-family:var(--ff-j);font-size:20px;font-weight:700;margin-bottom:14px}
+.c-done-p{font-size:13px;line-height:2;color:var(--w8);font-weight:300}
+@media(max-width:768px){
+  #contact{padding:120px 20px 72px}
+}
+
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+
+<nav id="nav">
+  <a href="/" class="logo">
+    <img src="../logo.png" alt="BLAZE">
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#vision">Vision</a></li>
+    <li><a href="/service/">Service</a></li>
+    <li><a href="/company/">Company</a></li>
+    <li><a href="/news/">News</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+  <div class="ham" id="ham" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="toggleMenu()">✕</button>
+  <a href="/#vision"   onclick="toggleMenu()">Vision</a>
+  <a href="/service/"  onclick="toggleMenu()">Service</a>
+  <a href="/company/"  onclick="toggleMenu()">Company</a>
+  <a href="/news/"     onclick="toggleMenu()">News</a>
+  <a href="/contact/"  onclick="toggleMenu()">Contact</a>
+</div>
+
+
+<main>
+<section id="contact">
+  <div class="s-lbl" style="display:inline-block;margin-bottom:12px">Contact</div>
+  <h1 class="s-ttl" style="text-align:center">お問い合わせ</h1>
+  <p class="c-sub">サービスのご相談・ご質問はお気軽にどうぞ。<br><span style="font-size:12px;color:var(--w5);">お問い合わせの前に<a href="/privacy/" style="color:var(--w5);text-decoration:underline;text-underline-offset:3px;">プライバシーポリシー</a>をご確認ください。</span></p>
+
+  <form class="c-form" id="cform" novalidate>
+    <div class="c-row">
+      <div class="c-field">
+        <label for="f-company">会社名<span class="c-req">*</span></label>
+        <input type="text" id="f-company" name="company" required autocomplete="organization">
+      </div>
+      <div class="c-field">
+        <label for="f-name">お名前<span class="c-req">*</span></label>
+        <input type="text" id="f-name" name="name" required autocomplete="name">
+      </div>
+    </div>
+    <div class="c-row">
+      <div class="c-field">
+        <label for="f-email">メールアドレス<span class="c-req">*</span></label>
+        <input type="email" id="f-email" name="email" required autocomplete="email">
+      </div>
+      <div class="c-field">
+        <label for="f-tel">電話番号（任意）</label>
+        <input type="tel" id="f-tel" name="tel" autocomplete="tel">
+      </div>
+    </div>
+    <div class="c-field">
+      <label for="f-category">お問い合わせ内容<span class="c-req">*</span></label>
+      <select id="f-category" name="category" required>
+        <option value="">選択してください</option>
+        <option>自社採用支援に関してのお問合わせ</option>
+        <option>人材派遣・紹介会社の集客支援に関してのお問合わせ</option>
+        <option>営業管理職研修に関してのお問合わせ</option>
+        <option>AI業務自動化に関してのお問い合わせ</option>
+        <option>弊社への営業・アライアンスのご連絡</option>
+        <option>その他</option>
+      </select>
+    </div>
+    <div class="c-field">
+      <label for="f-message">詳細<span class="c-req">*</span></label>
+      <textarea id="f-message" name="message" rows="6" required></textarea>
+    </div>
+    <label class="c-consent">
+      <input type="checkbox" id="f-agree">
+      <span><a href="/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a>に同意のうえ送信します</span>
+    </label>
+    <input type="text" name="website" class="c-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button type="submit" class="c-btn" id="c-submit">送信する</button>
+    <div class="c-msg" id="c-err" role="alert"></div>
+  </form>
+
+  <div class="c-done" id="c-done" role="status">
+    <div class="c-done-t">送信が完了しました</div>
+    <p class="c-done-p">お問い合わせありがとうございます。<br>ご入力のメールアドレスへ確認メールをお送りしました。<br>担当者より2営業日以内にご連絡いたします。</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p class="f-copy" style="position:absolute;left:50%;transform:translateX(-50%);letter-spacing:.18em;white-space:nowrap;">© 2026 BLAZE Inc. ALL RIGHTS RESERVED.</p>
+</footer>
+
+<script>
+const bgCv = document.getElementById('bg-canvas');
+const bgCtx = bgCv.getContext('2d');
+let W, H;
+function resizeBg(){ W = bgCv.width = window.innerWidth; H = bgCv.height = window.innerHeight; }
+resizeBg();
+window.addEventListener('resize', resizeBg);
+
+const beams = [
+  { c:'rgba(30,75,220,', lw:1.8, al:.45, phase:0.0, ox:[-.05,.22,.55,1.05], oy:[.50,.28,.72,.45], ax:[0,.12,.10,0], ay:[.08,.14,.12,.07], fx:[0,.41,.37,0], fy:[.29,.38,.43,.31] },
+  { c:'rgba(20,60,200,', lw:1.4, al:.38, phase:1.3, ox:[-.05,.18,.60,1.05], oy:[.45,.70,.25,.55], ax:[0,.10,.13,0], ay:[.09,.12,.10,.08], fx:[0,.35,.44,0], fy:[.33,.40,.36,.38] },
+  { c:'rgba(40,90,235,', lw:2.2, al:.30, phase:2.5, ox:[-.05,.30,.68,1.05], oy:[.55,.35,.65,.50], ax:[0,.11,.09,0], ay:[.07,.13,.11,.09], fx:[0,.43,.39,0], fy:[.37,.34,.41,.35] },
+  { c:'rgba(15,55,195,', lw:1.2, al:.28, phase:3.8, ox:[-.05,.45,.50,1.05], oy:[.42,.58,.42,.60], ax:[0,.09,.12,0], ay:[.10,.11,.09,.08], fx:[0,.38,.45,0], fy:[.32,.42,.38,.33] },
+  { c:'rgba(50,100,240,',lw:1.8, al:.35, phase:5.1, ox:[-.05,.15,.80,1.05], oy:[.48,.75,.28,.52], ax:[0,.13,.08,0], ay:[.11,.10,.13,.09], fx:[0,.46,.36,0], fy:[.40,.35,.44,.37] },
+];
+
+function drawBg(ts){
+  bgCtx.fillStyle = '#000008';
+  bgCtx.fillRect(0, 0, W, H);
+  const t = ts * 0.001;
+  const gx = W * (.2 + .08 * Math.sin(t * .12));
+  const gy = H * (.5 + .08 * Math.cos(t * .10));
+  const gr = bgCtx.createRadialGradient(gx,gy,0, gx,gy, Math.max(W,H)*.8);
+  gr.addColorStop(0, 'rgba(10,35,170,0.4)');
+  gr.addColorStop(.4,'rgba(6,20,120,0.15)');
+  gr.addColorStop(1, 'rgba(0,0,0,0)');
+  bgCtx.fillStyle = gr;
+  bgCtx.fillRect(0, 0, W, H);
+  beams.forEach(b => {
+    const ph = b.phase;
+    const pts = [
+      [b.ox[0]*W, (b.oy[0]+b.ay[0]*Math.sin(t*b.fy[0]+ph+0.0))*H],
+      [(b.ox[1]+b.ax[1]*Math.sin(t*b.fx[1]+ph+1.0))*W, (b.oy[1]+b.ay[1]*Math.sin(t*b.fy[1]+ph+0.5))*H],
+      [(b.ox[2]+b.ax[2]*Math.sin(t*b.fx[2]+ph+2.0))*W, (b.oy[2]+b.ay[2]*Math.sin(t*b.fy[2]+ph+1.5))*H],
+      [b.ox[3]*W, (b.oy[3]+b.ay[3]*Math.sin(t*b.fy[3]+ph+0.8))*H],
+    ];
+    const [p0,p1,p2,p3] = pts;
+    bgCtx.beginPath();
+    bgCtx.moveTo(p0[0],p0[1]);
+    bgCtx.bezierCurveTo(p1[0],p1[1],p2[0],p2[1],p3[0],p3[1]);
+    const grd = bgCtx.createLinearGradient(p0[0],p0[1],p3[0],p3[1]);
+    grd.addColorStop(0, b.c+'0)');
+    grd.addColorStop(.2,b.c+b.al+')');
+    grd.addColorStop(.5,b.c+(b.al*1.3).toFixed(2)+')');
+    grd.addColorStop(.8,b.c+b.al+')');
+    grd.addColorStop(1, b.c+'0)');
+    bgCtx.strokeStyle = grd;
+    bgCtx.lineWidth = b.lw;
+    bgCtx.shadowBlur = 24;
+    bgCtx.shadowColor = b.c+'0.6)';
+    bgCtx.stroke();
+    bgCtx.shadowBlur = 0;
+  });
+  requestAnimationFrame(drawBg);
+}
+requestAnimationFrame(drawBg);
+
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('s', scrollY > 40));
+
+const obs = new IntersectionObserver(
+  es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); }),
+  { threshold: .1 }
+);
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+function toggleMenu(){
+  document.getElementById('ham').classList.toggle('open');
+  document.getElementById('mobMenu').classList.toggle('open');
+}
+
+
+// ── CONTACT FORM
+(function(){
+  // Google Apps Script のウェブアプリURL（Resend経由で送信）
+  const ENDPOINT = 'https://script.google.com/macros/s/AKfycbyEnHUOQwnJzWsEEwIhSg1JVwa4YCSlbn8Js24GdGFQ8CBj2uLtP5F96I_rUdk-0Qza/exec';
+
+  const form = document.getElementById('cform');
+  if(!form) return;
+  const btn  = document.getElementById('c-submit');
+  const err  = document.getElementById('c-err');
+  const done = document.getElementById('c-done');
+  const MAILTO = '<a href="mailto:info@blaze-ltd.com">info@blaze-ltd.com</a>';
+
+  function showErr(html){ err.innerHTML = html; err.classList.add('on'); }
+  function clearErr(){ err.innerHTML = ''; err.classList.remove('on'); }
+
+  form.addEventListener('submit', async function(ev){
+    ev.preventDefault();
+    clearErr();
+
+    const fd = new FormData(form);
+    // 流入元（?from=oubopay 等）。指定がなければ corporate 扱い
+    const from = new URLSearchParams(location.search).get('from') || 'corporate';
+    fd.append('source', from);
+    const val = k => (fd.get(k) || '').toString().trim();
+
+    if(!val('company') || !val('name') || !val('email') || !val('category') || !val('message')){
+      showErr('必須項目をすべてご入力ください。'); return;
+    }
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val('email'))){
+      showErr('メールアドレスの形式をご確認ください。'); return;
+    }
+    if(!document.getElementById('f-agree').checked){
+      showErr('プライバシーポリシーへの同意にチェックをお願いします。'); return;
+    }
+    if(!ENDPOINT){
+      showErr('現在フォームを準備中です。お手数ですが ' + MAILTO + ' まで直接ご連絡ください。'); return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = '送信中...';
+
+    try{
+      const res = await fetch(ENDPOINT, { method:'POST', body:new URLSearchParams(fd) });
+      const data = await res.json();
+      if(!data.ok) throw new Error(data.error || 'failed');
+      form.style.display = 'none';
+      done.classList.add('on');
+      done.scrollIntoView({ behavior:'smooth', block:'center' });
+      if(typeof gtag === 'function') gtag('event','contact_submit',{ category: val('category'), source: from });
+    }catch(e){
+      showErr('送信に失敗しました。時間をおいて再度お試しいただくか、' + MAILTO + ' まで直接ご連絡ください。');
+      btn.disabled = false;
+      btn.textContent = '送信する';
+    }
+  });
+})();
+</script>
+</body>
+</html>

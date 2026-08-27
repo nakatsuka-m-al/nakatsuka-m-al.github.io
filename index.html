@@ -1126,6 +1126,9 @@ function toggleMenu(){
     clearErr();
 
     const fd = new FormData(form);
+    // 流入元（?from=oubopay 等）。指定がなければ corporate 扱い
+    const from = new URLSearchParams(location.search).get('from') || 'corporate';
+    fd.append('source', from);
     const val = k => (fd.get(k) || '').toString().trim();
 
     if(!val('company') || !val('name') || !val('email') || !val('category') || !val('message')){
@@ -1151,7 +1154,7 @@ function toggleMenu(){
       form.style.display = 'none';
       done.classList.add('on');
       done.scrollIntoView({ behavior:'smooth', block:'center' });
-      if(typeof gtag === 'function') gtag('event','contact_submit',{ category: val('category') });
+      if(typeof gtag === 'function') gtag('event','contact_submit',{ category: val('category'), source: from });
     }catch(e){
       showErr('送信に失敗しました。時間をおいて再度お試しいただくか、' + MAILTO + ' まで直接ご連絡ください。');
       btn.disabled = false;
