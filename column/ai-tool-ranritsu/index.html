@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H67Y48Q10E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H67Y48Q10E');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="気づけば似たようなAIツール・SaaSが部署ごとに乱立し、コストと管理負荷が膨らんでいる——多くの組織が直面する問題です。乱立が起きる構造、現状を可視化する棚卸しの手順、統廃合の判断基準、移行の進め方、再発を防ぐ仕組みまで、ツール整理の実務を解説します。">
+<meta property="og:title" content="ツールが乱立したときの整理方法">
+<meta property="og:description" content="気づけば似たようなAIツール・SaaSが部署ごとに乱立し、コストと管理負荷が膨らんでいる——多くの組織が直面する問題です。乱立が起きる構造、現状を可視化する棚卸しの手順、統廃合の判断基準、移行の進め方、再発を防ぐ仕組みまで、ツール整理の実務を解説します。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blaze-ltd.com/column/ai-tool-ranritsu/">
+<meta property="og:image" content="https://blaze-ltd.com/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blaze-ltd.com/ogp.png">
+<meta name="robots" content="index, follow">
+<title>ツールが乱立したときの整理方法</title>
+<link rel="canonical" href="https://blaze-ltd.com/column/ai-tool-ranritsu/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"ツールが乱立したときの整理方法","description":"気づけば似たようなAIツール・SaaSが部署ごとに乱立し、コストと管理負荷が膨らんでいる——多くの組織が直面する問題です。乱立が起きる構造、現状を可視化する棚卸しの手順、統廃合の判断基準、移行の進め方、再発を防ぐ仕組みまで、ツール整理の実務を解説します。","datePublished":"2026-08-28","dateModified":"2026-08-28","mainEntityOfPage":"https://blaze-ltd.com/column/ai-tool-ranritsu/","image":"https://blaze-ltd.com/ogp.png","author":{"@type":"Organization","name":"株式会社BLAZE","url":"https://blaze-ltd.com"},"publisher":{"@type":"Organization","name":"株式会社BLAZE","url":"https://blaze-ltd.com","logo":{"@type":"ImageObject","url":"https://blaze-ltd.com/logo.png"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://blaze-ltd.com"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://blaze-ltd.com/column/"},{"@type":"ListItem","position":3,"name":"AI・業務自動化","item":"https://blaze-ltd.com/column/ai/"},{"@type":"ListItem","position":4,"name":"ツールが乱立したときの整理方法","item":"https://blaze-ltd.com/column/ai-tool-ranritsu/"}]}]}</script>
+<style>
+:root{
+  --bg:#03050f; --surface:#080c1c; --accent:#4DFFDF; --white:#fff;
+  --tx:rgba(255,255,255,.92); --tx2:rgba(255,255,255,.72);
+  --w5:rgba(255,255,255,.5); --w3:rgba(255,255,255,.3);
+  --w15:rgba(255,255,255,.15); --w08:rgba(255,255,255,.08); --w04:rgba(255,255,255,.04);
+  --ff-j:'Jost',sans-serif; --ff-n:'Noto Sans JP',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.wrap,.hd,.cats,.list,#nav,footer,.mob-menu{position:relative;z-index:1}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:var(--ff-n);font-weight:400;line-height:1.9;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+
+/* ヘッダーは #nav に限定して指定する。
+   目次も意味的に <nav> で書いているため、型セレクタにすると巻き込まれる */
+#nav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 52px;height:72px;z-index:200;transition:background .4s}
+#nav.s{background:rgba(3,5,15,.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--w15)}
+.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
+.logo img{height:72px;width:auto;display:block}
+.nav-links{display:flex;gap:30px;list-style:none;align-items:center}
+.nav-links a{font-family:var(--ff-j);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--w5);text-decoration:none;transition:color .3s}
+.nav-links a:hover{color:var(--white)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;z-index:300}
+.ham span{display:block;width:22px;height:1.5px;background:var(--white);transition:transform .3s,opacity .3s}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob-menu{position:fixed;inset:0;background:rgba(0,0,8,.97);z-index:250;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;opacity:0;pointer-events:none;transition:opacity .3s}
+.mob-menu.open{opacity:1;pointer-events:all}
+.mob-menu a{font-family:var(--ff-j);font-size:21px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--white);text-decoration:none}
+.mob-close{position:absolute;top:26px;right:26px;background:none;border:1px solid var(--w3);color:var(--white);font-size:18px;width:44px;height:44px;cursor:pointer}
+
+/* ── 記事 ── */
+.wrap{max-width:760px;margin:0 auto;padding:130px 24px 90px}
+.crumb{font-size:12px;color:var(--w5);margin-bottom:22px;line-height:1.7}
+.crumb a{color:var(--w5);text-decoration:none}
+.crumb a:hover{color:var(--white)}
+.a-cat{display:inline-block;font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(77,255,223,.35);padding:5px 11px;margin-bottom:18px}
+h1{font-size:clamp(24px,3.4vw,34px);font-weight:700;line-height:1.5;letter-spacing:.01em;margin-bottom:18px;text-wrap:balance}
+.a-meta{font-size:12px;color:var(--w5);letter-spacing:.04em;padding-bottom:26px;border-bottom:1px solid var(--w15)}
+.a-lead{font-size:15px;line-height:2.05;color:var(--tx2);margin:30px 0 0}
+
+.toc{background:var(--surface);border:1px solid var(--w15);padding:24px 26px;margin:38px 0}
+.toc-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:14px}
+.toc ol{list-style:none;counter-reset:t}
+.toc li{counter-increment:t;font-size:14px;line-height:1.9;padding-left:30px;position:relative}
+.toc li::before{content:counter(t,decimal-leading-zero);position:absolute;left:0;font-family:var(--ff-j);font-size:11px;font-weight:600;color:var(--w3);top:4px}
+.toc a{color:var(--tx2);text-decoration:none}
+.toc a:hover{color:var(--accent)}
+
+article h2{font-size:21px;font-weight:700;line-height:1.6;margin:56px 0 20px;padding-left:14px;border-left:3px solid var(--accent);scroll-margin-top:90px}
+article h3{font-size:17px;font-weight:600;line-height:1.6;margin:36px 0 14px;color:var(--white)}
+article p{font-size:15px;line-height:2.05;margin-bottom:20px;color:var(--tx)}
+article ul,article ol{margin:0 0 22px 1.4em}
+article li{font-size:15px;line-height:1.95;margin-bottom:9px}
+article strong{font-weight:700;color:var(--white)}
+article a.plink{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+
+.tbl{width:100%;border-collapse:collapse;margin:8px 0 26px;font-size:14px;display:block;overflow-x:auto}
+.tbl th,.tbl td{border:1px solid var(--w15);padding:11px 13px;text-align:left;line-height:1.7}
+.tbl th{background:var(--w04);font-weight:600;white-space:nowrap}
+
+.note{background:var(--w04);border-left:3px solid var(--w3);padding:18px 20px;margin:26px 0;font-size:14px;line-height:1.95;color:var(--tx2)}
+
+.faq{margin:50px 0 0}
+.faq-i{border-bottom:1px solid var(--w15);padding:20px 0}
+.faq-q{font-size:15px;font-weight:600;margin-bottom:10px;line-height:1.7}
+.faq-q::before{content:'Q.';font-family:var(--ff-j);color:var(--accent);margin-right:8px;font-weight:700}
+.faq-a{font-size:14px;line-height:1.95;color:var(--tx2)}
+
+.recap{background:var(--surface);border:1px solid var(--w15);padding:26px 28px;margin:50px 0 0}
+.recap-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:14px}
+.recap ul{margin:0 0 0 1.2em}
+.recap li{font-size:14px;line-height:1.9;margin-bottom:10px;color:var(--tx2)}
+
+/* ── セグメント別CTA ── */
+.cta{border:1px solid rgba(77,255,223,.3);background:linear-gradient(180deg,rgba(77,255,223,.05),transparent);padding:34px 30px;margin:56px 0 0;text-align:center}
+.cta-t{font-family:var(--ff-j);font-size:19px;font-weight:700;line-height:1.5;margin-bottom:12px}
+.cta-s{font-size:14px;line-height:1.95;color:var(--tx2);margin-bottom:22px}
+.cta-b{display:inline-block;font-family:var(--ff-j);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bg);background:var(--white);text-decoration:none;padding:14px 34px;transition:background .3s,transform .2s}
+.cta-b:hover{background:var(--accent);transform:translateY(-2px)}
+
+.rel{margin:60px 0 0;border-top:1px solid var(--w15);padding-top:34px}
+.rel-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:16px}
+.rel a{display:block;font-size:14px;line-height:1.75;color:var(--tx2);text-decoration:none;padding:11px 0;border-bottom:1px solid var(--w08)}
+.rel a:hover{color:var(--accent)}
+
+/* ── 一覧ページ ── */
+.hd{max-width:1000px;margin:0 auto;padding:140px 24px 0}
+.hd .s-lbl{font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--w5);margin-bottom:12px}
+.hd h1{font-family:var(--ff-j);font-size:clamp(26px,3.8vw,46px);line-height:1.15}
+.hd p{font-size:14px;line-height:1.95;color:var(--tx2);margin-top:18px;max-width:600px}
+.cats{max-width:1000px;margin:44px auto 0;padding:0 24px;display:flex;flex-wrap:wrap;gap:10px}
+.cats a{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);text-decoration:none;border:1px solid var(--w15);padding:9px 18px;transition:all .3s}
+.cats a:hover,.cats a.on{background:var(--white);color:var(--bg);border-color:var(--white)}
+.list{max-width:1000px;margin:0 auto;padding:46px 24px 100px;display:grid;gap:1px;background:var(--w15);border:1px solid var(--w15);border-radius:0}
+.list{background:transparent;border:none;gap:0}
+.card{display:block;text-decoration:none;padding:26px 4px;border-bottom:1px solid var(--w15);transition:background .3s}
+.card:hover{background:var(--w04)}
+.card-c{font-family:var(--ff-j);font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
+.card-t{font-size:16px;font-weight:600;line-height:1.65;margin-bottom:9px;color:var(--white)}
+.card-d{font-size:13px;line-height:1.85;color:var(--tx2)}
+.empty{padding:60px 4px;color:var(--w5);font-size:14px}
+
+footer{padding:30px 52px;border-top:1px solid var(--w15);text-align:center}
+.f-copy{font-family:var(--ff-j);font-size:10px;font-weight:300;color:var(--w3);letter-spacing:.18em}
+
+@media(max-width:768px){
+  #nav{padding:0 20px;height:64px}
+  .logo img{height:48px}
+  .nav-links{display:none}
+  .ham{display:flex}
+  .wrap{padding:110px 20px 70px}
+  .hd{padding:110px 20px 0}
+  .cats,.list{padding-left:20px;padding-right:20px}
+  article h2{font-size:19px;margin:44px 0 16px}
+  footer{padding:26px 20px}
+}
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+
+<nav id="nav">
+  <a href="/" class="logo"><img src="/logo.png" alt="BLAZE"></a>
+  <ul class="nav-links">
+    <li><a href="/service/">Service</a></li>
+    <li><a href="/company/">Company</a></li>
+    <li><a href="/column/">Column</a></li>
+    <li><a href="/news/">News</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+  <div class="ham" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="toggleMenu()">✕</button>
+  <a href="/service/" onclick="toggleMenu()">Service</a>
+  <a href="/company/" onclick="toggleMenu()">Company</a>
+  <a href="/column/"  onclick="toggleMenu()">Column</a>
+  <a href="/news/"    onclick="toggleMenu()">News</a>
+  <a href="/contact/" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="wrap">
+  <p class="crumb"><a href="/">ホーム</a> ／ <a href="/column/">コラム</a> ／ <a href="/column/ai/">AI・業務自動化</a></p>
+  <span class="a-cat">AI Automation</span>
+  <h1>ツールが乱立したときの整理方法</h1>
+  <p class="a-meta">最終更新 2026-08-28</p>
+  <p class="a-lead">AI活用を推進した結果として、多くの組織が同じ問題に行き着きます。ツールの乱立です。部署ごとに別の議事録AIを契約し、似た機能の文章作成ツールが3つ動き、誰も全体像を把握していない。月額課金の積み上がりは財務を圧迫し、データはツールごとに分断され、セキュリティ管理は追いつかない——。しかし、乱立は活用が進んだ証でもあります。頭ごなしの一斉削減は現場の活用を殺します。この記事では、乱立が起きる構造の理解から、棚卸しによる可視化、統廃合の判断基準、現場を壊さない移行の進め方、そして再発防止の仕組みまでを解説します。</p>
+
+  <nav class="toc"><p class="toc-t">目次</p><ol><li><a href="#s1">乱立はなぜ起きるか：責めるべきは人ではなく構造</a></li><li><a href="#s2">棚卸し：まず全体像を1枚にする</a></li><li><a href="#s3">統廃合の判断：残す・束ねる・やめるの3分類</a></li><li><a href="#s4">移行の進め方：現場を壊さない段取り</a></li><li><a href="#s5">再発防止：交通整理の仕組みを常設する</a></li></ol></nav>
+
+  <article>
+<h2 id="s1">乱立はなぜ起きるか：責めるべきは人ではなく構造</h2>
+<p>ツールの乱立は、誰かの怠慢で起きるのではありません。次のような、それぞれは合理的な行動の積み重ねで起きます。</p>
+<ul><li><strong>現場の自助努力</strong> — 目の前の課題を解決するため、各部署が自分たちでツールを探して契約する。行動としてはむしろ模範的</li><li><strong>SaaSの契約の手軽さ</strong> — クレジットカードと数分の登録で使い始められる。稟議を通る金額の小ささが、全社の視点を通らない契約を量産する</li><li><strong>AI市場の変化の速さ</strong> — 半年ごとに有力ツールが入れ替わり、「とりあえず試す」契約が積み上がる</li><li><strong>管理の空白</strong> — 誰がツール契約の全体を見るのか決まっていない。総務は契約を、情シスはセキュリティを、経理は支払いを断片的に見ているが、全体像は誰も持っていない</li></ul>
+<p>この構造理解が重要なのは、対策の方向を決めるからです。乱立の原因が「現場の勝手な行動」なら統制の強化が答えになりますが、実際の原因は「全体を見る役割と仕組みの不在」です。したがって答えは、現場の行動力を保ったまま、全体を見る仕組みを後付けすること。締め付けではなく、見える化と交通整理です。</p>
+<p>なお、ツール選定の段階で乱立を予防する考え方は<a class="plink" href="/column/ai-tool-erabikata/">AIツールの選び方</a>で触れました。本記事は、既に乱立してしまった状態からの整理を扱います。</p>
+<h2 id="s2">棚卸し：まず全体像を1枚にする</h2>
+<p>整理の第一歩は、判断ではなく可視化です。次の情報を集めて、ツールの一覧表を作ります。</p>
+<table class="tbl"><tr><th>調べる項目</th><th>情報源</th><th>見るポイント</th></tr><tr><td>契約中のツールと料金</td><td>経理の支払記録、法人カードの明細、各部署への確認</td><td>年額換算の総コスト。想定を超える金額が出るのが通例</td></tr><tr><td>利用者数と利用頻度</td><td>各ツールの管理画面、部署へのアンケート</td><td>契約アカウント数に対する実利用者の割合</td></tr><tr><td>用途と代替可能性</td><td>部署ヒアリング</td><td>何の業務に使っているか。他のツールで代替できるか</td></tr><tr><td>データの所在と連携</td><td>管理画面、設定の確認</td><td>どんなデータが入っているか。他システムとつながっているか</td></tr><tr><td>契約条件</td><td>契約書、申込画面の控え</td><td>更新日、解約の条件、年契約か月契約か</td></tr></table>
+<p>実務のコツは、<strong>支払記録から始める</strong>ことです。部署への聞き取りだけでは、担当者が忘れている契約や、退職者が残した契約が漏れます。法人カードの明細と銀行の引き落としを12ヶ月分さらえば、契約の全量に近づけます。そこから各部署に「これは何に使っていますか」と確認していく順番が、漏れなく速い進め方です。</p>
+<p>棚卸しの結果は、多くの場合それ自体が衝撃をもって受け止められます。「AI関連だけで年間◯百万円」「契約アカウントの4割が未使用」——この数字の共有が、整理への組織的な合意を作る最初の材料になります。</p>
+<p class="note">棚卸しは犯人捜しにしないでください。「無駄な契約をした部署」を責める空気が出ると、以降の申告が隠れ、次の棚卸しが機能しなくなります。目的はコストの最適化と管理の回復であり、過去の契約はすべて「当時の合理的な判断」として扱うのが、協力を引き出す姿勢です。</p>
+<h2 id="s3">統廃合の判断：残す・束ねる・やめるの3分類</h2>
+<p>全体像ができたら、ツールを3つに分類します。</p>
+<p><strong>残す</strong>。用途が明確で、利用が定着しており、代替の難しいツール。これは判断が簡単です。</p>
+<p><strong>束ねる</strong>。同じ用途のツールが複数ある場合、原則として1つに寄せます。選ぶ基準は、機能の優劣よりも(1)利用者数と定着度、(2)データの扱いと管理機能、(3)全社で使ったときの料金、の3点です。現場ごとに愛着があるため、比較の物差しを事前に示し、決定の理由を説明できる形にすることが、移行の納得感を作ります。また、汎用AIツールが進化して特化ツールの機能を包含するケースは増えており、「汎用1つ+本当に必要な特化のみ」という構成に寄せるのが、コストと管理の両面で有利なことが多いでしょう。</p>
+<p><strong>やめる</strong>。利用率が低い、用途が消滅した、より良い代替に統合済み、というツールは解約します。ここでの注意は2つ。第一に、<strong>データの救出を解約より先に行う</strong>こと。蓄積された文書・履歴・設定を出力してから解約する手順を必ず踏んでください。第二に、<strong>少数でも熱心な利用者がいる場合の扱い</strong>です。その用途が業務上重要なら残す判断もあり得ますが、「個人の好み」レベルなら、統合先での代替方法をセットで示した上で解約するのが全体最適です。</p>
+<p>判断に迷うツールは、<strong>更新日まで判断を保留し、月契約に切り替えて観察する</strong>という中間の選択肢も使えます。整理は一度で完璧にする必要はなく、次の更新サイクルで再判断すればよいのです。</p>
+<h2 id="s4">移行の進め方：現場を壊さない段取り</h2>
+<p>統廃合の判断より難しいのが、実行です。ツールの切り替えは現場の日常動作を変えることであり、段取りを誤ると生産性の低下と反発を招きます。</p>
+<ol><li><strong>理由と全体像を先に伝える</strong> — 「コスト削減で取り上げられる」ではなく、「全体でこれだけの重複があり、この形に整理する。浮いた費用は◯◯に使う」という絵を最初に示す</li><li><strong>移行先の受け入れ準備を整える</strong> — 統合先ツールのアカウント発行、テンプレートの移植、簡単な使い方ガイドを、旧ツール停止の前に用意する</li><li><strong>併走期間を設ける</strong> — 1〜2ヶ月は新旧を併走させ、日常業務が新ツールで回ることを確認してから旧を止める。ただし併走期間の終了日は最初に明示する(明示しないと永遠に併走する)</li><li><strong>データを救出してから解約する</strong> — 旧ツールの蓄積データの出力と保管を確認してから解約手続きを行う</li><li><strong>移行後の不満を拾う</strong> — 移行1ヶ月後に「困っていること」を聞く場を設け、対処する。不満の放置は、次のシャドー契約の種になる</li></ol>
+<p>特に重要なのが最初の「理由の伝達」です。整理はどうしても「取り上げられる」体験として受け止められがちです。浮いたコストの使い道(より良いツールへの投資、教育、処遇)まで含めて語ることで、整理が「現場への投資の原資づくり」であることが伝わり、協力の土台ができます。</p>
+<p>移行の順番は、影響の小さいツール(利用者が少ない・代替が容易)から始めて経験を積み、影響の大きい統合は後半に回すのが安全です。最初の1〜2件の移行がスムーズに終われば、組織は「整理は怖くない」と学び、以降が楽になります。</p>
+<h2 id="s5">再発防止：交通整理の仕組みを常設する</h2>
+<p>整理をやり切っても、仕組みを変えなければ1年後には元に戻ります。乱立の再発を防ぐ常設の仕組みは、次の4点です。</p>
+<ul><li><strong>契約の一元把握</strong> — 新規のツール契約は金額にかかわらず台帳への登録を必須にする。承認を重くする必要はなく、「登録すれば使える」程度の軽さが続けるコツ</li><li><strong>申請の受付と即応</strong> — 新ツールを使いたい現場のために、数日で判断が返る申請窓口を用意する。判断基準(データの扱い・管理機能・既存ツールとの重複)は公開しておく</li><li><strong>年1回の定期棚卸し</strong> — 更新日の一覧を持ち、更新前に利用状況と代替可能性を確認するサイクルを回す。<a class="plink" href="/column/ai-unyou-taisei/">運用体制</a>の定例に組み込むのが自然</li><li><strong>試用の公式ルート</strong> — 「とりあえず試したい」を公認する試用枠(期間と条件を定めた無料・少額での検証)を設ける。試用の出口(採用するか、やめるか)を必ず判断する運用にすれば、試しっぱなしの契約は残らない</li></ul>
+<p>要点は、<strong>現場の「試したい・使いたい」を止めないこと</strong>です。変化の速いAIの領域では、新しいツールを試す力は競争力そのものです。守るべきは「全体が見えている状態」であって、「新しいものを増やさない状態」ではありません。登録・申請・棚卸しという軽い交通整理が回っていれば、ツールは増えても乱立にはなりません。</p>
+<p>ツールの整理は、単なるコスト削減ではなく、組織のAI活用を「個々の点」から「設計された全体」へ進める節目の作業です。1枚の台帳と年1回の棚卸し。この地味な仕組みが、活用の自由と全体の統制を両立させます。</p>
+<div class="faq"><h2 id="faq">よくある質問</h2><div class="faq-i"><p class="faq-q">整理はどのくらいの期間で終わりますか?</p><p class="faq-a">組織規模によりますが、目安として、棚卸しに1ヶ月、統廃合の判断に2週間〜1ヶ月、移行の実行に2〜3ヶ月(併走期間を含む)、全体で3〜5ヶ月程度です。ただし年契約のツールは更新日まで解約できないため、コスト面の効果が全部出るまでには1年かかります。最初の棚卸しと台帳整備さえ終われば、以降は更新日に合わせて順次判断していく流れになるので、「一気に片付ける」より「サイクルに乗せる」と捉えてください。</p></div><div class="faq-i"><p class="faq-q">どのくらいのコスト削減が見込めますか?</p><p class="faq-a">状況次第ですが、実務の感覚として、未使用アカウントの削減と重複ツールの統合だけで、ツール関連コストの2〜4割が圧縮できるケースは珍しくありません。特に、契約アカウント数と実利用者数の差(使われていない席)は、最も確実に削れる部分です。ただし、削減額そのものより、「何にいくら使っているかを把握できている状態」の回復が本質的な成果です。把握があれば、以降の投資判断の質が変わります。</p></div><div class="faq-i"><p class="faq-q">部署が「うちのツールは特別で、統合できない」と主張します</p><p class="faq-a">主張を頭ごなしに退けず、要件で検証してください。その部署の業務要件を書き出してもらい、統合先ツールで満たせるかを一緒に確認します。本当に満たせないなら残す判断が正しく、満たせるなら移行の不安(慣れ・データ移行)が本当の論点なので、併走期間と移行支援で応えます。「特別だ」の多くは要件の問題ではなく変化への不安であり、不安には統制ではなく支援で応えるのが結果的に早道です。</p></div><div class="faq-i"><p class="faq-q">汎用AIツールに寄せると、各部署の専門用途が犠牲になりませんか?</p><p class="faq-a">「汎用に全部寄せる」のではなく、「汎用を土台に、要件が明確な特化だけ残す」が正しい形です。判断基準は、その特化ツールが汎用+テンプレートで再現できるかどうかです。議事録の要約・文章の下書きのような用途は汎用で再現できることが多く、一方で業界特有のデータ処理や既存システムとの深い連携を持つツールは特化を残す価値があります。用途ごとにこの検証を行えば、犠牲は避けられます。</p></div><div class="faq-i"><p class="faq-q">台帳や申請の管理は、どの部署が持つべきですか?</p><p class="faq-a">AI・ツール活用の推進役がいるなら、その機能に載せるのが最も自然です。契約・支払の情報は経理と、セキュリティの確認は情シス(または情報管理の担当)と連携する形にし、台帳の持ち主は一つにします。専任部署を新設する必要はありません。重要なのは部署の名前ではなく、「新しい契約は必ずここを通る(または登録される)」という流れが一本になっていることです。</p></div><div class="faq-i"><p class="faq-q">整理を進めたいのですが、経営層が関心を持ってくれません</p><p class="faq-a">年額換算の総コストを一枚で示すのが最も確実です。月々の少額課金は個別には目立ちませんが、合算して「AI・SaaS関連で年間◯百万円、うち未使用席が◯割」という形にすると、多くの経営層は即座に関心を持ちます。加えて、退職者アカウントの放置や無管理の機密入力といったセキュリティ上の発見があれば、コストと合わせて報告してください。整理はコスト削減とリスク対応の両面を持つ施策として説明すると、優先度が上がりやすくなります。</p></div><div class="faq-i"><p class="faq-q">解約したいツールが年契約で、更新日がだいぶ先です</p><p class="faq-a">無理に違約金を払って中途解約する必要は通常ありません。台帳に更新日と「更新しない」判断を記録し、更新の30〜60日前に通知期限がないかを契約条件で確認しておきます(自動更新の通知期限を過ぎると1年延びるのが典型的な失敗です)。それまでの期間は、データの救出と移行の準備に充てれば、更新日に自然に切り替えられます。更新日の一覧管理こそ、年契約ツールの整理の実務の中心です。</p></div></div>
+<div class="recap"><p class="recap-t">この記事のまとめ</p><ul><li>乱立は現場の怠慢ではなく、全体を見る役割と仕組みの不在という構造から起きる</li><li>整理は支払記録からの棚卸しで全体像を1枚にすることから。犯人捜しは以降の協力を失う</li><li>判断は残す・束ねる・やめるの3分類。束ねる基準は定着度・データの扱い・全社料金の3点</li><li>移行は理由の伝達→受け入れ準備→期限付き併走→データ救出→不満の回収という段取りで現場を壊さない</li><li>再発防止は台帳登録・即応の申請窓口・年1回の棚卸し・公式の試用枠という軽い交通整理で足りる</li><li>守るべきは「全体が見えている状態」であり、新しいツールを試す現場の力は止めない</li></ul></div>
+  </article>
+
+  <div class="cta"><p class="cta-t">自社の業務をAIで自動化する</p><p class="cta-s">ヒアリングから開発・運用まで一気通貫。既存システムはそのままに、御社の業務に合わせたAIツールを設計・導入します。</p><a class="cta-b" href="https://hakadoruai.blaze-ltd.com/?utm_source=blaze-column" target="_blank" rel="noopener">Hakadoru AI を見る</a></div>
+  <div class="rel"><p class="rel-t">関連記事</p><a href="/column/kojin-jouhou-ai/">個人情報を扱う業務でAIをどこまで使えるか</a><a href="/column/ai-kouka-sokutei/">自動化の効果測定｜何を見れば成功と言えるか</a><a href="/column/small-start-jidouka/">スモールスタートで始める自動化の進め方</a><a href="/column/seisei-ai-gyoumu-katsuyou/">生成AIを実務に組み込む具体的な手順</a><a href="/column/saas-renkei-jidouka/">SaaS間連携による自動化の実務</a></div>
+</div>
+
+<footer>
+  <p class="f-copy">&copy; 2026 BLAZE Inc. ALL RIGHTS RESERVED.</p>
+</footer>
+
+<script>
+const bgCv = document.getElementById('bg-canvas');
+const bgCtx = bgCv.getContext('2d');
+let W, H;
+function resizeBg(){ W = bgCv.width = window.innerWidth; H = bgCv.height = window.innerHeight; }
+resizeBg();
+window.addEventListener('resize', resizeBg);
+
+const beams = [
+  { c:'rgba(30,75,220,', lw:1.8, al:.45, phase:0.0, ox:[-.05,.22,.55,1.05], oy:[.50,.28,.72,.45], ax:[0,.12,.10,0], ay:[.08,.14,.12,.07], fx:[0,.41,.37,0], fy:[.29,.38,.43,.31] },
+  { c:'rgba(20,60,200,', lw:1.4, al:.38, phase:1.3, ox:[-.05,.18,.60,1.05], oy:[.45,.70,.25,.55], ax:[0,.10,.13,0], ay:[.09,.12,.10,.08], fx:[0,.35,.44,0], fy:[.33,.40,.36,.38] },
+  { c:'rgba(40,90,235,', lw:2.2, al:.30, phase:2.5, ox:[-.05,.30,.68,1.05], oy:[.55,.35,.65,.50], ax:[0,.11,.09,0], ay:[.07,.13,.11,.09], fx:[0,.43,.39,0], fy:[.37,.34,.41,.35] },
+  { c:'rgba(15,55,195,', lw:1.2, al:.28, phase:3.8, ox:[-.05,.45,.50,1.05], oy:[.42,.58,.42,.60], ax:[0,.09,.12,0], ay:[.10,.11,.09,.08], fx:[0,.38,.45,0], fy:[.32,.42,.38,.33] },
+  { c:'rgba(50,100,240,',lw:1.8, al:.35, phase:5.1, ox:[-.05,.15,.80,1.05], oy:[.48,.75,.28,.52], ax:[0,.13,.08,0], ay:[.11,.10,.13,.09], fx:[0,.46,.36,0], fy:[.40,.35,.44,.37] },
+];
+
+function drawBg(ts){
+  bgCtx.fillStyle = '#000008';
+  bgCtx.fillRect(0, 0, W, H);
+  const t = ts * 0.001;
+  const gx = W * (.2 + .08 * Math.sin(t * .12));
+  const gy = H * (.5 + .08 * Math.cos(t * .10));
+  const gr = bgCtx.createRadialGradient(gx,gy,0, gx,gy, Math.max(W,H)*.8);
+  gr.addColorStop(0, 'rgba(10,35,170,0.4)');
+  gr.addColorStop(.4,'rgba(6,20,120,0.15)');
+  gr.addColorStop(1, 'rgba(0,0,0,0)');
+  bgCtx.fillStyle = gr;
+  bgCtx.fillRect(0, 0, W, H);
+  beams.forEach(b => {
+    const ph = b.phase;
+    const pts = [
+      [b.ox[0]*W, (b.oy[0]+b.ay[0]*Math.sin(t*b.fy[0]+ph+0.0))*H],
+      [(b.ox[1]+b.ax[1]*Math.sin(t*b.fx[1]+ph+1.0))*W, (b.oy[1]+b.ay[1]*Math.sin(t*b.fy[1]+ph+0.5))*H],
+      [(b.ox[2]+b.ax[2]*Math.sin(t*b.fx[2]+ph+2.0))*W, (b.oy[2]+b.ay[2]*Math.sin(t*b.fy[2]+ph+1.5))*H],
+      [b.ox[3]*W, (b.oy[3]+b.ay[3]*Math.sin(t*b.fy[3]+ph+0.8))*H],
+    ];
+    const [p0,p1,p2,p3] = pts;
+    bgCtx.beginPath();
+    bgCtx.moveTo(p0[0],p0[1]);
+    bgCtx.bezierCurveTo(p1[0],p1[1],p2[0],p2[1],p3[0],p3[1]);
+    const grd = bgCtx.createLinearGradient(p0[0],p0[1],p3[0],p3[1]);
+    grd.addColorStop(0, b.c+'0)');
+    grd.addColorStop(.2,b.c+b.al+')');
+    grd.addColorStop(.5,b.c+(b.al*1.3).toFixed(2)+')');
+    grd.addColorStop(.8,b.c+b.al+')');
+    grd.addColorStop(1, b.c+'0)');
+    bgCtx.strokeStyle = grd;
+    bgCtx.lineWidth = b.lw;
+    bgCtx.shadowBlur = 24;
+    bgCtx.shadowColor = b.c+'0.6)';
+    bgCtx.stroke();
+    bgCtx.shadowBlur = 0;
+  });
+  requestAnimationFrame(drawBg);
+}
+requestAnimationFrame(drawBg);
+
+window.addEventListener('scroll', function(){
+  document.getElementById('nav').classList.toggle('s', window.scrollY > 40);
+});
+function toggleMenu(){
+  document.getElementById('ham').classList.toggle('open');
+  document.getElementById('mobMenu').classList.toggle('open');
+}
+</script>
+</body>
+</html>

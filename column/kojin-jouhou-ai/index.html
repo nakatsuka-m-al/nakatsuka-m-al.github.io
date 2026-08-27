@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H67Y48Q10E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H67Y48Q10E');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="顧客対応、人事、経理——個人情報を扱う業務ほどAIの効果は大きい一方、扱いを誤れば重大な事故になります。個人情報保護の基本的な考え方、AI利用で問題になる場面、匿名化・仮名化による安全な活用、業務別の実務判断まで、個人情報×AIの線引きを解説します。">
+<meta property="og:title" content="個人情報を扱う業務でAIをどこまで使えるか">
+<meta property="og:description" content="顧客対応、人事、経理——個人情報を扱う業務ほどAIの効果は大きい一方、扱いを誤れば重大な事故になります。個人情報保護の基本的な考え方、AI利用で問題になる場面、匿名化・仮名化による安全な活用、業務別の実務判断まで、個人情報×AIの線引きを解説します。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blaze-ltd.com/column/kojin-jouhou-ai/">
+<meta property="og:image" content="https://blaze-ltd.com/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blaze-ltd.com/ogp.png">
+<meta name="robots" content="index, follow">
+<title>個人情報を扱う業務でAIをどこまで使えるか</title>
+<link rel="canonical" href="https://blaze-ltd.com/column/kojin-jouhou-ai/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"個人情報を扱う業務でAIをどこまで使えるか","description":"顧客対応、人事、経理——個人情報を扱う業務ほどAIの効果は大きい一方、扱いを誤れば重大な事故になります。個人情報保護の基本的な考え方、AI利用で問題になる場面、匿名化・仮名化による安全な活用、業務別の実務判断まで、個人情報×AIの線引きを解説します。","datePublished":"2026-08-28","dateModified":"2026-08-28","mainEntityOfPage":"https://blaze-ltd.com/column/kojin-jouhou-ai/","image":"https://blaze-ltd.com/ogp.png","author":{"@type":"Organization","name":"株式会社BLAZE","url":"https://blaze-ltd.com"},"publisher":{"@type":"Organization","name":"株式会社BLAZE","url":"https://blaze-ltd.com","logo":{"@type":"ImageObject","url":"https://blaze-ltd.com/logo.png"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://blaze-ltd.com"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://blaze-ltd.com/column/"},{"@type":"ListItem","position":3,"name":"AI・業務自動化","item":"https://blaze-ltd.com/column/ai/"},{"@type":"ListItem","position":4,"name":"個人情報を扱う業務でAIをどこまで使えるか","item":"https://blaze-ltd.com/column/kojin-jouhou-ai/"}]}]}</script>
+<style>
+:root{
+  --bg:#03050f; --surface:#080c1c; --accent:#4DFFDF; --white:#fff;
+  --tx:rgba(255,255,255,.92); --tx2:rgba(255,255,255,.72);
+  --w5:rgba(255,255,255,.5); --w3:rgba(255,255,255,.3);
+  --w15:rgba(255,255,255,.15); --w08:rgba(255,255,255,.08); --w04:rgba(255,255,255,.04);
+  --ff-j:'Jost',sans-serif; --ff-n:'Noto Sans JP',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.wrap,.hd,.cats,.list,#nav,footer,.mob-menu{position:relative;z-index:1}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:var(--ff-n);font-weight:400;line-height:1.9;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+
+/* ヘッダーは #nav に限定して指定する。
+   目次も意味的に <nav> で書いているため、型セレクタにすると巻き込まれる */
+#nav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 52px;height:72px;z-index:200;transition:background .4s}
+#nav.s{background:rgba(3,5,15,.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--w15)}
+.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
+.logo img{height:72px;width:auto;display:block}
+.nav-links{display:flex;gap:30px;list-style:none;align-items:center}
+.nav-links a{font-family:var(--ff-j);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--w5);text-decoration:none;transition:color .3s}
+.nav-links a:hover{color:var(--white)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;z-index:300}
+.ham span{display:block;width:22px;height:1.5px;background:var(--white);transition:transform .3s,opacity .3s}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob-menu{position:fixed;inset:0;background:rgba(0,0,8,.97);z-index:250;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;opacity:0;pointer-events:none;transition:opacity .3s}
+.mob-menu.open{opacity:1;pointer-events:all}
+.mob-menu a{font-family:var(--ff-j);font-size:21px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--white);text-decoration:none}
+.mob-close{position:absolute;top:26px;right:26px;background:none;border:1px solid var(--w3);color:var(--white);font-size:18px;width:44px;height:44px;cursor:pointer}
+
+/* ── 記事 ── */
+.wrap{max-width:760px;margin:0 auto;padding:130px 24px 90px}
+.crumb{font-size:12px;color:var(--w5);margin-bottom:22px;line-height:1.7}
+.crumb a{color:var(--w5);text-decoration:none}
+.crumb a:hover{color:var(--white)}
+.a-cat{display:inline-block;font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(77,255,223,.35);padding:5px 11px;margin-bottom:18px}
+h1{font-size:clamp(24px,3.4vw,34px);font-weight:700;line-height:1.5;letter-spacing:.01em;margin-bottom:18px;text-wrap:balance}
+.a-meta{font-size:12px;color:var(--w5);letter-spacing:.04em;padding-bottom:26px;border-bottom:1px solid var(--w15)}
+.a-lead{font-size:15px;line-height:2.05;color:var(--tx2);margin:30px 0 0}
+
+.toc{background:var(--surface);border:1px solid var(--w15);padding:24px 26px;margin:38px 0}
+.toc-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:14px}
+.toc ol{list-style:none;counter-reset:t}
+.toc li{counter-increment:t;font-size:14px;line-height:1.9;padding-left:30px;position:relative}
+.toc li::before{content:counter(t,decimal-leading-zero);position:absolute;left:0;font-family:var(--ff-j);font-size:11px;font-weight:600;color:var(--w3);top:4px}
+.toc a{color:var(--tx2);text-decoration:none}
+.toc a:hover{color:var(--accent)}
+
+article h2{font-size:21px;font-weight:700;line-height:1.6;margin:56px 0 20px;padding-left:14px;border-left:3px solid var(--accent);scroll-margin-top:90px}
+article h3{font-size:17px;font-weight:600;line-height:1.6;margin:36px 0 14px;color:var(--white)}
+article p{font-size:15px;line-height:2.05;margin-bottom:20px;color:var(--tx)}
+article ul,article ol{margin:0 0 22px 1.4em}
+article li{font-size:15px;line-height:1.95;margin-bottom:9px}
+article strong{font-weight:700;color:var(--white)}
+article a.plink{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+
+.tbl{width:100%;border-collapse:collapse;margin:8px 0 26px;font-size:14px;display:block;overflow-x:auto}
+.tbl th,.tbl td{border:1px solid var(--w15);padding:11px 13px;text-align:left;line-height:1.7}
+.tbl th{background:var(--w04);font-weight:600;white-space:nowrap}
+
+.note{background:var(--w04);border-left:3px solid var(--w3);padding:18px 20px;margin:26px 0;font-size:14px;line-height:1.95;color:var(--tx2)}
+
+.faq{margin:50px 0 0}
+.faq-i{border-bottom:1px solid var(--w15);padding:20px 0}
+.faq-q{font-size:15px;font-weight:600;margin-bottom:10px;line-height:1.7}
+.faq-q::before{content:'Q.';font-family:var(--ff-j);color:var(--accent);margin-right:8px;font-weight:700}
+.faq-a{font-size:14px;line-height:1.95;color:var(--tx2)}
+
+.recap{background:var(--surface);border:1px solid var(--w15);padding:26px 28px;margin:50px 0 0}
+.recap-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:14px}
+.recap ul{margin:0 0 0 1.2em}
+.recap li{font-size:14px;line-height:1.9;margin-bottom:10px;color:var(--tx2)}
+
+/* ── セグメント別CTA ── */
+.cta{border:1px solid rgba(77,255,223,.3);background:linear-gradient(180deg,rgba(77,255,223,.05),transparent);padding:34px 30px;margin:56px 0 0;text-align:center}
+.cta-t{font-family:var(--ff-j);font-size:19px;font-weight:700;line-height:1.5;margin-bottom:12px}
+.cta-s{font-size:14px;line-height:1.95;color:var(--tx2);margin-bottom:22px}
+.cta-b{display:inline-block;font-family:var(--ff-j);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bg);background:var(--white);text-decoration:none;padding:14px 34px;transition:background .3s,transform .2s}
+.cta-b:hover{background:var(--accent);transform:translateY(-2px)}
+
+.rel{margin:60px 0 0;border-top:1px solid var(--w15);padding-top:34px}
+.rel-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:16px}
+.rel a{display:block;font-size:14px;line-height:1.75;color:var(--tx2);text-decoration:none;padding:11px 0;border-bottom:1px solid var(--w08)}
+.rel a:hover{color:var(--accent)}
+
+/* ── 一覧ページ ── */
+.hd{max-width:1000px;margin:0 auto;padding:140px 24px 0}
+.hd .s-lbl{font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--w5);margin-bottom:12px}
+.hd h1{font-family:var(--ff-j);font-size:clamp(26px,3.8vw,46px);line-height:1.15}
+.hd p{font-size:14px;line-height:1.95;color:var(--tx2);margin-top:18px;max-width:600px}
+.cats{max-width:1000px;margin:44px auto 0;padding:0 24px;display:flex;flex-wrap:wrap;gap:10px}
+.cats a{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);text-decoration:none;border:1px solid var(--w15);padding:9px 18px;transition:all .3s}
+.cats a:hover,.cats a.on{background:var(--white);color:var(--bg);border-color:var(--white)}
+.list{max-width:1000px;margin:0 auto;padding:46px 24px 100px;display:grid;gap:1px;background:var(--w15);border:1px solid var(--w15);border-radius:0}
+.list{background:transparent;border:none;gap:0}
+.card{display:block;text-decoration:none;padding:26px 4px;border-bottom:1px solid var(--w15);transition:background .3s}
+.card:hover{background:var(--w04)}
+.card-c{font-family:var(--ff-j);font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
+.card-t{font-size:16px;font-weight:600;line-height:1.65;margin-bottom:9px;color:var(--white)}
+.card-d{font-size:13px;line-height:1.85;color:var(--tx2)}
+.empty{padding:60px 4px;color:var(--w5);font-size:14px}
+
+footer{padding:30px 52px;border-top:1px solid var(--w15);text-align:center}
+.f-copy{font-family:var(--ff-j);font-size:10px;font-weight:300;color:var(--w3);letter-spacing:.18em}
+
+@media(max-width:768px){
+  #nav{padding:0 20px;height:64px}
+  .logo img{height:48px}
+  .nav-links{display:none}
+  .ham{display:flex}
+  .wrap{padding:110px 20px 70px}
+  .hd{padding:110px 20px 0}
+  .cats,.list{padding-left:20px;padding-right:20px}
+  article h2{font-size:19px;margin:44px 0 16px}
+  footer{padding:26px 20px}
+}
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+
+<nav id="nav">
+  <a href="/" class="logo"><img src="/logo.png" alt="BLAZE"></a>
+  <ul class="nav-links">
+    <li><a href="/service/">Service</a></li>
+    <li><a href="/company/">Company</a></li>
+    <li><a href="/column/">Column</a></li>
+    <li><a href="/news/">News</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+  <div class="ham" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="toggleMenu()">✕</button>
+  <a href="/service/" onclick="toggleMenu()">Service</a>
+  <a href="/company/" onclick="toggleMenu()">Company</a>
+  <a href="/column/"  onclick="toggleMenu()">Column</a>
+  <a href="/news/"    onclick="toggleMenu()">News</a>
+  <a href="/contact/" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="wrap">
+  <p class="crumb"><a href="/">ホーム</a> ／ <a href="/column/">コラム</a> ／ <a href="/column/ai/">AI・業務自動化</a></p>
+  <span class="a-cat">AI Automation</span>
+  <h1>個人情報を扱う業務でAIをどこまで使えるか</h1>
+  <p class="a-meta">最終更新 2026-08-28</p>
+  <p class="a-lead">「AIは便利だが、個人情報があるから使えない」——この判断で、顧客対応や人事といった効果の大きい業務がAI活用の対象外になっている組織は少なくありません。しかし、正確に言えば「使えない」のではなく、「そのままでは使えない場面がある」だけです。何が個人情報にあたり、どんな扱いが問題になり、どう加工すれば安全に使えるのか。この線引きを理解すれば、守りを固めたまま活用の範囲は大きく広がります。この記事では、法律の専門家でない実務者に向けて、個人情報を扱う業務でのAI利用の考え方と実務の線引きを解説します。なお、個別の判断は自社の状況と契約によって変わるため、重要な場面では専門家への確認を前提としてください。</p>
+
+  <nav class="toc"><p class="toc-t">目次</p><ol><li><a href="#s1">前提の整理：何が問題になるのか</a></li><li><a href="#s2">問題になりやすい場面：具体例で見る</a></li><li><a href="#s3">匿名化・仮名化の実務：外せば使える範囲が広がる</a></li><li><a href="#s4">業務別の実務判断：顧客対応・人事・経理</a></li><li><a href="#s5">組織としての備え：ルール・記録・相談先</a></li></ol></nav>
+
+  <article>
+<h2 id="s1">前提の整理：何が問題になるのか</h2>
+<p>個人情報とAIの問題を考える出発点は、「AIに入力する」という行為の法的な性質です。外部のAIサービスに個人データを入力することは、多くの場合、<strong>第三者であるサービス事業者にデータを渡すこと</strong>、あるいは<strong>取り扱いの委託</strong>にあたり得ます。ここから、次のような論点が生まれます。</p>
+<ul><li><strong>利用目的の範囲</strong> — 取得時に本人に示した利用目的の範囲内での利用か。目的の範囲を超える利用には原則として本人の同意が必要</li><li><strong>第三者提供・委託の整理</strong> — 入力先のサービスへのデータの移転が、第三者提供にあたるのか、委託として整理できるのか。委託なら委託先の監督義務が生じる</li><li><strong>外国にある事業者への提供</strong> — サービスの運営者やサーバーが外国にある場合、越境移転に関する規律への対応が必要になり得る</li><li><strong>安全管理措置</strong> — 入力データが適切に保護されるか。学習利用の有無、保存場所、アクセス管理はここに関わる</li></ul>
+<p>難しく見えますが、実務の要点はシンプルです。<strong>「学習利用されない設定の、契約関係のある法人向けサービス」であれば委託として整理しやすく、「設定の不明な無料サービス」への入力は説明のつかない提供になりやすい</strong>。つまり、どのサービスを・どの設定で使うかが、法的整理の大部分を決めます。</p>
+<p>この整理は<a class="plink" href="/column/ai-riyou-guideline/">利用ガイドラインの入力区分</a>の土台でもあります。区分の「条件付き可」の条件が法人プラン・学習停止設定と紐づいているのは、この法的整理を反映したものです。</p>
+<h2 id="s2">問題になりやすい場面：具体例で見る</h2>
+<p>抽象論より、問題になりやすい具体的な場面を知る方が、現場の判断には役立ちます。</p>
+<table class="tbl"><tr><th>場面</th><th>何が問題か</th><th>安全にする方法</th></tr><tr><td>顧客からの問い合わせメールを貼り付けて返信案を作る</td><td>氏名・連絡先・相談内容(場合により要配慮情報)の外部入力</td><td>承認済みツールを使い、氏名・連絡先を除いた本文だけで依頼する</td></tr><tr><td>応募者の履歴書を要約・評価させる</td><td>応募者の個人情報の入力に加え、採用判断への利用という影響の大きさ</td><td>承認済みツール+識別情報の除去。評価の判断自体はAIに委ねない</td></tr><tr><td>従業員の評価情報・健康情報を分析する</td><td>要配慮個人情報を含む可能性が高く、最も慎重さが要る領域</td><td>原則として外部AIへの入力対象から外すか、統計化したデータのみ扱う</td></tr><tr><td>顧客リスト全体を渡して傾向分析させる</td><td>大量の個人データの一括外部入力</td><td>氏名等を除き、属性と行動データに絞った形に加工して渡す</td></tr><tr><td>録音した商談・面談をAIで文字起こしする</td><td>会話に含まれる個人情報・機密の外部処理</td><td>承認済みツールの利用と、録音への同意の取得を運用に組み込む</td></tr></table>
+<p>共通するパターンが見えるはずです。問題の核心は「AIを使うこと」ではなく、<strong>個人を識別できる情報を、管理の不明な場所に出すこと</strong>。逆に言えば、(1)管理の明確なサービスを使い、(2)識別情報を外す、という2つの手当てで、多くの業務は安全側に持ち込めます。</p>
+<p>もうひとつ重要な軸が、<strong>本人への影響の大きさ</strong>です。採用・評価・与信のような、個人に対する重要な判断に関わる利用は、情報管理が適切でも、判断の妥当性・説明可能性という別の問題を伴います。この種の業務では「AIは下処理と資料整理まで、判断は人が行う」という役割の線引きを、情報管理とは別に設けてください。</p>
+<h2 id="s3">匿名化・仮名化の実務：外せば使える範囲が広がる</h2>
+<p>個人情報を扱う業務でAIの活用範囲を広げる最も実務的な技法が、<strong>識別情報の除去・置き換え</strong>です。</p>
+<p>基本の操作は3つです。<strong>削除</strong>(氏名・住所・電話番号・メールアドレスなどを取り除く)、<strong>置き換え</strong>(氏名を「Aさん」「顧客X」のような記号に変える)、<strong>丸め</strong>(生年月日を年代に、住所を地域にするなど、粒度を粗くする)。問い合わせ対応の返信案作成であれば、「50代の既存顧客から、契約更新時の料金について次の趣旨の質問」という形まで加工すれば、個人を特定できる要素はほぼ消えます。</p>
+<p>実務で注意すべきは、<strong>組み合わせによる特定</strong>です。氏名を消しても、「◯◯市の従業員30名の製造業で、先月工場を増設した会社の社長」のような記述は、周辺情報と組み合わせれば特定できてしまいます。役職・会社の特徴・出来事の日付など、まれな属性の組み合わせが残っていないかを見る癖をつけてください。</p>
+<ol><li>対象の文書から、直接の識別子(氏名・連絡先・ID)を削除または置き換える</li><li>まれな属性の組み合わせ(特徴的な役職・地名・出来事)を丸めるか削る</li><li>加工後の文章だけを読んで、個人や取引先を推定できないかを確認する</li><li>置き換えの対応表(Aさん=誰)が必要な場合は、AIに入力せず手元だけで保管する</li></ol>
+<p>この手順は、慣れれば1件あたり1〜2分の作業です。テンプレート化して<a class="plink" href="/column/prompt-sekkei-jitsumu/">プロンプトの雛形</a>に「識別情報を除いた形で貼り付ける」という手順として組み込めば、現場の標準動作にできます。</p>
+<p class="note">法令上の「匿名加工情報」「仮名加工情報」には、それぞれ定められた加工基準と義務があります。本節の実務的な識別情報の除去は、日常業務でリスクを下げるための運用であり、法令上の匿名加工情報の作成とは区別してください。制度としての匿名加工を活用する場合は、専門家の関与のもとで基準に沿った加工が必要です。</p>
+<h2 id="s4">業務別の実務判断：顧客対応・人事・経理</h2>
+<p>主要な業務ごとに、実務の線引きの目安を示します。いずれも「承認済みツール(学習停止・法人契約)の利用」を前提とした上での整理です。</p>
+<p><strong>顧客対応</strong>。活用の効果が大きく、識別情報の除去で多くが安全にできる領域です。返信案の作成・問い合わせの分類・応対履歴の要約は、氏名や連絡先を外せば実施しやすい。一方、会話履歴の全件をAI連携の仕組みに流すような構成では、都度の手動加工ができないため、サービス側の管理(委託としての整理・安全管理)を契約レベルで固める必要があります。手動運用と仕組み化では、必要な手当てが変わる点に注意してください。</p>
+<p><strong>人事・採用</strong>。情報の機微性と本人への影響が大きく、最も慎重な領域です。求人票の作成・面接の質問設計・制度文書の下書きなど、個人データを使わない業務から広げるのが定石です。応募者・従業員の個人データを使う場合は、識別情報の除去に加え、「AIの出力を判断の根拠にしない(資料整理まで)」という役割の線引きを明文化してください。評価や健康情報などの要配慮情報は、外部AIの対象から原則外すのが現実的です。</p>
+<p><strong>経理・総務</strong>。取引データには取引先の情報(個人事業主なら個人情報)が含まれます。仕訳の相談や資料作成は、社名・氏名を伏せた形での利用が基本です。請求書処理のような仕組み化された自動処理では、処理するデータの範囲を必要最小限にし、サービスの管理体制を確認した上で委託として整理します。</p>
+<p>共通する判断の順序は、(1)個人データを使わずにできる部分から始める、(2)識別情報を除いて使える範囲を広げる、(3)個人データそのものを扱う仕組みは、契約と管理体制を固めてから——という3段階です。この順序を守れば、活用と保護は対立しません。</p>
+<h2 id="s5">組織としての備え：ルール・記録・相談先</h2>
+<p>個人情報×AIの判断を、毎回現場の勘に委ねるのは危険です。組織として次の備えを整えてください。</p>
+<ul><li><strong>プライバシーポリシーの点検</strong> — 自社の利用目的の記載が、AIを使った処理をカバーできているかを確認する。必要なら利用目的の見直しと周知を行う</li><li><strong>委託先としての確認</strong> — 業務で使うAIサービスについて、データの取り扱い(学習利用・保存場所・第三者提供の有無)を文書で確認し、記録を残す。これが委託先の監督の実務になる</li><li><strong>判断の記録</strong> — 「この業務でこの範囲の利用を可とした」という判断とその理由を残す。後から見直せる記録が、組織の一貫性と説明力を作る</li><li><strong>相談ルートの確保</strong> — 顧問弁護士や専門家に、AIと個人情報の論点を相談できる関係を作っておく。判断に迷う案件を保留にせず前に進めるための投資</li><li><strong>事故時の手順</strong> — 誤入力が起きた場合の報告・記録・影響判断の初動を決めておく。漏えいに該当し得る場合の報告義務の判断は専門家と行う</li></ul>
+<p>これらの備えは、<a class="plink" href="/column/ai-seculity-jitsumu/">情報セキュリティの実務</a>で述べた体制と重なります。個人情報対応を特別扱いせず、AI運用の点検サイクルの中に「個人データを扱う用途の確認」という項目を一つ足す形が、続けやすい運用です。</p>
+<p>最後に、この領域の原則をひとつ挙げるなら、<strong>「迷う案件は、加工して使うか、聞いてから使う」</strong>です。個人情報だからと全面停止するのは過剰であり、確認なしで全面活用するのは無防備です。識別情報を外す一手間と、専門家に聞ける関係。この2つを持つ組織は、守りを固めたまま、個人情報を扱う業務でもAIの恩恵を受けられます。</p>
+<div class="faq"><h2 id="faq">よくある質問</h2><div class="faq-i"><p class="faq-q">「学習に使われない設定なら個人情報を入力してよい」と考えていいですか?</p><p class="faq-a">学習利用の停止は必要条件のひとつであって、十分条件ではありません。利用目的の範囲か、委託としての整理と監督ができているか、越境移転の手当てが必要か、といった論点は学習設定とは別に残ります。実務的には、学習停止+法人契約+取り扱いの文書確認、の3点セットで「委託として説明できる状態」を作った上で、入力する情報も業務に必要な最小限に絞る、が安全な運用です。</p></div><div class="faq-i"><p class="faq-q">本人の同意を取れば、どんな利用でも可能になりますか?</p><p class="faq-a">同意は万能ではありません。同意が有効であるためには、何にどう使われるかを本人が理解できる説明が前提ですし、従業員に対する同意は立場上の力関係から有効性が問われる場合があります。実務では、同意に頼る前に、利用目的の範囲内での利用として整理できないか、識別情報を除いた形で目的を達成できないかを先に検討する方が、堅牢な組み立てになります。</p></div><div class="faq-i"><p class="faq-q">社内に設置するタイプ(オンプレミス等)のAIなら、個人情報を自由に使えますか?</p><p class="faq-a">外部への提供の論点は小さくなりますが、自由にはなりません。利用目的の範囲、安全管理措置、そして本人への影響が大きい判断への利用の妥当性という論点は、設置場所に関係なく残ります。また、社内設置型でも、保守やログの外部送信の有無は確認が必要です。「外に出ないから何でもよい」ではなく、「提供の論点が軽くなる」と捉えてください。</p></div><div class="faq-i"><p class="faq-q">うっかり顧客の個人情報を入力してしまいました。漏えいとして報告が必要ですか?</p><p class="faq-a">一律の答えはなく、入力先のサービスの性質(学習利用の有無・保存の状態・契約関係)と、情報の内容・件数によって判断が変わります。まず、履歴の削除と事実関係の記録(何を・どこに・いつ・どの設定で)を行い、社内の窓口に報告してください。要配慮情報や相当数の個人データが関わる場合は、報告義務の判断を専門家と行う必要があります。判断に迷う事案を現場で抱え込まない体制が何より重要です。</p></div><div class="faq-i"><p class="faq-q">取引先から「AIに当社の情報を入力しないでほしい」と言われました</p><p class="faq-a">契約・依頼として尊重すべき要望です。まず、その取引先の情報を扱う業務と担当者を特定し、当該情報をAI入力の対象から除外する運用を明確にしてください。その上で、自社のAI利用の管理体制(承認済みツール・学習停止設定・入力区分)を説明し、どの範囲なら懸念がないかを対話することも有効です。取引先の懸念の多くは「無管理な利用」への不安であり、管理体制の説明で解消する場合も少なくありません。</p></div></div>
+<div class="recap"><p class="recap-t">この記事のまとめ</p><ul><li>問題の核心はAI利用そのものではなく、識別できる情報を管理の不明な場所に出すこと</li><li>法的整理はどのサービスを・どの設定で使うかが大部分を決める。法人契約+学習停止+文書確認が土台</li><li>識別情報の削除・置き換え・丸めで活用範囲は大きく広がる。組み合わせによる特定に注意</li><li>採用・評価など本人への影響が大きい判断は、情報管理とは別に「判断は人が行う」線引きを設ける</li><li>業務の判断順序は、個人データなしで始める→加工して広げる→仕組み化は契約を固めてから</li><li>利用目的の点検・委託先確認の記録・判断の記録・専門家への相談ルート・事故時の初動を組織で備える</li></ul></div>
+  </article>
+
+  <div class="cta"><p class="cta-t">自社の業務をAIで自動化する</p><p class="cta-s">ヒアリングから開発・運用まで一気通貫。既存システムはそのままに、御社の業務に合わせたAIツールを設計・導入します。</p><a class="cta-b" href="https://hakadoruai.blaze-ltd.com/?utm_source=blaze-column" target="_blank" rel="noopener">Hakadoru AI を見る</a></div>
+  <div class="rel"><p class="rel-t">関連記事</p><a href="/column/ai-tool-ranritsu/">ツールが乱立したときの整理方法</a><a href="/column/ai-kouka-sokutei/">自動化の効果測定｜何を見れば成功と言えるか</a><a href="/column/small-start-jidouka/">スモールスタートで始める自動化の進め方</a><a href="/column/seisei-ai-gyoumu-katsuyou/">生成AIを実務に組み込む具体的な手順</a><a href="/column/saas-renkei-jidouka/">SaaS間連携による自動化の実務</a></div>
+</div>
+
+<footer>
+  <p class="f-copy">&copy; 2026 BLAZE Inc. ALL RIGHTS RESERVED.</p>
+</footer>
+
+<script>
+const bgCv = document.getElementById('bg-canvas');
+const bgCtx = bgCv.getContext('2d');
+let W, H;
+function resizeBg(){ W = bgCv.width = window.innerWidth; H = bgCv.height = window.innerHeight; }
+resizeBg();
+window.addEventListener('resize', resizeBg);
+
+const beams = [
+  { c:'rgba(30,75,220,', lw:1.8, al:.45, phase:0.0, ox:[-.05,.22,.55,1.05], oy:[.50,.28,.72,.45], ax:[0,.12,.10,0], ay:[.08,.14,.12,.07], fx:[0,.41,.37,0], fy:[.29,.38,.43,.31] },
+  { c:'rgba(20,60,200,', lw:1.4, al:.38, phase:1.3, ox:[-.05,.18,.60,1.05], oy:[.45,.70,.25,.55], ax:[0,.10,.13,0], ay:[.09,.12,.10,.08], fx:[0,.35,.44,0], fy:[.33,.40,.36,.38] },
+  { c:'rgba(40,90,235,', lw:2.2, al:.30, phase:2.5, ox:[-.05,.30,.68,1.05], oy:[.55,.35,.65,.50], ax:[0,.11,.09,0], ay:[.07,.13,.11,.09], fx:[0,.43,.39,0], fy:[.37,.34,.41,.35] },
+  { c:'rgba(15,55,195,', lw:1.2, al:.28, phase:3.8, ox:[-.05,.45,.50,1.05], oy:[.42,.58,.42,.60], ax:[0,.09,.12,0], ay:[.10,.11,.09,.08], fx:[0,.38,.45,0], fy:[.32,.42,.38,.33] },
+  { c:'rgba(50,100,240,',lw:1.8, al:.35, phase:5.1, ox:[-.05,.15,.80,1.05], oy:[.48,.75,.28,.52], ax:[0,.13,.08,0], ay:[.11,.10,.13,.09], fx:[0,.46,.36,0], fy:[.40,.35,.44,.37] },
+];
+
+function drawBg(ts){
+  bgCtx.fillStyle = '#000008';
+  bgCtx.fillRect(0, 0, W, H);
+  const t = ts * 0.001;
+  const gx = W * (.2 + .08 * Math.sin(t * .12));
+  const gy = H * (.5 + .08 * Math.cos(t * .10));
+  const gr = bgCtx.createRadialGradient(gx,gy,0, gx,gy, Math.max(W,H)*.8);
+  gr.addColorStop(0, 'rgba(10,35,170,0.4)');
+  gr.addColorStop(.4,'rgba(6,20,120,0.15)');
+  gr.addColorStop(1, 'rgba(0,0,0,0)');
+  bgCtx.fillStyle = gr;
+  bgCtx.fillRect(0, 0, W, H);
+  beams.forEach(b => {
+    const ph = b.phase;
+    const pts = [
+      [b.ox[0]*W, (b.oy[0]+b.ay[0]*Math.sin(t*b.fy[0]+ph+0.0))*H],
+      [(b.ox[1]+b.ax[1]*Math.sin(t*b.fx[1]+ph+1.0))*W, (b.oy[1]+b.ay[1]*Math.sin(t*b.fy[1]+ph+0.5))*H],
+      [(b.ox[2]+b.ax[2]*Math.sin(t*b.fx[2]+ph+2.0))*W, (b.oy[2]+b.ay[2]*Math.sin(t*b.fy[2]+ph+1.5))*H],
+      [b.ox[3]*W, (b.oy[3]+b.ay[3]*Math.sin(t*b.fy[3]+ph+0.8))*H],
+    ];
+    const [p0,p1,p2,p3] = pts;
+    bgCtx.beginPath();
+    bgCtx.moveTo(p0[0],p0[1]);
+    bgCtx.bezierCurveTo(p1[0],p1[1],p2[0],p2[1],p3[0],p3[1]);
+    const grd = bgCtx.createLinearGradient(p0[0],p0[1],p3[0],p3[1]);
+    grd.addColorStop(0, b.c+'0)');
+    grd.addColorStop(.2,b.c+b.al+')');
+    grd.addColorStop(.5,b.c+(b.al*1.3).toFixed(2)+')');
+    grd.addColorStop(.8,b.c+b.al+')');
+    grd.addColorStop(1, b.c+'0)');
+    bgCtx.strokeStyle = grd;
+    bgCtx.lineWidth = b.lw;
+    bgCtx.shadowBlur = 24;
+    bgCtx.shadowColor = b.c+'0.6)';
+    bgCtx.stroke();
+    bgCtx.shadowBlur = 0;
+  });
+  requestAnimationFrame(drawBg);
+}
+requestAnimationFrame(drawBg);
+
+window.addEventListener('scroll', function(){
+  document.getElementById('nav').classList.toggle('s', window.scrollY > 40);
+});
+function toggleMenu(){
+  document.getElementById('ham').classList.toggle('open');
+  document.getElementById('mobMenu').classList.toggle('open');
+}
+</script>
+</body>
+</html>
