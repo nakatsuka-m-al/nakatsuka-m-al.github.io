@@ -36,6 +36,8 @@
   --ff-j:'Jost',sans-serif; --ff-n:'Noto Sans JP',sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.wrap,.hd,.cats,.list,#nav,footer,.mob-menu{position:relative;z-index:1}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--tx);font-family:var(--ff-n);font-weight:400;line-height:1.9;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 a{color:inherit}
@@ -148,6 +150,8 @@ footer{padding:30px 52px;border-top:1px solid var(--w15);text-align:center}
 </style>
 </head>
 <body>
+<canvas id="bg-canvas"></canvas>
+
 <nav id="nav">
   <a href="/" class="logo"><img src="/logo.png" alt="BLAZE"></a>
   <ul class="nav-links">
@@ -182,6 +186,62 @@ footer{padding:30px 52px;border-top:1px solid var(--w15);text-align:center}
 </footer>
 
 <script>
+const bgCv = document.getElementById('bg-canvas');
+const bgCtx = bgCv.getContext('2d');
+let W, H;
+function resizeBg(){ W = bgCv.width = window.innerWidth; H = bgCv.height = window.innerHeight; }
+resizeBg();
+window.addEventListener('resize', resizeBg);
+
+const beams = [
+  { c:'rgba(30,75,220,', lw:1.8, al:.45, phase:0.0, ox:[-.05,.22,.55,1.05], oy:[.50,.28,.72,.45], ax:[0,.12,.10,0], ay:[.08,.14,.12,.07], fx:[0,.41,.37,0], fy:[.29,.38,.43,.31] },
+  { c:'rgba(20,60,200,', lw:1.4, al:.38, phase:1.3, ox:[-.05,.18,.60,1.05], oy:[.45,.70,.25,.55], ax:[0,.10,.13,0], ay:[.09,.12,.10,.08], fx:[0,.35,.44,0], fy:[.33,.40,.36,.38] },
+  { c:'rgba(40,90,235,', lw:2.2, al:.30, phase:2.5, ox:[-.05,.30,.68,1.05], oy:[.55,.35,.65,.50], ax:[0,.11,.09,0], ay:[.07,.13,.11,.09], fx:[0,.43,.39,0], fy:[.37,.34,.41,.35] },
+  { c:'rgba(15,55,195,', lw:1.2, al:.28, phase:3.8, ox:[-.05,.45,.50,1.05], oy:[.42,.58,.42,.60], ax:[0,.09,.12,0], ay:[.10,.11,.09,.08], fx:[0,.38,.45,0], fy:[.32,.42,.38,.33] },
+  { c:'rgba(50,100,240,',lw:1.8, al:.35, phase:5.1, ox:[-.05,.15,.80,1.05], oy:[.48,.75,.28,.52], ax:[0,.13,.08,0], ay:[.11,.10,.13,.09], fx:[0,.46,.36,0], fy:[.40,.35,.44,.37] },
+];
+
+function drawBg(ts){
+  bgCtx.fillStyle = '#000008';
+  bgCtx.fillRect(0, 0, W, H);
+  const t = ts * 0.001;
+  const gx = W * (.2 + .08 * Math.sin(t * .12));
+  const gy = H * (.5 + .08 * Math.cos(t * .10));
+  const gr = bgCtx.createRadialGradient(gx,gy,0, gx,gy, Math.max(W,H)*.8);
+  gr.addColorStop(0, 'rgba(10,35,170,0.4)');
+  gr.addColorStop(.4,'rgba(6,20,120,0.15)');
+  gr.addColorStop(1, 'rgba(0,0,0,0)');
+  bgCtx.fillStyle = gr;
+  bgCtx.fillRect(0, 0, W, H);
+  beams.forEach(b => {
+    const ph = b.phase;
+    const pts = [
+      [b.ox[0]*W, (b.oy[0]+b.ay[0]*Math.sin(t*b.fy[0]+ph+0.0))*H],
+      [(b.ox[1]+b.ax[1]*Math.sin(t*b.fx[1]+ph+1.0))*W, (b.oy[1]+b.ay[1]*Math.sin(t*b.fy[1]+ph+0.5))*H],
+      [(b.ox[2]+b.ax[2]*Math.sin(t*b.fx[2]+ph+2.0))*W, (b.oy[2]+b.ay[2]*Math.sin(t*b.fy[2]+ph+1.5))*H],
+      [b.ox[3]*W, (b.oy[3]+b.ay[3]*Math.sin(t*b.fy[3]+ph+0.8))*H],
+    ];
+    const [p0,p1,p2,p3] = pts;
+    bgCtx.beginPath();
+    bgCtx.moveTo(p0[0],p0[1]);
+    bgCtx.bezierCurveTo(p1[0],p1[1],p2[0],p2[1],p3[0],p3[1]);
+    const grd = bgCtx.createLinearGradient(p0[0],p0[1],p3[0],p3[1]);
+    grd.addColorStop(0, b.c+'0)');
+    grd.addColorStop(.2,b.c+b.al+')');
+    grd.addColorStop(.5,b.c+(b.al*1.3).toFixed(2)+')');
+    grd.addColorStop(.8,b.c+b.al+')');
+    grd.addColorStop(1, b.c+'0)');
+    bgCtx.strokeStyle = grd;
+    bgCtx.lineWidth = b.lw;
+    bgCtx.shadowBlur = 24;
+    bgCtx.shadowColor = b.c+'0.6)';
+    bgCtx.stroke();
+    bgCtx.shadowBlur = 0;
+  });
+  requestAnimationFrame(drawBg);
+}
+requestAnimationFrame(drawBg);
+
 window.addEventListener('scroll', function(){
   document.getElementById('nav').classList.toggle('s', window.scrollY > 40);
 });
