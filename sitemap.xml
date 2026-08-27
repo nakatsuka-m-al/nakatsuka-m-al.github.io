@@ -98,6 +98,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://blaze-ltd.com/column/saiyo-yosan-sakugen-handan/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://blaze-ltd.com/column/saiyo-toushi-kaikei/</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -111,6 +117,12 @@
   </url>
   <url>
     <loc>https://blaze-ltd.com/column/saiyo-roi-keisan/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blaze-ltd.com/column/saiyo-naiseika-gaichuka/</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
