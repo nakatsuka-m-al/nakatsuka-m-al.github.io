@@ -225,6 +225,22 @@ section.dark-panel{
 .c-field input:focus,.c-field textarea:focus{border-color:var(--w5)}
 .c-btn{font-family:var(--ff-j);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--bg);background:var(--white);border:none;padding:16px;width:100%;cursor:pointer;margin-top:4px;transition:background .3s,transform .2s}
 .c-btn:hover{background:var(--accent);transform:translateY(-2px)}
+.c-btn:disabled{opacity:.45;cursor:not-allowed;transform:none;background:var(--white)}
+.c-field select{background-color:rgba(255,255,255,0.05);border:1px solid var(--w15);color:var(--white);font-family:var(--ff-n);font-size:13px;padding:12px 14px;outline:none;transition:border-color .3s;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='rgba(255,255,255,0.45)' stroke-width='1.4' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.c-field select:focus{border-color:var(--w5)}
+.c-field select option{background:#0a1024;color:var(--white)}
+.c-req{color:var(--accent);margin-left:3px}
+.c-consent{display:flex;align-items:flex-start;gap:9px;margin-top:8px;font-size:12px;line-height:1.7;color:var(--w8);text-align:left;cursor:pointer}
+.c-consent input{width:15px;height:15px;margin-top:2px;flex-shrink:0;accent-color:var(--accent);cursor:pointer}
+.c-consent a{color:var(--w8);text-decoration:underline;text-underline-offset:3px}
+.c-hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0}
+.c-msg{display:none;margin-top:12px;font-size:13px;line-height:1.8;padding:13px 15px;text-align:left;border:1px solid rgba(255,120,120,.45);background:rgba(255,120,120,.08);color:#ffb3b3}
+.c-msg.on{display:block}
+.c-msg a{color:#ffb3b3;text-decoration:underline;text-underline-offset:3px}
+.c-done{display:none;max-width:500px;margin:0 auto;padding:44px 28px;border:1px solid var(--w15);background:var(--w04);text-align:center}
+.c-done.on{display:block}
+.c-done-t{font-family:var(--ff-j);font-size:20px;font-weight:700;margin-bottom:14px}
+.c-done-p{font-size:13px;line-height:2;color:var(--w8);font-weight:300}
 
 /* ── FOOTER ── */
 footer{padding:30px 52px;border-top:1px solid var(--w15);display:flex;align-items:center;background:rgba(3,5,15,0.7);backdrop-filter:blur(12px);position:relative}
@@ -897,8 +913,55 @@ a.news-row .na { transition: opacity .25s, transform .25s; }
   <div class="s-lbl" style="display:inline-block;margin-bottom:12px">Contact</div>
   <h2 class="s-ttl" style="text-align:center">お問い合わせ</h2>
   <p class="c-sub">サービスのご相談・ご質問はお気軽にどうぞ。<br><span style="font-size:12px;color:var(--w5);">お問い合わせの前に<a href="/privacy" style="color:var(--w5);text-decoration:underline;text-underline-offset:3px;">プライバシーポリシー</a>をご確認ください。</span></p>
-  <div style="text-align:center;margin-top:48px;margin-bottom:80px">
-    <a href="https://share-na2.hsforms.com/1tOpmNzYoS_-4gTEgeSR3LA425mcd" target="_blank" class="c-btn-link" onclick="if(typeof gtag==='function')gtag('event','contact_click',{cta_location:'top_contact'})">お問い合わせはこちら</a>
+  <form class="c-form" id="cform" novalidate>
+    <div class="c-row">
+      <div class="c-field">
+        <label for="f-company">会社名<span class="c-req">*</span></label>
+        <input type="text" id="f-company" name="company" required autocomplete="organization">
+      </div>
+      <div class="c-field">
+        <label for="f-name">お名前<span class="c-req">*</span></label>
+        <input type="text" id="f-name" name="name" required autocomplete="name">
+      </div>
+    </div>
+    <div class="c-row">
+      <div class="c-field">
+        <label for="f-email">メールアドレス<span class="c-req">*</span></label>
+        <input type="email" id="f-email" name="email" required autocomplete="email">
+      </div>
+      <div class="c-field">
+        <label for="f-tel">電話番号（任意）</label>
+        <input type="tel" id="f-tel" name="tel" autocomplete="tel">
+      </div>
+    </div>
+    <div class="c-field">
+      <label for="f-category">お問い合わせ内容<span class="c-req">*</span></label>
+      <select id="f-category" name="category" required>
+        <option value="">選択してください</option>
+        <option>自社採用支援に関してのお問合わせ</option>
+        <option>人材派遣・紹介会社の集客支援に関してのお問合わせ</option>
+        <option>営業管理職研修に関してのお問合わせ</option>
+        <option>AI業務自動化に関してのお問い合わせ</option>
+        <option>弊社への営業・アライアンスのご連絡</option>
+        <option>その他</option>
+      </select>
+    </div>
+    <div class="c-field">
+      <label for="f-message">詳細<span class="c-req">*</span></label>
+      <textarea id="f-message" name="message" rows="6" required></textarea>
+    </div>
+    <label class="c-consent">
+      <input type="checkbox" id="f-agree">
+      <span><a href="/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a>に同意のうえ送信します</span>
+    </label>
+    <input type="text" name="website" class="c-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button type="submit" class="c-btn" id="c-submit">送信する</button>
+    <div class="c-msg" id="c-err" role="alert"></div>
+  </form>
+
+  <div class="c-done" id="c-done" role="status">
+    <div class="c-done-t">送信が完了しました</div>
+    <p class="c-done-p">お問い合わせありがとうございます。<br>ご入力のメールアドレスへ確認メールをお送りしました。<br>担当者より2営業日以内にご連絡いたします。</p>
   </div>
 </section>
 </main>
@@ -1042,6 +1105,60 @@ function toggleMenu(){
   document.getElementById('ham').classList.toggle('open');
   document.getElementById('mobMenu').classList.toggle('open');
 }
+
+// ── CONTACT FORM
+(function(){
+  // Google Apps Script のウェブアプリURL（デプロイ後に差し替え）
+  const ENDPOINT = '';
+
+  const form = document.getElementById('cform');
+  if(!form) return;
+  const btn  = document.getElementById('c-submit');
+  const err  = document.getElementById('c-err');
+  const done = document.getElementById('c-done');
+  const MAILTO = '<a href="mailto:info@blaze-ltd.com">info@blaze-ltd.com</a>';
+
+  function showErr(html){ err.innerHTML = html; err.classList.add('on'); }
+  function clearErr(){ err.innerHTML = ''; err.classList.remove('on'); }
+
+  form.addEventListener('submit', async function(ev){
+    ev.preventDefault();
+    clearErr();
+
+    const fd = new FormData(form);
+    const val = k => (fd.get(k) || '').toString().trim();
+
+    if(!val('company') || !val('name') || !val('email') || !val('category') || !val('message')){
+      showErr('必須項目をすべてご入力ください。'); return;
+    }
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val('email'))){
+      showErr('メールアドレスの形式をご確認ください。'); return;
+    }
+    if(!document.getElementById('f-agree').checked){
+      showErr('プライバシーポリシーへの同意にチェックをお願いします。'); return;
+    }
+    if(!ENDPOINT){
+      showErr('現在フォームを準備中です。お手数ですが ' + MAILTO + ' まで直接ご連絡ください。'); return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = '送信中...';
+
+    try{
+      const res = await fetch(ENDPOINT, { method:'POST', body:new URLSearchParams(fd) });
+      const data = await res.json();
+      if(!data.ok) throw new Error(data.error || 'failed');
+      form.style.display = 'none';
+      done.classList.add('on');
+      done.scrollIntoView({ behavior:'smooth', block:'center' });
+      if(typeof gtag === 'function') gtag('event','contact_submit',{ category: val('category') });
+    }catch(e){
+      showErr('送信に失敗しました。時間をおいて再度お試しいただくか、' + MAILTO + ' まで直接ご連絡ください。');
+      btn.disabled = false;
+      btn.textContent = '送信する';
+    }
+  });
+})();
 </script>
 </body>
 </html>
