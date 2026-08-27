@@ -68,6 +68,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://blaze-ltd.com/column/top-player-ikusei/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blaze-ltd.com/column/teiseki-member-taiou/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blaze-ltd.com/column/shitsumon-de-kangaesaseru/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://blaze-ltd.com/column/shinnin-manager-90nichi/</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
