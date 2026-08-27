@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H67Y48Q10E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H67Y48Q10E');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="「任せる」が丸投げか過干渉のどちらかに振れてしまう営業管理職へ。判断の重さと回復可能性で任せる範囲を線引きし、メンバーの力量に応じて広げていく具体的な設計方法を解説します。">
+<meta property="og:title" content="任せる範囲の決め方｜丸投げと過干渉の間を設計する">
+<meta property="og:description" content="「任せる」が丸投げか過干渉のどちらかに振れてしまう営業管理職へ。判断の重さと回復可能性で任せる範囲を線引きし、メンバーの力量に応じて広げていく具体的な設計方法を解説します。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blaze-ltd.com/column/makaseru-hanni-kimekata/">
+<meta property="og:image" content="https://blaze-ltd.com/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blaze-ltd.com/ogp.png">
+<meta name="robots" content="index, follow">
+<title>任せる範囲の決め方｜丸投げと過干渉の間を設計する</title>
+<link rel="canonical" href="https://blaze-ltd.com/column/makaseru-hanni-kimekata/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"任せる範囲の決め方｜丸投げと過干渉の間を設計する","description":"「任せる」が丸投げか過干渉のどちらかに振れてしまう営業管理職へ。判断の重さと回復可能性で任せる範囲を線引きし、メンバーの力量に応じて広げていく具体的な設計方法を解説します。","datePublished":"2026-08-27","dateModified":"2026-08-27","mainEntityOfPage":"https://blaze-ltd.com/column/makaseru-hanni-kimekata/","image":"https://blaze-ltd.com/ogp.png","author":{"@type":"Organization","name":"株式会社BLAZE","url":"https://blaze-ltd.com"},"publisher":{"@type":"Organization","name":"株式会社BLAZE","url":"https://blaze-ltd.com","logo":{"@type":"ImageObject","url":"https://blaze-ltd.com/logo.png"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://blaze-ltd.com"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://blaze-ltd.com/column/"},{"@type":"ListItem","position":3,"name":"営業育成・事業成長","item":"https://blaze-ltd.com/column/sales/"},{"@type":"ListItem","position":4,"name":"任せる範囲の決め方｜丸投げと過干渉の間を設計する","item":"https://blaze-ltd.com/column/makaseru-hanni-kimekata/"}]}]}</script>
+<style>
+:root{
+  --bg:#03050f; --surface:#080c1c; --accent:#4DFFDF; --white:#fff;
+  --tx:rgba(255,255,255,.92); --tx2:rgba(255,255,255,.72);
+  --w5:rgba(255,255,255,.5); --w3:rgba(255,255,255,.3);
+  --w15:rgba(255,255,255,.15); --w08:rgba(255,255,255,.08); --w04:rgba(255,255,255,.04);
+  --ff-j:'Jost',sans-serif; --ff-n:'Noto Sans JP',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.wrap,.hd,.cats,.list,#nav,footer,.mob-menu{position:relative;z-index:1}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:var(--ff-n);font-weight:400;line-height:1.9;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+
+/* ヘッダーは #nav に限定して指定する。
+   目次も意味的に <nav> で書いているため、型セレクタにすると巻き込まれる */
+#nav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 52px;height:72px;z-index:200;transition:background .4s}
+#nav.s{background:rgba(3,5,15,.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--w15)}
+.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
+.logo img{height:72px;width:auto;display:block}
+.nav-links{display:flex;gap:30px;list-style:none;align-items:center}
+.nav-links a{font-family:var(--ff-j);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--w5);text-decoration:none;transition:color .3s}
+.nav-links a:hover{color:var(--white)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;z-index:300}
+.ham span{display:block;width:22px;height:1.5px;background:var(--white);transition:transform .3s,opacity .3s}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob-menu{position:fixed;inset:0;background:rgba(0,0,8,.97);z-index:250;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;opacity:0;pointer-events:none;transition:opacity .3s}
+.mob-menu.open{opacity:1;pointer-events:all}
+.mob-menu a{font-family:var(--ff-j);font-size:21px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--white);text-decoration:none}
+.mob-close{position:absolute;top:26px;right:26px;background:none;border:1px solid var(--w3);color:var(--white);font-size:18px;width:44px;height:44px;cursor:pointer}
+
+/* ── 記事 ── */
+.wrap{max-width:760px;margin:0 auto;padding:130px 24px 90px}
+.crumb{font-size:12px;color:var(--w5);margin-bottom:22px;line-height:1.7}
+.crumb a{color:var(--w5);text-decoration:none}
+.crumb a:hover{color:var(--white)}
+.a-cat{display:inline-block;font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(77,255,223,.35);padding:5px 11px;margin-bottom:18px}
+h1{font-size:clamp(24px,3.4vw,34px);font-weight:700;line-height:1.5;letter-spacing:.01em;margin-bottom:18px;text-wrap:balance}
+.a-meta{font-size:12px;color:var(--w5);letter-spacing:.04em;padding-bottom:26px;border-bottom:1px solid var(--w15)}
+.a-lead{font-size:15px;line-height:2.05;color:var(--tx2);margin:30px 0 0}
+
+.toc{background:var(--surface);border:1px solid var(--w15);padding:24px 26px;margin:38px 0}
+.toc-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:14px}
+.toc ol{list-style:none;counter-reset:t}
+.toc li{counter-increment:t;font-size:14px;line-height:1.9;padding-left:30px;position:relative}
+.toc li::before{content:counter(t,decimal-leading-zero);position:absolute;left:0;font-family:var(--ff-j);font-size:11px;font-weight:600;color:var(--w3);top:4px}
+.toc a{color:var(--tx2);text-decoration:none}
+.toc a:hover{color:var(--accent)}
+
+article h2{font-size:21px;font-weight:700;line-height:1.6;margin:56px 0 20px;padding-left:14px;border-left:3px solid var(--accent);scroll-margin-top:90px}
+article h3{font-size:17px;font-weight:600;line-height:1.6;margin:36px 0 14px;color:var(--white)}
+article p{font-size:15px;line-height:2.05;margin-bottom:20px;color:var(--tx)}
+article ul,article ol{margin:0 0 22px 1.4em}
+article li{font-size:15px;line-height:1.95;margin-bottom:9px}
+article strong{font-weight:700;color:var(--white)}
+article a.plink{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+
+.tbl{width:100%;border-collapse:collapse;margin:8px 0 26px;font-size:14px;display:block;overflow-x:auto}
+.tbl th,.tbl td{border:1px solid var(--w15);padding:11px 13px;text-align:left;line-height:1.7}
+.tbl th{background:var(--w04);font-weight:600;white-space:nowrap}
+
+.note{background:var(--w04);border-left:3px solid var(--w3);padding:18px 20px;margin:26px 0;font-size:14px;line-height:1.95;color:var(--tx2)}
+
+.faq{margin:50px 0 0}
+.faq-i{border-bottom:1px solid var(--w15);padding:20px 0}
+.faq-q{font-size:15px;font-weight:600;margin-bottom:10px;line-height:1.7}
+.faq-q::before{content:'Q.';font-family:var(--ff-j);color:var(--accent);margin-right:8px;font-weight:700}
+.faq-a{font-size:14px;line-height:1.95;color:var(--tx2)}
+
+.recap{background:var(--surface);border:1px solid var(--w15);padding:26px 28px;margin:50px 0 0}
+.recap-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:14px}
+.recap ul{margin:0 0 0 1.2em}
+.recap li{font-size:14px;line-height:1.9;margin-bottom:10px;color:var(--tx2)}
+
+/* ── セグメント別CTA ── */
+.cta{border:1px solid rgba(77,255,223,.3);background:linear-gradient(180deg,rgba(77,255,223,.05),transparent);padding:34px 30px;margin:56px 0 0;text-align:center}
+.cta-t{font-family:var(--ff-j);font-size:19px;font-weight:700;line-height:1.5;margin-bottom:12px}
+.cta-s{font-size:14px;line-height:1.95;color:var(--tx2);margin-bottom:22px}
+.cta-b{display:inline-block;font-family:var(--ff-j);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bg);background:var(--white);text-decoration:none;padding:14px 34px;transition:background .3s,transform .2s}
+.cta-b:hover{background:var(--accent);transform:translateY(-2px)}
+
+.rel{margin:60px 0 0;border-top:1px solid var(--w15);padding-top:34px}
+.rel-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:16px}
+.rel a{display:block;font-size:14px;line-height:1.75;color:var(--tx2);text-decoration:none;padding:11px 0;border-bottom:1px solid var(--w08)}
+.rel a:hover{color:var(--accent)}
+
+/* ── 一覧ページ ── */
+.hd{max-width:1000px;margin:0 auto;padding:140px 24px 0}
+.hd .s-lbl{font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--w5);margin-bottom:12px}
+.hd h1{font-family:var(--ff-j);font-size:clamp(26px,3.8vw,46px);line-height:1.15}
+.hd p{font-size:14px;line-height:1.95;color:var(--tx2);margin-top:18px;max-width:600px}
+.cats{max-width:1000px;margin:44px auto 0;padding:0 24px;display:flex;flex-wrap:wrap;gap:10px}
+.cats a{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);text-decoration:none;border:1px solid var(--w15);padding:9px 18px;transition:all .3s}
+.cats a:hover,.cats a.on{background:var(--white);color:var(--bg);border-color:var(--white)}
+.list{max-width:1000px;margin:0 auto;padding:46px 24px 100px;display:grid;gap:1px;background:var(--w15);border:1px solid var(--w15);border-radius:0}
+.list{background:transparent;border:none;gap:0}
+.card{display:block;text-decoration:none;padding:26px 4px;border-bottom:1px solid var(--w15);transition:background .3s}
+.card:hover{background:var(--w04)}
+.card-c{font-family:var(--ff-j);font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
+.card-t{font-size:16px;font-weight:600;line-height:1.65;margin-bottom:9px;color:var(--white)}
+.card-d{font-size:13px;line-height:1.85;color:var(--tx2)}
+.empty{padding:60px 4px;color:var(--w5);font-size:14px}
+
+footer{padding:30px 52px;border-top:1px solid var(--w15);text-align:center}
+.f-copy{font-family:var(--ff-j);font-size:10px;font-weight:300;color:var(--w3);letter-spacing:.18em}
+
+@media(max-width:768px){
+  #nav{padding:0 20px;height:64px}
+  .logo img{height:48px}
+  .nav-links{display:none}
+  .ham{display:flex}
+  .wrap{padding:110px 20px 70px}
+  .hd{padding:110px 20px 0}
+  .cats,.list{padding-left:20px;padding-right:20px}
+  article h2{font-size:19px;margin:44px 0 16px}
+  footer{padding:26px 20px}
+}
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+
+<nav id="nav">
+  <a href="/" class="logo"><img src="/logo.png" alt="BLAZE"></a>
+  <ul class="nav-links">
+    <li><a href="/service/">Service</a></li>
+    <li><a href="/company/">Company</a></li>
+    <li><a href="/column/">Column</a></li>
+    <li><a href="/news/">News</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+  <div class="ham" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="toggleMenu()">✕</button>
+  <a href="/service/" onclick="toggleMenu()">Service</a>
+  <a href="/company/" onclick="toggleMenu()">Company</a>
+  <a href="/column/"  onclick="toggleMenu()">Column</a>
+  <a href="/news/"    onclick="toggleMenu()">News</a>
+  <a href="/contact/" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="wrap">
+  <p class="crumb"><a href="/">ホーム</a> ／ <a href="/column/">コラム</a> ／ <a href="/column/sales/">営業育成・事業成長</a></p>
+  <span class="a-cat">Sales Leadership</span>
+  <h1>任せる範囲の決め方｜丸投げと過干渉の間を設計する</h1>
+  <p class="a-meta">最終更新 2026-08-27</p>
+  <p class="a-lead">「もっと部下に任せなさい」。管理職なら誰もが言われる言葉ですが、実行は簡単ではありません。任せたつもりが放置になり、案件が壊れてから発覚する。逆に心配で口を出し続け、メンバーのやる気を削ぐ。丸投げと過干渉、どちらの失敗も「任せる範囲が設計されていない」ことが原因です。この記事では、任せる範囲を感覚ではなく基準で決める方法を解説します。</p>
+
+  <nav class="toc"><p class="toc-t">目次</p><ol><li><a href="#s1">なぜ「任せ方」は教わる機会がないのか</a></li><li><a href="#s2">「任せる」が失敗する2つの型</a></li><li><a href="#s3">任せる範囲を決める2軸：判断の重さ × 回復可能性</a></li><li><a href="#s4">メンバーの力量で線をずらす</a></li><li><a href="#s5">任せた後の関与ルールを先に決める</a></li><li><a href="#s6">失敗したときの振る舞いが、次の委任を決める</a></li><li><a href="#s7">任せる範囲を見直すタイミング</a></li><li><a href="#s8">任せる範囲の設計がもたらすもの</a></li></ol></nav>
+
+  <article>
+<h2 id="s1">なぜ「任せ方」は教わる機会がないのか</h2>
+<p>営業の売り方は研修や同行で教わりますが、「任せ方」を体系的に教わった管理職はほとんどいません。多くの人は、自分が過去に上司から受けた任され方を、無自覚に再生産しています。</p>
+<p>丸投げされて育った人は丸投げし、細かく管理されて育った人は細かく管理する。つまり任せ方は、個人の性格ではなく<strong>組織の中で連鎖する習慣</strong>です。だからこそ、どこかの世代の管理職が意識的に設計し直さない限り、同じ任せ方が続きます。</p>
+<p>また、任せ方には売り方と違って即時のフィードバックがありません。商談は失注すればすぐ分かりますが、まずい任せ方の影響は数ヶ月後にメンバーの停滞や離職として現れ、しかも原因が任せ方にあったとは特定されにくい。<strong>失敗が見えにくいスキルは、上達もしにくい</strong>。これが、経験年数の長い管理職でも任せ方が我流のままである理由です。</p>
+<p>見えにくいものを扱うには、基準を外に置くしかありません。次章から、その基準の作り方を順に説明します。</p>
+<h2 id="s2">「任せる」が失敗する2つの型</h2>
+<p>任せ方の失敗は、正反対に見える2つの型に分かれます。</p>
+<p><strong>丸投げ型</strong>は、案件を渡した後に関与しなくなる型です。「任せたから」と進捗を見ず、メンバーが詰まっていても気づかない。失注や納期遅れが起きてから事態を知り、「なぜ相談しなかった」とメンバーを責める。メンバーからすれば、相談してよいのか分からないまま放置され、失敗の責任だけ負わされた形になります。</p>
+<p><strong>過干渉型</strong>は、渡したはずの案件に口を出し続ける型です。メールの文面を直させ、提案の細部に修正を入れ、商談に同席したがる。メンバーは「任せると言われたのに信用されていない」と感じ、次第に自分で考えることをやめて、指示を待つようになります。</p>
+<p>両者は逆に見えて、根は同じです。<strong>「何を任せ、何を任せていないか」の線引きが言語化されていない</strong>。線がないから、管理職はその日の不安の大きさで関与量を変え、メンバーは基準が読めずに萎縮します。</p>
+<h2 id="s3">任せる範囲を決める2軸：判断の重さ × 回復可能性</h2>
+<p>線引きの基準として実務で機能するのは、<strong>判断の重さ</strong>と<strong>失敗した場合の回復可能性</strong>の2軸です。</p>
+<p>判断の重さとは、その判断が影響を与える範囲です。1案件で閉じる判断か、他の顧客や価格体系全体に波及する判断か。回復可能性とは、失敗したときに取り返しがつくかです。謝罪してやり直せる失敗か、顧客関係が終わる失敗か。</p>
+<table class="tbl"><tr><th>組み合わせ</th><th>例</th><th>任せ方</th></tr><tr><td>軽い × 回復可能</td><td>既存顧客への定期提案、日程調整、見積の再送</td><td>完全に任せる。報告も事後でよい</td></tr><tr><td>軽い × 回復困難</td><td>小さいが感情的にこじれている顧客への対応</td><td>方針だけ事前にすり合わせる</td></tr><tr><td>重い × 回復可能</td><td>新規の大型提案、キャンペーン企画</td><td>節目で確認。中身は任せる</td></tr><tr><td>重い × 回復困難</td><td>最重要顧客の契約更新、値引き体系に関わる交渉</td><td>同席・共同で進める</td></tr></table>
+<p>この2軸で案件を仕分けると、「全部心配だから全部見る」という過干渉も、「忙しいから全部渡す」という丸投げも消えます。関与の濃淡が案件の性質で決まるため、メンバーから見ても納得感があります。</p>
+<h3>「金額の大きさ」だけで線を引かない</h3>
+<p>よくある失敗は、案件金額だけで任せる範囲を決めることです。金額が小さくても、紹介元が重要顧客である案件や、業界内で評判が伝播しやすい案件は、失敗の波及が大きい。逆に金額が大きくても、定型的で回復可能な案件はあります。</p>
+<p>金額は判断の重さの一要素にすぎません。「これが壊れたら何が起きるか」を想像して仕分ける習慣が、線引きの精度を上げます。</p>
+<h2 id="s4">メンバーの力量で線をずらす</h2>
+<p>案件の2軸に加えて、<strong>メンバーの現在の力量</strong>で線をずらします。同じ案件でも、任せられる範囲は人によって違って当然です。</p>
+<p>力量の判定は「経験年数」ではなく、<strong>直近の実績で確認できた範囲</strong>で行います。判断基準はシンプルです。</p>
+<ol><li><strong>一度も単独でやったことがない業務</strong> — 同行・同席で見せてから、次回に任せる</li><li><strong>単独でやり切った実績が1〜2回ある業務</strong> — 任せて、節目で確認する</li><li><strong>安定して成果を出している業務</strong> — 完全に任せ、報告も本人のペースに委ねる</li></ol>
+<p>重要なのは、<strong>任せる範囲を「拡張していく設計」</strong>として扱うことです。今月は既存顧客の更新交渉まで、来月からは新規の提案まで。範囲が広がっていくこと自体がメンバーにとっての成長実感になり、評価の材料にもなります。</p>
+<p class="note">範囲拡張の合図を明示するのが効果的です。「この種類の案件は、今日から事前相談なしで進めていい」と言葉で渡す。メンバーは自分の裁量が広がった瞬間を認識でき、信頼されている実感を持ちます。黙って放置量を増やすのとは、同じ行動でも受け取られ方がまったく違います。</p>
+<h2 id="s5">任せた後の関与ルールを先に決める</h2>
+<p>範囲を決めたら、<strong>任せた後にどう関わるかのルール</strong>を先に合意します。ここを曖昧にすると、結局その日の気分で介入することになります。</p>
+<p>決めておくべきは3点です。</p>
+<ul><li><strong>報告のタイミング</strong> — 「商談後24時間以内に3行で」など、頻度と粒度を具体化する。詳細な日報を課すのではなく、判断に必要な最小限にする</li><li><strong>エスカレーション条件</strong> — 「値引きが◯%を超える場合」「先方の決裁者が変わった場合」など、必ず相談してほしい条件を列挙する。条件外は相談不要と明言する</li><li><strong>管理職側の介入条件</strong> — 「停滞が2週間続いたら状況を聞く」など、こちらから動く条件も伝えておく。突然の介入が「信用されていない」と受け取られるのを防ぐ</li></ul>
+<p>エスカレーション条件の明示は特に重要です。「困ったら相談して」という曖昧な指示は、真面目なメンバーほど「どこまで自分で粘るべきか」で悩ませます。条件を具体的に列挙すれば、それ以外は堂々と自分で判断してよいという裏の意味が伝わります。</p>
+<h2 id="s6">失敗したときの振る舞いが、次の委任を決める</h2>
+<p>任せた案件は、いつか必ず失敗します。そのときの管理職の振る舞いが、以後の委任が機能するかどうかを決めます。</p>
+<p>原則は一つです。<strong>任せた案件の結果責任は管理職が取る。メンバーと行うのは原因の究明だけ</strong>。</p>
+<p>失注の報告を受けた瞬間に「なぜ相談しなかった」「だから任せられない」と返すと、その言葉はチーム全体に伝わります。以後、メンバーは失敗の可能性がある挑戦を避け、安全な案件しか扱わなくなります。表面上は失敗が減りますが、それは挑戦が消えただけです。</p>
+<p>振り返りでは、責任追及と原因究明を明確に分けます。「誰が悪かったか」ではなく「どの時点で、何が見えていれば、違う手が打てたか」。この問いなら、メンバーは防衛的にならずに事実を出せます。そして振り返りで出た学びを、エスカレーション条件の更新に反映します。失敗が線引きの精度を上げる材料になれば、失敗にも価値が生まれます。</p>
+<h3>「巻き取り」は最終手段にする</h3>
+<p>案件が危うくなったとき、管理職が引き取って自分で立て直す「巻き取り」は、最も安易で最も高くつく選択です。その案件は救えても、メンバーには「最後は上司がやってくれる」という学習が残り、当事者意識が壊れます。</p>
+<p>巻き取る前に、同席・助言・顧客への口添えなど、メンバーを主役に残したまま支援する方法を先に検討します。巻き取りは、顧客への影響が回復不能になる一歩手前まで取っておく最終手段です。</p>
+<h2 id="s7">任せる範囲を見直すタイミング</h2>
+<p>線引きは一度作って終わりではありません。定期的な見直しを組み込まないと、半年前の力量評価のまま固定され、成長したメンバーの裁量が不当に狭いままになります。</p>
+<p>見直しのトリガーを3つ用意しておくと運用しやすくなります。</p>
+<ul><li><strong>四半期の節目</strong> — 全メンバーの任せる範囲を一覧化して棚卸しする。カレンダーに固定しておく</li><li><strong>単独での成功が続いたとき</strong> — 同種の案件を2〜3回やり切ったら、次の段階へ広げる合図と捉える</li><li><strong>組織や商材が変わったとき</strong> — 新商材の投入・体制変更の際は、線引き自体を作り直す。旧商材での力量評価は新商材には持ち越せない</li></ul>
+<p>見直しの場では、広げる話だけでなく<strong>狭める判断</strong>も避けないことが大切です。任せた範囲で失敗が続いているなら、一段階戻して立て直す方が本人のためになります。その際は「評価を下げた」ではなく「成功の階段を掛け直した」と説明し、再拡張の条件をセットで示します。戻し方に誠実さがあれば、メンバーの信頼は失われません。</p>
+<p>また、任せる範囲の一覧はチーム内で公開することを勧めます。誰が何をどこまで任されているかが見えると、メンバー間で「あの範囲を任されたい」という健全な目標が生まれ、範囲の拡張が昇進前の実績としても機能し始めます。</p>
+<h2 id="s8">任せる範囲の設計がもたらすもの</h2>
+<p>任せる範囲の設計は、単なる業務分担の話ではありません。組織の成長速度を決める設計です。</p>
+<p>線引きが明確な組織では、メンバーは自分の裁量範囲を理解し、その中で判断の経験を積み重ねます。判断の経験量が力量を作り、力量が上がれば任せる範囲が広がる。この循環が回り始めると、管理職が意識的に育成時間を取らなくても、日常業務そのものが育成装置になります。</p>
+<p>逆に線引きのない組織では、すべての判断が管理職に集まり続けます。管理職は忙しさに溺れ、メンバーは判断経験を積めないまま年次だけ重ねる。数年後の組織力の差は、この日々の設計の差の積分です。</p>
+<p>さらに、線引きの設計は管理職自身の次のキャリアにも直結します。自分がいなくても回るチームを作れた管理職だけが、より大きな組織や新しい事業を任されます。「自分がいないと回らない」は献身の証ではなく、委任設計の未完成を示すシグナルです。</p>
+<p>まずは自分のチームの案件を、判断の重さ × 回復可能性の4象限に仕分けることから始めてください。1時間の作業で、明日から関与を減らせる案件がいくつも見つかるはずです。</p>
+<div class="faq"><h2 id="faq">よくある質問</h2><div class="faq-i"><p class="faq-q">任せたいのですが、メンバーが「自信がない」と受けたがりません</p><p class="faq-a">範囲の刻み方が大きすぎる可能性があります。商談全体ではなく「次回のヒアリングだけ」「提案書の構成案まで」など、工程を分割して渡してください。小さな成功体験が積み上がれば、受ける側の姿勢は変わります。また、失敗したときに責めない実績を先に見せることも効きます。</p></div><div class="faq-i"><p class="faq-q">エスカレーション条件を決めても、メンバーが守らず事後報告になります</p><p class="faq-a">条件が多すぎるか、相談のコストが高い可能性を疑ってください。条件が10個あれば覚えられません。3〜5個に絞ること。また、相談のたびに説教が付いてくるなら、メンバーは合理的に相談を避けます。相談されたら、まず相談したこと自体を肯定するのが原則です。</p></div><div class="faq-i"><p class="faq-q">自分が担当した方が確実に受注できる案件も任せるべきですか?</p><p class="faq-a">その案件の受注が今期の必達に不可欠なら、自分で持つ判断もあり得ます。ただし「確実に取れるから自分で」をすべての重要案件に適用すると、メンバーには軽い案件しか残りません。重要案件の一部を、同席付きでメンバーに任せる中間形態を使ってください。</p></div><div class="faq-i"><p class="faq-q">リモートワーク中心のチームでは、任せた後の様子が見えず不安です</p><p class="faq-a">見えないことを報告の増加で補おうとすると、監視に近づきメンバーの信頼を損ねます。対面で自然に得ていた情報のうち、判断に本当に必要なものだけをエスカレーション条件に組み込んでください。あとは商談録画やSFAの記録など、メンバーの手を止めずに得られる情報源に置き換えるのが現実的です。</p></div></div>
+<div class="recap"><p class="recap-t">この記事のまとめ</p><ul><li>丸投げも過干渉も、根は同じ。「何を任せ、何を任せていないか」の線引きが言語化されていない</li><li>線引きは「判断の重さ × 失敗の回復可能性」の2軸で行う。金額だけで決めない</li><li>メンバーの力量は経験年数ではなく、単独でやり切った実績で判定し、範囲を段階的に拡張する</li><li>範囲拡張は言葉で明示的に渡す。黙って放置量を増やすのとは受け取られ方が違う</li><li>報告タイミング・エスカレーション条件・介入条件の3点を事前に合意する</li><li>任せた案件の結果責任は管理職が取る。振り返りは責任追及ではなく原因究明に限定する</li><li>線引きの明確な組織では日常業務が育成装置になり、組織の成長速度そのものが変わる</li></ul></div>
+  </article>
+
+  <div class="cta"><p class="cta-t">営業管理職の育成について相談する</p><p class="cta-s">プレイングマネージャーの時間配分から部下育成の型まで、営業組織を率いる立場に必要なスキルを体系化した研修プログラムをご案内します。</p><a class="cta-b" href="/contact/?from=column-sales">営業管理職研修を相談する</a></div>
+  <div class="rel"><p class="rel-t">関連記事</p><a href="/column/playing-manager-jikan-haibun/">プレイングマネージャーの時間配分｜自分の数字とチームの数字を両立させる方法</a><a href="/column/player-manager-ikou/">プレイヤーからマネージャーへの移行で捨てるべきもの</a><a href="/column/manager-annai-jikan-kakuho/">マネジメント時間を仕組みで確保する4つの方法</a><a href="/column/jibun-de-utta-hoga-hayai/">「自分で売った方が早い」が組織を壊すまでの過程</a></div>
+</div>
+
+<footer>
+  <p class="f-copy">&copy; 2026 BLAZE Inc. ALL RIGHTS RESERVED.</p>
+</footer>
+
+<script>
+const bgCv = document.getElementById('bg-canvas');
+const bgCtx = bgCv.getContext('2d');
+let W, H;
+function resizeBg(){ W = bgCv.width = window.innerWidth; H = bgCv.height = window.innerHeight; }
+resizeBg();
+window.addEventListener('resize', resizeBg);
+
+const beams = [
+  { c:'rgba(30,75,220,', lw:1.8, al:.45, phase:0.0, ox:[-.05,.22,.55,1.05], oy:[.50,.28,.72,.45], ax:[0,.12,.10,0], ay:[.08,.14,.12,.07], fx:[0,.41,.37,0], fy:[.29,.38,.43,.31] },
+  { c:'rgba(20,60,200,', lw:1.4, al:.38, phase:1.3, ox:[-.05,.18,.60,1.05], oy:[.45,.70,.25,.55], ax:[0,.10,.13,0], ay:[.09,.12,.10,.08], fx:[0,.35,.44,0], fy:[.33,.40,.36,.38] },
+  { c:'rgba(40,90,235,', lw:2.2, al:.30, phase:2.5, ox:[-.05,.30,.68,1.05], oy:[.55,.35,.65,.50], ax:[0,.11,.09,0], ay:[.07,.13,.11,.09], fx:[0,.43,.39,0], fy:[.37,.34,.41,.35] },
+  { c:'rgba(15,55,195,', lw:1.2, al:.28, phase:3.8, ox:[-.05,.45,.50,1.05], oy:[.42,.58,.42,.60], ax:[0,.09,.12,0], ay:[.10,.11,.09,.08], fx:[0,.38,.45,0], fy:[.32,.42,.38,.33] },
+  { c:'rgba(50,100,240,',lw:1.8, al:.35, phase:5.1, ox:[-.05,.15,.80,1.05], oy:[.48,.75,.28,.52], ax:[0,.13,.08,0], ay:[.11,.10,.13,.09], fx:[0,.46,.36,0], fy:[.40,.35,.44,.37] },
+];
+
+function drawBg(ts){
+  bgCtx.fillStyle = '#000008';
+  bgCtx.fillRect(0, 0, W, H);
+  const t = ts * 0.001;
+  const gx = W * (.2 + .08 * Math.sin(t * .12));
+  const gy = H * (.5 + .08 * Math.cos(t * .10));
+  const gr = bgCtx.createRadialGradient(gx,gy,0, gx,gy, Math.max(W,H)*.8);
+  gr.addColorStop(0, 'rgba(10,35,170,0.4)');
+  gr.addColorStop(.4,'rgba(6,20,120,0.15)');
+  gr.addColorStop(1, 'rgba(0,0,0,0)');
+  bgCtx.fillStyle = gr;
+  bgCtx.fillRect(0, 0, W, H);
+  beams.forEach(b => {
+    const ph = b.phase;
+    const pts = [
+      [b.ox[0]*W, (b.oy[0]+b.ay[0]*Math.sin(t*b.fy[0]+ph+0.0))*H],
+      [(b.ox[1]+b.ax[1]*Math.sin(t*b.fx[1]+ph+1.0))*W, (b.oy[1]+b.ay[1]*Math.sin(t*b.fy[1]+ph+0.5))*H],
+      [(b.ox[2]+b.ax[2]*Math.sin(t*b.fx[2]+ph+2.0))*W, (b.oy[2]+b.ay[2]*Math.sin(t*b.fy[2]+ph+1.5))*H],
+      [b.ox[3]*W, (b.oy[3]+b.ay[3]*Math.sin(t*b.fy[3]+ph+0.8))*H],
+    ];
+    const [p0,p1,p2,p3] = pts;
+    bgCtx.beginPath();
+    bgCtx.moveTo(p0[0],p0[1]);
+    bgCtx.bezierCurveTo(p1[0],p1[1],p2[0],p2[1],p3[0],p3[1]);
+    const grd = bgCtx.createLinearGradient(p0[0],p0[1],p3[0],p3[1]);
+    grd.addColorStop(0, b.c+'0)');
+    grd.addColorStop(.2,b.c+b.al+')');
+    grd.addColorStop(.5,b.c+(b.al*1.3).toFixed(2)+')');
+    grd.addColorStop(.8,b.c+b.al+')');
+    grd.addColorStop(1, b.c+'0)');
+    bgCtx.strokeStyle = grd;
+    bgCtx.lineWidth = b.lw;
+    bgCtx.shadowBlur = 24;
+    bgCtx.shadowColor = b.c+'0.6)';
+    bgCtx.stroke();
+    bgCtx.shadowBlur = 0;
+  });
+  requestAnimationFrame(drawBg);
+}
+requestAnimationFrame(drawBg);
+
+window.addEventListener('scroll', function(){
+  document.getElementById('nav').classList.toggle('s', window.scrollY > 40);
+});
+function toggleMenu(){
+  document.getElementById('ham').classList.toggle('open');
+  document.getElementById('mobMenu').classList.toggle('open');
+}
+</script>
+</body>
+</html>
