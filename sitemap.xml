@@ -92,6 +92,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://blaze-ltd.com/column/saiyo-youken-teigi-shippai/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://blaze-ltd.com/column/saiyo-yosan-shonin/</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -207,6 +213,12 @@
   </url>
   <url>
     <loc>https://blaze-ltd.com/column/jinji-ai-katsuyou/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blaze-ltd.com/column/ii-hito-ga-inai-shoutai/</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

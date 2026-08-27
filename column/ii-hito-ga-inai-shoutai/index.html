@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H67Y48Q10E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H67Y48Q10E');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="「応募は来るが良い人がいない」という嘆きの多くは、市場ではなく自社の要件と選考に原因があります。この言葉の裏にある4つの正体、要件過多を数字で検出する方法、そして「良い人」の定義を作り直す実務を解説します。">
+<meta property="og:title" content="「良い人がいない」の正体｜要件過多を検出する方法">
+<meta property="og:description" content="「応募は来るが良い人がいない」という嘆きの多くは、市場ではなく自社の要件と選考に原因があります。この言葉の裏にある4つの正体、要件過多を数字で検出する方法、そして「良い人」の定義を作り直す実務を解説します。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blaze-ltd.com/column/ii-hito-ga-inai-shoutai/">
+<meta property="og:image" content="https://blaze-ltd.com/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blaze-ltd.com/ogp.png">
+<meta name="robots" content="index, follow">
+<title>「良い人がいない」の正体｜要件過多を検出する方法</title>
+<link rel="canonical" href="https://blaze-ltd.com/column/ii-hito-ga-inai-shoutai/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"「良い人がいない」の正体｜要件過多を検出する方法","description":"「応募は来るが良い人がいない」という嘆きの多くは、市場ではなく自社の要件と選考に原因があります。この言葉の裏にある4つの正体、要件過多を数字で検出する方法、そして「良い人」の定義を作り直す実務を解説します。","datePublished":"2026-08-28","dateModified":"2026-08-28","mainEntityOfPage":"https://blaze-ltd.com/column/ii-hito-ga-inai-shoutai/","image":"https://blaze-ltd.com/ogp.png","author":{"@type":"Organization","name":"株式会社BLAZE","url":"https://blaze-ltd.com"},"publisher":{"@type":"Organization","name":"株式会社BLAZE","url":"https://blaze-ltd.com","logo":{"@type":"ImageObject","url":"https://blaze-ltd.com/logo.png"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://blaze-ltd.com"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://blaze-ltd.com/column/"},{"@type":"ListItem","position":3,"name":"採用・組織","item":"https://blaze-ltd.com/column/recruit/"},{"@type":"ListItem","position":4,"name":"「良い人がいない」の正体｜要件過多を検出する方法","item":"https://blaze-ltd.com/column/ii-hito-ga-inai-shoutai/"}]}]}</script>
+<style>
+:root{
+  --bg:#03050f; --surface:#080c1c; --accent:#4DFFDF; --white:#fff;
+  --tx:rgba(255,255,255,.92); --tx2:rgba(255,255,255,.72);
+  --w5:rgba(255,255,255,.5); --w3:rgba(255,255,255,.3);
+  --w15:rgba(255,255,255,.15); --w08:rgba(255,255,255,.08); --w04:rgba(255,255,255,.04);
+  --ff-j:'Jost',sans-serif; --ff-n:'Noto Sans JP',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.wrap,.hd,.cats,.list,#nav,footer,.mob-menu{position:relative;z-index:1}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:var(--ff-n);font-weight:400;line-height:1.9;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+
+/* ヘッダーは #nav に限定して指定する。
+   目次も意味的に <nav> で書いているため、型セレクタにすると巻き込まれる */
+#nav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 52px;height:72px;z-index:200;transition:background .4s}
+#nav.s{background:rgba(3,5,15,.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--w15)}
+.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
+.logo img{height:72px;width:auto;display:block}
+.nav-links{display:flex;gap:30px;list-style:none;align-items:center}
+.nav-links a{font-family:var(--ff-j);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--w5);text-decoration:none;transition:color .3s}
+.nav-links a:hover{color:var(--white)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;z-index:300}
+.ham span{display:block;width:22px;height:1.5px;background:var(--white);transition:transform .3s,opacity .3s}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob-menu{position:fixed;inset:0;background:rgba(0,0,8,.97);z-index:250;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;opacity:0;pointer-events:none;transition:opacity .3s}
+.mob-menu.open{opacity:1;pointer-events:all}
+.mob-menu a{font-family:var(--ff-j);font-size:21px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--white);text-decoration:none}
+.mob-close{position:absolute;top:26px;right:26px;background:none;border:1px solid var(--w3);color:var(--white);font-size:18px;width:44px;height:44px;cursor:pointer}
+
+/* ── 記事 ── */
+.wrap{max-width:760px;margin:0 auto;padding:130px 24px 90px}
+.crumb{font-size:12px;color:var(--w5);margin-bottom:22px;line-height:1.7}
+.crumb a{color:var(--w5);text-decoration:none}
+.crumb a:hover{color:var(--white)}
+.a-cat{display:inline-block;font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(77,255,223,.35);padding:5px 11px;margin-bottom:18px}
+h1{font-size:clamp(24px,3.4vw,34px);font-weight:700;line-height:1.5;letter-spacing:.01em;margin-bottom:18px;text-wrap:balance}
+.a-meta{font-size:12px;color:var(--w5);letter-spacing:.04em;padding-bottom:26px;border-bottom:1px solid var(--w15)}
+.a-lead{font-size:15px;line-height:2.05;color:var(--tx2);margin:30px 0 0}
+
+.toc{background:var(--surface);border:1px solid var(--w15);padding:24px 26px;margin:38px 0}
+.toc-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:14px}
+.toc ol{list-style:none;counter-reset:t}
+.toc li{counter-increment:t;font-size:14px;line-height:1.9;padding-left:30px;position:relative}
+.toc li::before{content:counter(t,decimal-leading-zero);position:absolute;left:0;font-family:var(--ff-j);font-size:11px;font-weight:600;color:var(--w3);top:4px}
+.toc a{color:var(--tx2);text-decoration:none}
+.toc a:hover{color:var(--accent)}
+
+article h2{font-size:21px;font-weight:700;line-height:1.6;margin:56px 0 20px;padding-left:14px;border-left:3px solid var(--accent);scroll-margin-top:90px}
+article h3{font-size:17px;font-weight:600;line-height:1.6;margin:36px 0 14px;color:var(--white)}
+article p{font-size:15px;line-height:2.05;margin-bottom:20px;color:var(--tx)}
+article ul,article ol{margin:0 0 22px 1.4em}
+article li{font-size:15px;line-height:1.95;margin-bottom:9px}
+article strong{font-weight:700;color:var(--white)}
+article a.plink{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+
+.tbl{width:100%;border-collapse:collapse;margin:8px 0 26px;font-size:14px;display:block;overflow-x:auto}
+.tbl th,.tbl td{border:1px solid var(--w15);padding:11px 13px;text-align:left;line-height:1.7}
+.tbl th{background:var(--w04);font-weight:600;white-space:nowrap}
+
+.note{background:var(--w04);border-left:3px solid var(--w3);padding:18px 20px;margin:26px 0;font-size:14px;line-height:1.95;color:var(--tx2)}
+
+.faq{margin:50px 0 0}
+.faq-i{border-bottom:1px solid var(--w15);padding:20px 0}
+.faq-q{font-size:15px;font-weight:600;margin-bottom:10px;line-height:1.7}
+.faq-q::before{content:'Q.';font-family:var(--ff-j);color:var(--accent);margin-right:8px;font-weight:700}
+.faq-a{font-size:14px;line-height:1.95;color:var(--tx2)}
+
+.recap{background:var(--surface);border:1px solid var(--w15);padding:26px 28px;margin:50px 0 0}
+.recap-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:14px}
+.recap ul{margin:0 0 0 1.2em}
+.recap li{font-size:14px;line-height:1.9;margin-bottom:10px;color:var(--tx2)}
+
+/* ── セグメント別CTA ── */
+.cta{border:1px solid rgba(77,255,223,.3);background:linear-gradient(180deg,rgba(77,255,223,.05),transparent);padding:34px 30px;margin:56px 0 0;text-align:center}
+.cta-t{font-family:var(--ff-j);font-size:19px;font-weight:700;line-height:1.5;margin-bottom:12px}
+.cta-s{font-size:14px;line-height:1.95;color:var(--tx2);margin-bottom:22px}
+.cta-b{display:inline-block;font-family:var(--ff-j);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bg);background:var(--white);text-decoration:none;padding:14px 34px;transition:background .3s,transform .2s}
+.cta-b:hover{background:var(--accent);transform:translateY(-2px)}
+
+.rel{margin:60px 0 0;border-top:1px solid var(--w15);padding-top:34px}
+.rel-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:16px}
+.rel a{display:block;font-size:14px;line-height:1.75;color:var(--tx2);text-decoration:none;padding:11px 0;border-bottom:1px solid var(--w08)}
+.rel a:hover{color:var(--accent)}
+
+/* ── 一覧ページ ── */
+.hd{max-width:1000px;margin:0 auto;padding:140px 24px 0}
+.hd .s-lbl{font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--w5);margin-bottom:12px}
+.hd h1{font-family:var(--ff-j);font-size:clamp(26px,3.8vw,46px);line-height:1.15}
+.hd p{font-size:14px;line-height:1.95;color:var(--tx2);margin-top:18px;max-width:600px}
+.cats{max-width:1000px;margin:44px auto 0;padding:0 24px;display:flex;flex-wrap:wrap;gap:10px}
+.cats a{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);text-decoration:none;border:1px solid var(--w15);padding:9px 18px;transition:all .3s}
+.cats a:hover,.cats a.on{background:var(--white);color:var(--bg);border-color:var(--white)}
+.list{max-width:1000px;margin:0 auto;padding:46px 24px 100px;display:grid;gap:1px;background:var(--w15);border:1px solid var(--w15);border-radius:0}
+.list{background:transparent;border:none;gap:0}
+.card{display:block;text-decoration:none;padding:26px 4px;border-bottom:1px solid var(--w15);transition:background .3s}
+.card:hover{background:var(--w04)}
+.card-c{font-family:var(--ff-j);font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
+.card-t{font-size:16px;font-weight:600;line-height:1.65;margin-bottom:9px;color:var(--white)}
+.card-d{font-size:13px;line-height:1.85;color:var(--tx2)}
+.empty{padding:60px 4px;color:var(--w5);font-size:14px}
+
+footer{padding:30px 52px;border-top:1px solid var(--w15);text-align:center}
+.f-copy{font-family:var(--ff-j);font-size:10px;font-weight:300;color:var(--w3);letter-spacing:.18em}
+
+@media(max-width:768px){
+  #nav{padding:0 20px;height:64px}
+  .logo img{height:48px}
+  .nav-links{display:none}
+  .ham{display:flex}
+  .wrap{padding:110px 20px 70px}
+  .hd{padding:110px 20px 0}
+  .cats,.list{padding-left:20px;padding-right:20px}
+  article h2{font-size:19px;margin:44px 0 16px}
+  footer{padding:26px 20px}
+}
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+
+<nav id="nav">
+  <a href="/" class="logo"><img src="/logo.png" alt="BLAZE"></a>
+  <ul class="nav-links">
+    <li><a href="/service/">Service</a></li>
+    <li><a href="/company/">Company</a></li>
+    <li><a href="/column/">Column</a></li>
+    <li><a href="/news/">News</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+  <div class="ham" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="toggleMenu()">✕</button>
+  <a href="/service/" onclick="toggleMenu()">Service</a>
+  <a href="/company/" onclick="toggleMenu()">Company</a>
+  <a href="/column/"  onclick="toggleMenu()">Column</a>
+  <a href="/news/"    onclick="toggleMenu()">News</a>
+  <a href="/contact/" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="wrap">
+  <p class="crumb"><a href="/">ホーム</a> ／ <a href="/column/">コラム</a> ／ <a href="/column/recruit/">採用・組織</a></p>
+  <span class="a-cat">Recruiting</span>
+  <h1>「良い人がいない」の正体｜要件過多を検出する方法</h1>
+  <p class="a-meta">最終更新 2026-08-28</p>
+  <p class="a-lead">採用の現場で最も頻繁に聞かれる言葉が、「良い人がいない」です。募集をかけても、紹介を受けても、面接をしても、決め手に欠ける。だから採用が進まない——。しかしこの言葉は、原因の診断としてはほとんど機能していません。「良い人がいない」は、市場に人がいないのか、要件が高すぎるのか、見極めができていないのか、そもそも「良い人」が定義されていないのか——複数のまったく異なる問題を、ひとつの嘆きに溶かし込んでしまうからです。この記事では、「良い人がいない」の正体を4つに腑分けし、その中で最も多い「要件過多」を数字で検出する方法と、対処の実務を解説します。</p>
+
+  <nav class="toc"><p class="toc-t">目次</p><ol><li><a href="#s1">「良い人がいない」の4つの正体</a></li><li><a href="#s2">要件過多はなぜ自覚できないのか</a></li><li><a href="#s3">数字で検出する：要件過多の5つのシグナル</a></li><li><a href="#s4">対処の実務：要件を「削る」のではなく「組み替える」</a></li><li><a href="#s5">「良い人」を再定義する：市場にいる人の中から最良を選ぶ</a></li></ol></nav>
+
+  <article>
+<h2 id="s1">「良い人がいない」の4つの正体</h2>
+<p>この言葉が指し得る問題を、まず分解します。対処がまったく違うため、どれに当たるかの診断がすべての出発点です。</p>
+<table class="tbl"><tr><th>正体</th><th>実際に起きていること</th><th>見分けるサイン</th></tr><tr><td>①市場の不在</td><td>要件を満たす人材が、市場にほぼ存在しない(希少職種・地域制約)</td><td>競合他社も同様に苦戦している。紹介会社が「候補者がいない」と言う</td></tr><tr><td>②要件過多</td><td>要件の掛け算で対象が消滅している。市場に人はいるが、条件に合わない</td><td>応募はあるが書類・一次で大量に落ちる。「あと一歩」の人ばかり来る</td></tr><tr><td>③魅力の不足</td><td>良い人は来ているが、自社が選ばれず、辞退・離脱されている</td><td>選考後半・内定段階での辞退が多い。良い人ほど逃げる</td></tr><tr><td>④基準の不在</td><td>「良い人」の定義がなく、面接官の直感頼み。誰を見ても決め手に欠ける</td><td>面接官によって評価が割れる。「なんとなく違う」という不合格理由が多い</td></tr></table>
+<p>重要なのは、<strong>①(本当に市場にいない)は、実際には少数派</strong>だということです。「良い人がいない」と嘆く会社の実態を歩留まりデータで見ると、多くは②要件過多と④基準の不在、そして「来ているのに選ばれていない」③の複合です。つまり、問題の大半は市場ではなく自社の設計の側にあり、設計は変えられます。</p>
+<p>③の魅力の不足は<a class="plink" href="/column/uriteshijou-teigi/">選ばれる設計</a>と<a class="plink" href="/column/saiyo-kyousou-souteigai/">競合分析</a>の主題、④の基準の不在は<a class="plink" href="/column/saiyo-youken-teigi-shippai/">要件定義</a>と<a class="plink" href="/column/mensetsukan-hinshitsu/">面接の標準化</a>の主題として、それぞれ独立に扱っています。本記事は、最も頻度が高く、かつ自覚しにくい<strong>②要件過多</strong>の検出と対処に焦点を当てます。</p>
+<h2 id="s2">要件過多はなぜ自覚できないのか</h2>
+<p>要件過多の厄介さは、<strong>内側からは正当に見える</strong>ことです。一つひとつの要件には理由があります。「経験者でないと教える余裕がない」「若い職場だから年齢層を合わせたい」「前任が◯◯で失敗したから、今回は◯◯できる人を」。個別には合理的な条件の掛け算が、全体としては市場に存在しない人物像を作り上げる——この構造は、要件を足した本人たちには見えません。</p>
+<p>さらに、要件過多は<strong>もっともらしい別の説明</strong>に覆い隠されます。応募が少なければ「媒体が悪い」「市場が厳しい」。書類で落ち続ければ「応募者の質が下がった」。つまり、症状はすべて外部要因として解釈可能であり、「自分たちの要件がおかしい」という仮説は、意識的に検証しない限り浮上しないのです。</p>
+<p>自覚を妨げるもうひとつの力学が、<strong>責任の非対称</strong>です。基準を緩めて採った人が失敗すれば、「なぜ妥協した」と緩めた人が責められます。基準を守って採れなくても、「市場が厳しい」で誰も責められません。この非対称の下では、関係者全員にとって、要件を高く保つことが個人として安全な行動になります。組織として損をしているのに、誰も間違っていない——要件過多が長期化する理由がここにあります。</p>
+<p>だからこそ、要件過多の検出は、関係者の内省に期待するのではなく、<strong>数字による外部からの検証</strong>として仕組みにする必要があります。</p>
+<h2 id="s3">数字で検出する：要件過多の5つのシグナル</h2>
+<p>要件過多は、採用データに特徴的なパターンを残します。次の5つのシグナルを確認してください。</p>
+<ol><li><strong>書類通過率の異常な低さ</strong> — 応募のうち面接に進む割合が1〜2割を切っている場合、市場が送ってくる人材と要件の乖離を疑う。応募は「市場にいる人」のサンプルであり、その9割を落とす要件は市場と噛み合っていない</li><li><strong>「惜しい人」の頻出</strong> — 「あと◯◯さえあれば」という不合格が続くのは、要件の掛け算が1つ多い証拠。単独の要件はそれぞれ満たす人が来ているのに、全部を同時に満たす人だけがいない状態</li><li><strong>募集期間の長期化</strong> — 同職種の一般的な充足期間(紹介会社に聞けば分かる)を大幅に超えて空席が続いている。市場全体の問題なら競合も埋まらないはずで、競合が埋めているなら自社要件の問題</li><li><strong>紹介会社からの推薦の減少</strong> — 紹介会社は決まらない求人への推薦を減らす。「最近推薦が来ない」は、市場のプロが「この要件では決まらない」と判定したシグナル</li><li><strong>要件を満たした人の辞退</strong> — ようやく要件を満たす人が現れても辞退される場合、要件の高さに対して提供条件が釣り合っていない。要件と条件のパッケージ全体が市場で成立していない</li></ol>
+<p>これらのシグナルは、<a class="plink" href="/column/saiyo-roi-keisan/">段階別の歩留まりデータ</a>が整備されていれば、機械的に検出できます。おすすめは、募集開始から2ヶ月時点での<strong>定期健診</strong>です。書類通過率・面接評価の分布・辞退の発生箇所を確認し、シグナルが2つ以上点灯していたら、要件の見直し会議を自動的に開く——このルール化が、「もう少し待てば良い人が来るはず」という希望的観測の長期化を断ち切ります。</p>
+<p class="note">最も強力な検証方法は、「現有社員テスト」です。今この求人の要件を、現在活躍している自社の社員に当てはめたら、何人が通過するか。活躍しているエースが書類で落ちる要件なら、その要件は活躍と無関係な条件で人を弾いています。シンプルですが、要件過多を関係者に自覚させる効果は絶大です。</p>
+<h2 id="s4">対処の実務：要件を「削る」のではなく「組み替える」</h2>
+<p>要件過多が検出されたら、対処です。ここで「基準を下げる」という言葉を使うと、現場と経営の抵抗を招きます。実際にやるべきことは、水準の切り下げではなく、<strong>要件の構造の組み替え</strong>です。</p>
+<p><strong>組み替え1：入社時要件と到達要件に分ける</strong>。<a class="plink" href="/column/saiyo-youken-teigi-shippai/">要件定義の原則</a>の通り、「入社時に持っていなければならないもの」と「入社後6ヶ月〜1年で到達すればよいもの」を分けます。経験・スキルの多くは後者に移せます。移した分は、育成の設計(誰が・どう教えるか)とセットにする——これは基準を下げたのではなく、<strong>要求のタイミングを設計し直した</strong>のです。</p>
+<p><strong>組み替え2：代替可能な要件を束ねる</strong>。「業界経験」の中身を分解すると、「業界知識」(座学で学べる)、「商習慣への慣れ」(3ヶ月で身につく)、「人脈」(本当に必要か?)に分かれます。要件を能力の粒度まで分解すると、「業界は違うが同じ能力を持つ人」——隣接業界の経験者、類似の構造を持つ職種の出身者——に対象が広がります。</p>
+<p><strong>組み替え3：要件と条件のパッケージを再設計する</strong>。要件を維持したいなら、提供条件(給与・裁量・柔軟性)を市場で釣り合う水準に上げる。条件を動かせないなら、要件を市場が応じる水準に組み替える。どちらも動かせないなら、その採用は成立しません——この三択を、データとともに経営に提示するのが人事の仕事です。</p>
+<p><strong>組み替え4：「見送りの基準」を明確にして、それ以外を開く</strong>。要件を絞ることへの不安の正体は、「変な人を採ってしまう」恐れです。この不安には、必須要件の削減と同時に、見送りの基準(自社で機能しない特性・過去の不適合パターン)を明文化することで応えます。「入口は広く、しかし通さない人は明確」という構造なら、要件を開いても選考の質は守れます。</p>
+<h2 id="s5">「良い人」を再定義する：市場にいる人の中から最良を選ぶ</h2>
+<p>最後に、この問題の根にある発想の転換を述べます。</p>
+<p>「良い人がいない」という言葉の暗黙の前提は、「良い人」の絶対的な像がどこかに存在し、それが市場に現れるのを待つ、という採用観です。しかし、<a class="plink" href="/column/uriteshijou-teigi/">売り手市場が常態化し</a>、<a class="plink" href="/column/roudou-jinkou-genshou-saiyo/">労働人口が減り続ける</a>現実の中で、この採用観は機能しません。</p>
+<p>機能する採用観は、こうです。<strong>「良い人」とは、市場に実在する人々の中で、自社の要件・条件・育成力の組み合わせにおいて最も適合し、入社後に活躍まで到達できる人</strong>。つまり「良い人」は、待つ対象ではなく、自社の設計(要件・条件・育成・口説き)によって定義され、作り出される存在です。</p>
+<p>この転換ができた会社は、行動が変わります。市場を嘆く時間が、要件の検証に変わる。「完璧な経験者」を待つ時間が、「素質のある未経験者を6ヶ月で戦力化する仕組み」への投資に変わる。他社が見落としている層(要件の掛け算からこぼれるが、単独の能力は高い人)を拾う目が育つ。<strong>採用力とは、良い人を見つける力である以上に、市場にいる人を「自社にとっての良い人」に変える力</strong>なのです。</p>
+<p>「良い人がいない」と感じたら、それは市場の報告ではなく、自社の採用設計への問いかけとして受け取ってください。歩留まりの数字を見て、現有社員テストをして、要件を組み替える。この一連の検証を経てなお埋まらないなら、そのときはじめて、条件・育成・業務設計というより深い変数に踏み込む判断ができます。嘆きを診断に変えること——それが、この言葉との正しい付き合い方です。</p>
+<div class="faq"><h2 id="faq">よくある質問</h2><div class="faq-i"><p class="faq-q">現場が「基準を下げるくらいなら欠員のままでいい」と言います</p><p class="faq-a">その判断のコストを見えるようにしてください。欠員継続の損失([機会損失の数値化](/column/saiyo-kikaisonshitsu/))と、現場に生じている負荷(残業・疲弊・次の離職リスク)を数字で示した上で、「下げる」のではなく「組み替える+育成で埋める」という選択肢を提示します。また、現場の本音が「教える余裕がない」にある場合は、要件の議論ではなく、受け入れ・育成の負荷を軽くする設計(手順書の整備、教育担当の業務調整)が本当の論点です。抵抗の正体を特定してから対処してください。</p></div><div class="faq-i"><p class="faq-q">書類通過率はどのくらいが適正なのでしょうか?</p><p class="faq-a">職種とチャネルで変わるため絶対的な基準はありませんが、実務の目安として、自然応募で3〜5割、紹介経由で5割以上が通過しない状態が続くなら、要件と母集団のずれを疑う価値があります。大切なのは絶対値より、(1)経年の変化(通過率が下がり続けていないか)、(2)不合格理由の分布(特定の要件で落ち続けていないか)を見ることです。特定の1条件が不合格理由の大半を占めているなら、その条件が市場と噛み合っていない張本人です。</p></div><div class="faq-i"><p class="faq-q">未経験者に要件を開いた結果、応募が急増して選考が回りません</p><p class="faq-a">開き方に段階を設けてください。有効なのは、(1)見送り基準(必須の土台と不適合特性)を明確にして書類段階の判定を速くする、(2)応募時に簡単な設問(志望の背景・重視すること)を設けて、真剣度の高い応募に絞る、(3)一次選考を効率化する(録画面談・集団説明会の活用)、の3つです。応募増は要件を開いた成果であり、問題は選考体制のボトルネックです。体制側を整えれば、母集団の拡大は本来の狙い通り、選択肢の拡大として機能します。</p></div><div class="faq-i"><p class="faq-q">紹介会社に要件を伝えると「その条件では難しい」と言われました。信じていいのでしょうか?</p><p class="faq-a">貴重な市場情報として扱うべきです。紹介会社は同種の求人を多数見ており、「決まる要件・決まらない要件」の相場観を持っています。ただし、鵜呑みにする前に2つ確認を。(1)「どの条件を変えれば候補者が出ますか?」と具体的に聞く——ボトルネックの特定に使えます。(2)複数の紹介会社に同じ質問をする——1社の意見は担当者の得意領域に偏ることがあります。複数のプロが同じ条件を指摘するなら、それはほぼ確実に、市場と噛み合っていない箇所です。</p></div><div class="faq-i"><p class="faq-q">経営者の理想が高く、どんな候補者にも首を縦に振りません。どうすればいいですか?</p><p class="faq-a">抽象的な理想と具体的な判断のギャップを利用します。まず、経営者に「過去に採って最高だった人」の具体像を聞き、その人が現在の要件・選考を通過できたかを検証してください(多くの場合、通過できません)。次に、面接での不合格理由を毎回具体的に記録し、蓄積されたパターンを見せる——「この半年、◯◯を理由に◯人を見送り、ポジションは空席のままです。この基準を続けますか?」という事実の提示です。理想論は反論できませんが、自らの判断の記録と帰結には、多くの経営者が向き合います。</p></div></div>
+<div class="recap"><p class="recap-t">この記事のまとめ</p><ul><li>「良い人がいない」は診断ではない。市場の不在・要件過多・魅力の不足・基準の不在の4つに腑分けする</li><li>最多の正体は要件過多。個別には合理的な条件の掛け算が、市場に存在しない人物像を作る</li><li>要件過多は内側からは正当に見え、外部要因の説明に隠れる。数字による検証を仕組みにするしかない</li><li>シグナルは書類通過率の異常・「惜しい人」の頻出・長期化・紹介の減少・要件充足者の辞退の5つ</li><li>対処は基準の切り下げでなく組み替え。入社時と到達の分離・能力への分解・条件との再パッケージ・見送り基準の明確化</li><li>「良い人」は待つ対象でなく、要件・条件・育成の設計が作り出すもの。嘆きを設計への問いに変える</li></ul></div>
+  </article>
+
+  <div class="cta"><p class="cta-t">採用コストを、成果報酬型に</p><p class="cta-s">有効応募1件ごとの課金で、掲載費・初期費用は0円。求人情報を渡すだけで媒体運用まで一貫対応します。</p><a class="cta-b" href="https://oubopay.blaze-ltd.com/?utm_source=blaze-column" target="_blank" rel="noopener">Oubo Pay を見る</a></div>
+  <div class="rel"><p class="rel-t">関連記事</p><a href="/column/yuko-kyujin-bairitsu-yomikata/">有効求人倍率の正しい読み方と、自社採用への翻訳方法</a><a href="/column/uriteshijou-teigi/">売り手市場とは何か｜言葉の裏にある構造を正しく捉える</a><a href="/column/saiyo-youken-teigi-shippai/">採用要件定義が失敗する3つの構造</a><a href="/column/saiyo-yosan-shonin/">採用予算の社内承認をどう通すか｜経営を動かす材料の作り方</a><a href="/column/saiyo-yosan-sakugen-handan/">採用予算を削るべき時と、削ってはいけない時の判断基準</a></div>
+</div>
+
+<footer>
+  <p class="f-copy">&copy; 2026 BLAZE Inc. ALL RIGHTS RESERVED.</p>
+</footer>
+
+<script>
+const bgCv = document.getElementById('bg-canvas');
+const bgCtx = bgCv.getContext('2d');
+let W, H;
+function resizeBg(){ W = bgCv.width = window.innerWidth; H = bgCv.height = window.innerHeight; }
+resizeBg();
+window.addEventListener('resize', resizeBg);
+
+const beams = [
+  { c:'rgba(30,75,220,', lw:1.8, al:.45, phase:0.0, ox:[-.05,.22,.55,1.05], oy:[.50,.28,.72,.45], ax:[0,.12,.10,0], ay:[.08,.14,.12,.07], fx:[0,.41,.37,0], fy:[.29,.38,.43,.31] },
+  { c:'rgba(20,60,200,', lw:1.4, al:.38, phase:1.3, ox:[-.05,.18,.60,1.05], oy:[.45,.70,.25,.55], ax:[0,.10,.13,0], ay:[.09,.12,.10,.08], fx:[0,.35,.44,0], fy:[.33,.40,.36,.38] },
+  { c:'rgba(40,90,235,', lw:2.2, al:.30, phase:2.5, ox:[-.05,.30,.68,1.05], oy:[.55,.35,.65,.50], ax:[0,.11,.09,0], ay:[.07,.13,.11,.09], fx:[0,.43,.39,0], fy:[.37,.34,.41,.35] },
+  { c:'rgba(15,55,195,', lw:1.2, al:.28, phase:3.8, ox:[-.05,.45,.50,1.05], oy:[.42,.58,.42,.60], ax:[0,.09,.12,0], ay:[.10,.11,.09,.08], fx:[0,.38,.45,0], fy:[.32,.42,.38,.33] },
+  { c:'rgba(50,100,240,',lw:1.8, al:.35, phase:5.1, ox:[-.05,.15,.80,1.05], oy:[.48,.75,.28,.52], ax:[0,.13,.08,0], ay:[.11,.10,.13,.09], fx:[0,.46,.36,0], fy:[.40,.35,.44,.37] },
+];
+
+function drawBg(ts){
+  bgCtx.fillStyle = '#000008';
+  bgCtx.fillRect(0, 0, W, H);
+  const t = ts * 0.001;
+  const gx = W * (.2 + .08 * Math.sin(t * .12));
+  const gy = H * (.5 + .08 * Math.cos(t * .10));
+  const gr = bgCtx.createRadialGradient(gx,gy,0, gx,gy, Math.max(W,H)*.8);
+  gr.addColorStop(0, 'rgba(10,35,170,0.4)');
+  gr.addColorStop(.4,'rgba(6,20,120,0.15)');
+  gr.addColorStop(1, 'rgba(0,0,0,0)');
+  bgCtx.fillStyle = gr;
+  bgCtx.fillRect(0, 0, W, H);
+  beams.forEach(b => {
+    const ph = b.phase;
+    const pts = [
+      [b.ox[0]*W, (b.oy[0]+b.ay[0]*Math.sin(t*b.fy[0]+ph+0.0))*H],
+      [(b.ox[1]+b.ax[1]*Math.sin(t*b.fx[1]+ph+1.0))*W, (b.oy[1]+b.ay[1]*Math.sin(t*b.fy[1]+ph+0.5))*H],
+      [(b.ox[2]+b.ax[2]*Math.sin(t*b.fx[2]+ph+2.0))*W, (b.oy[2]+b.ay[2]*Math.sin(t*b.fy[2]+ph+1.5))*H],
+      [b.ox[3]*W, (b.oy[3]+b.ay[3]*Math.sin(t*b.fy[3]+ph+0.8))*H],
+    ];
+    const [p0,p1,p2,p3] = pts;
+    bgCtx.beginPath();
+    bgCtx.moveTo(p0[0],p0[1]);
+    bgCtx.bezierCurveTo(p1[0],p1[1],p2[0],p2[1],p3[0],p3[1]);
+    const grd = bgCtx.createLinearGradient(p0[0],p0[1],p3[0],p3[1]);
+    grd.addColorStop(0, b.c+'0)');
+    grd.addColorStop(.2,b.c+b.al+')');
+    grd.addColorStop(.5,b.c+(b.al*1.3).toFixed(2)+')');
+    grd.addColorStop(.8,b.c+b.al+')');
+    grd.addColorStop(1, b.c+'0)');
+    bgCtx.strokeStyle = grd;
+    bgCtx.lineWidth = b.lw;
+    bgCtx.shadowBlur = 24;
+    bgCtx.shadowColor = b.c+'0.6)';
+    bgCtx.stroke();
+    bgCtx.shadowBlur = 0;
+  });
+  requestAnimationFrame(drawBg);
+}
+requestAnimationFrame(drawBg);
+
+window.addEventListener('scroll', function(){
+  document.getElementById('nav').classList.toggle('s', window.scrollY > 40);
+});
+function toggleMenu(){
+  document.getElementById('ham').classList.toggle('open');
+  document.getElementById('mobMenu').classList.toggle('open');
+}
+</script>
+</body>
+</html>
