@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H67Y48Q10E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H67Y48Q10E');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="チームの数字が伸びないとき、「売上が足りない」という認識だけでは打ち手は決まりません。受注を「行動量×商談化率×提案転換率×受注率×単価」に分解し、どこが詰まっているかをデータで特定する実務手順と、詰まりの箇所別の典型的な打ち手を解説します。">
+<meta property="og:title" content="営業プロセスを分解して、どこが詰まっているかを特定する">
+<meta property="og:description" content="チームの数字が伸びないとき、「売上が足りない」という認識だけでは打ち手は決まりません。受注を「行動量×商談化率×提案転換率×受注率×単価」に分解し、どこが詰まっているかをデータで特定する実務手順と、詰まりの箇所別の典型的な打ち手を解説します。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blaze-ltd.com/column/eigyou-process-bunkai/">
+<meta property="og:image" content="https://blaze-ltd.com/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blaze-ltd.com/ogp.png">
+<meta name="robots" content="index, follow">
+<title>営業プロセスを分解して、どこが詰まっているかを特定する</title>
+<link rel="canonical" href="https://blaze-ltd.com/column/eigyou-process-bunkai/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"営業プロセスを分解して、どこが詰まっているかを特定する","description":"チームの数字が伸びないとき、「売上が足りない」という認識だけでは打ち手は決まりません。受注を「行動量×商談化率×提案転換率×受注率×単価」に分解し、どこが詰まっているかをデータで特定する実務手順と、詰まりの箇所別の典型的な打ち手を解説します。","datePublished":"2026-08-27","dateModified":"2026-08-27","mainEntityOfPage":"https://blaze-ltd.com/column/eigyou-process-bunkai/","image":"https://blaze-ltd.com/ogp.png","author":{"@type":"Organization","name":"株式会社BLAZE","url":"https://blaze-ltd.com"},"publisher":{"@type":"Organization","name":"株式会社BLAZE","url":"https://blaze-ltd.com","logo":{"@type":"ImageObject","url":"https://blaze-ltd.com/logo.png"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://blaze-ltd.com"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://blaze-ltd.com/column/"},{"@type":"ListItem","position":3,"name":"営業育成・事業成長","item":"https://blaze-ltd.com/column/sales/"},{"@type":"ListItem","position":4,"name":"営業プロセスを分解して、どこが詰まっているかを特定する","item":"https://blaze-ltd.com/column/eigyou-process-bunkai/"}]}]}</script>
+<style>
+:root{
+  --bg:#03050f; --surface:#080c1c; --accent:#4DFFDF; --white:#fff;
+  --tx:rgba(255,255,255,.92); --tx2:rgba(255,255,255,.72);
+  --w5:rgba(255,255,255,.5); --w3:rgba(255,255,255,.3);
+  --w15:rgba(255,255,255,.15); --w08:rgba(255,255,255,.08); --w04:rgba(255,255,255,.04);
+  --ff-j:'Jost',sans-serif; --ff-n:'Noto Sans JP',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.wrap,.hd,.cats,.list,#nav,footer,.mob-menu{position:relative;z-index:1}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:var(--ff-n);font-weight:400;line-height:1.9;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+
+/* ヘッダーは #nav に限定して指定する。
+   目次も意味的に <nav> で書いているため、型セレクタにすると巻き込まれる */
+#nav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 52px;height:72px;z-index:200;transition:background .4s}
+#nav.s{background:rgba(3,5,15,.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--w15)}
+.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
+.logo img{height:72px;width:auto;display:block}
+.nav-links{display:flex;gap:30px;list-style:none;align-items:center}
+.nav-links a{font-family:var(--ff-j);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--w5);text-decoration:none;transition:color .3s}
+.nav-links a:hover{color:var(--white)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;z-index:300}
+.ham span{display:block;width:22px;height:1.5px;background:var(--white);transition:transform .3s,opacity .3s}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob-menu{position:fixed;inset:0;background:rgba(0,0,8,.97);z-index:250;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;opacity:0;pointer-events:none;transition:opacity .3s}
+.mob-menu.open{opacity:1;pointer-events:all}
+.mob-menu a{font-family:var(--ff-j);font-size:21px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--white);text-decoration:none}
+.mob-close{position:absolute;top:26px;right:26px;background:none;border:1px solid var(--w3);color:var(--white);font-size:18px;width:44px;height:44px;cursor:pointer}
+
+/* ── 記事 ── */
+.wrap{max-width:760px;margin:0 auto;padding:130px 24px 90px}
+.crumb{font-size:12px;color:var(--w5);margin-bottom:22px;line-height:1.7}
+.crumb a{color:var(--w5);text-decoration:none}
+.crumb a:hover{color:var(--white)}
+.a-cat{display:inline-block;font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(77,255,223,.35);padding:5px 11px;margin-bottom:18px}
+h1{font-size:clamp(24px,3.4vw,34px);font-weight:700;line-height:1.5;letter-spacing:.01em;margin-bottom:18px;text-wrap:balance}
+.a-meta{font-size:12px;color:var(--w5);letter-spacing:.04em;padding-bottom:26px;border-bottom:1px solid var(--w15)}
+.a-lead{font-size:15px;line-height:2.05;color:var(--tx2);margin:30px 0 0}
+
+.toc{background:var(--surface);border:1px solid var(--w15);padding:24px 26px;margin:38px 0}
+.toc-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:14px}
+.toc ol{list-style:none;counter-reset:t}
+.toc li{counter-increment:t;font-size:14px;line-height:1.9;padding-left:30px;position:relative}
+.toc li::before{content:counter(t,decimal-leading-zero);position:absolute;left:0;font-family:var(--ff-j);font-size:11px;font-weight:600;color:var(--w3);top:4px}
+.toc a{color:var(--tx2);text-decoration:none}
+.toc a:hover{color:var(--accent)}
+
+article h2{font-size:21px;font-weight:700;line-height:1.6;margin:56px 0 20px;padding-left:14px;border-left:3px solid var(--accent);scroll-margin-top:90px}
+article h3{font-size:17px;font-weight:600;line-height:1.6;margin:36px 0 14px;color:var(--white)}
+article p{font-size:15px;line-height:2.05;margin-bottom:20px;color:var(--tx)}
+article ul,article ol{margin:0 0 22px 1.4em}
+article li{font-size:15px;line-height:1.95;margin-bottom:9px}
+article strong{font-weight:700;color:var(--white)}
+article a.plink{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+
+.tbl{width:100%;border-collapse:collapse;margin:8px 0 26px;font-size:14px;display:block;overflow-x:auto}
+.tbl th,.tbl td{border:1px solid var(--w15);padding:11px 13px;text-align:left;line-height:1.7}
+.tbl th{background:var(--w04);font-weight:600;white-space:nowrap}
+
+.note{background:var(--w04);border-left:3px solid var(--w3);padding:18px 20px;margin:26px 0;font-size:14px;line-height:1.95;color:var(--tx2)}
+
+.faq{margin:50px 0 0}
+.faq-i{border-bottom:1px solid var(--w15);padding:20px 0}
+.faq-q{font-size:15px;font-weight:600;margin-bottom:10px;line-height:1.7}
+.faq-q::before{content:'Q.';font-family:var(--ff-j);color:var(--accent);margin-right:8px;font-weight:700}
+.faq-a{font-size:14px;line-height:1.95;color:var(--tx2)}
+
+.recap{background:var(--surface);border:1px solid var(--w15);padding:26px 28px;margin:50px 0 0}
+.recap-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:14px}
+.recap ul{margin:0 0 0 1.2em}
+.recap li{font-size:14px;line-height:1.9;margin-bottom:10px;color:var(--tx2)}
+
+/* ── セグメント別CTA ── */
+.cta{border:1px solid rgba(77,255,223,.3);background:linear-gradient(180deg,rgba(77,255,223,.05),transparent);padding:34px 30px;margin:56px 0 0;text-align:center}
+.cta-t{font-family:var(--ff-j);font-size:19px;font-weight:700;line-height:1.5;margin-bottom:12px}
+.cta-s{font-size:14px;line-height:1.95;color:var(--tx2);margin-bottom:22px}
+.cta-b{display:inline-block;font-family:var(--ff-j);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bg);background:var(--white);text-decoration:none;padding:14px 34px;transition:background .3s,transform .2s}
+.cta-b:hover{background:var(--accent);transform:translateY(-2px)}
+
+.rel{margin:60px 0 0;border-top:1px solid var(--w15);padding-top:34px}
+.rel-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:16px}
+.rel a{display:block;font-size:14px;line-height:1.75;color:var(--tx2);text-decoration:none;padding:11px 0;border-bottom:1px solid var(--w08)}
+.rel a:hover{color:var(--accent)}
+
+/* ── 一覧ページ ── */
+.hd{max-width:1000px;margin:0 auto;padding:140px 24px 0}
+.hd .s-lbl{font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--w5);margin-bottom:12px}
+.hd h1{font-family:var(--ff-j);font-size:clamp(26px,3.8vw,46px);line-height:1.15}
+.hd p{font-size:14px;line-height:1.95;color:var(--tx2);margin-top:18px;max-width:600px}
+.cats{max-width:1000px;margin:44px auto 0;padding:0 24px;display:flex;flex-wrap:wrap;gap:10px}
+.cats a{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);text-decoration:none;border:1px solid var(--w15);padding:9px 18px;transition:all .3s}
+.cats a:hover,.cats a.on{background:var(--white);color:var(--bg);border-color:var(--white)}
+.list{max-width:1000px;margin:0 auto;padding:46px 24px 100px;display:grid;gap:1px;background:var(--w15);border:1px solid var(--w15);border-radius:0}
+.list{background:transparent;border:none;gap:0}
+.card{display:block;text-decoration:none;padding:26px 4px;border-bottom:1px solid var(--w15);transition:background .3s}
+.card:hover{background:var(--w04)}
+.card-c{font-family:var(--ff-j);font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
+.card-t{font-size:16px;font-weight:600;line-height:1.65;margin-bottom:9px;color:var(--white)}
+.card-d{font-size:13px;line-height:1.85;color:var(--tx2)}
+.empty{padding:60px 4px;color:var(--w5);font-size:14px}
+
+footer{padding:30px 52px;border-top:1px solid var(--w15);text-align:center}
+.f-copy{font-family:var(--ff-j);font-size:10px;font-weight:300;color:var(--w3);letter-spacing:.18em}
+
+@media(max-width:768px){
+  #nav{padding:0 20px;height:64px}
+  .logo img{height:48px}
+  .nav-links{display:none}
+  .ham{display:flex}
+  .wrap{padding:110px 20px 70px}
+  .hd{padding:110px 20px 0}
+  .cats,.list{padding-left:20px;padding-right:20px}
+  article h2{font-size:19px;margin:44px 0 16px}
+  footer{padding:26px 20px}
+}
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+
+<nav id="nav">
+  <a href="/" class="logo"><img src="/logo.png" alt="BLAZE"></a>
+  <ul class="nav-links">
+    <li><a href="/service/">Service</a></li>
+    <li><a href="/company/">Company</a></li>
+    <li><a href="/column/">Column</a></li>
+    <li><a href="/news/">News</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+  <div class="ham" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="toggleMenu()">✕</button>
+  <a href="/service/" onclick="toggleMenu()">Service</a>
+  <a href="/company/" onclick="toggleMenu()">Company</a>
+  <a href="/column/"  onclick="toggleMenu()">Column</a>
+  <a href="/news/"    onclick="toggleMenu()">News</a>
+  <a href="/contact/" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="wrap">
+  <p class="crumb"><a href="/">ホーム</a> ／ <a href="/column/">コラム</a> ／ <a href="/column/sales/">営業育成・事業成長</a></p>
+  <span class="a-cat">Sales Leadership</span>
+  <h1>営業プロセスを分解して、どこが詰まっているかを特定する</h1>
+  <p class="a-meta">最終更新 2026-08-27</p>
+  <p class="a-lead">「今月も数字が厳しい。みんな、もうひと踏ん張り頼む」。この号令で数字が上がるなら、営業管理職は要りません。売上が足りないという事実は、体温が高いという事実と同じで、それ自体は診断ではありません。どこが悪いのかを特定しなければ、処方は決まらない。営業における診断とは、受注に至るプロセスを変数に分解し、どの変数が細っているかを数字で特定することです。この記事では、営業プロセス分解の実務手順——数字の取り方、フェーズ定義の揃え方、ボトルネックの見つけ方、詰まりの箇所別の打ち手、そして分解を週次の運用に組み込む方法までを解説します。</p>
+
+  <nav class="toc"><p class="toc-t">目次</p><ol><li><a href="#s1">「売上が足りない」は診断ではない</a></li><li><a href="#s2">分解の実務手順：数字をどう取るか</a></li><li><a href="#s3">ボトルネックの見つけ方：3つの比較軸</a></li><li><a href="#s4">詰まりの箇所別：典型的な原因と打ち手</a></li><li><a href="#s5">分解の落とし穴：指標は人を歪める</a></li><li><a href="#s6">分解を週次の定例運用に組み込む</a></li></ol></nav>
+
+  <article>
+<h2 id="s1">「売上が足りない」は診断ではない</h2>
+<p>数字が伸びないチームの営業会議には、共通のパターンがあります。目標との差分が示され、残り日数が確認され、「案件を積み増そう」「訪問を増やそう」という結論に至る。翌月も同じ会議が繰り返される。</p>
+<p>この会議が機能しない理由は、議論が「結果」の層に留まっているからです。売上は結果であり、結果を直接操作することは誰にもできません。操作できるのは、結果を生み出すプロセスの各段階だけです。</p>
+<p>受注金額は、次の掛け算に分解できます。</p>
+<p><strong>受注金額 = 行動量 × 商談化率 × 提案転換率 × 受注率 × 平均単価</strong></p>
+<p>行動量とは新規のアプローチ数（架電、訪問、問い合わせ対応など、商談の入口となる活動の総量）。商談化率はそのうち商談に至った割合。提案転換率は商談から提案・見積提示に進んだ割合。受注率は提案からの成約割合。そこに平均単価を掛けると受注金額になります。</p>
+<p>この分解が重要なのは、<strong>同じ「売上不足」でも、どの変数が細っているかによって打ち手が正反対になる</strong>からです。行動量が細いチームに提案研修をしても意味がなく、受注率が低いチームに架電目標を積んでも、失注が増えるだけです。気合の号令は、全変数に薄く圧をかける最も非効率な介入だと言えます。分解して一点を特定し、そこに打ち手を集中する。診断なき処方をやめることが、プロセス改善の出発点です。</p>
+<h2 id="s2">分解の実務手順：数字をどう取るか</h2>
+<p>分解の考え方はシンプルですが、実務でつまずくのは数字の取得です。手順は3段階です。</p>
+<ol><li><strong>フェーズ定義を揃える</strong> — 「商談」「提案」が何を指すかを、行動ベースで定義し、チームで統一する</li><li><strong>記録の置き場所を決める</strong> — SFAがあればSFA、なければスプレッドシートでよい。全員が同じ場所に、同じ粒度で記録する</li><li><strong>期間を区切って集計する</strong> — 月次で5変数を、チーム全体とメンバー個人の両方で算出する</li></ol>
+<p>最も重要で、最も軽視されがちなのが1つ目のフェーズ定義です。「商談化」を、ある人は「初回訪問したら商談」と数え、別の人は「予算の話が出たら商談」と数えているなら、二人の商談化率を比べることには何の意味もありません。<strong>定義が人によって違う分解は、精密に見えて何も測っていません。</strong></p>
+<p class="note">フェーズ定義は「顧客側の行動」で置くと解釈のブレが減ります。「提案フェーズ＝見積を提示し、顧客が社内検討を約束した状態」のように、自社の活動ではなく顧客の反応で定義する。「頑張って提案した」かどうかは主観ですが、顧客が検討を約束したかどうかは事実として判定できます。</p>
+<p>SFAを導入済みの組織でも、フェーズの運用が乱れているケースは多くあります。分解を始める前に、直近の案件を20件ほどサンプリングして、記録されたフェーズと実態が合っているかを確認してください。記録が実態とずれているなら、まず記録の規律を立て直すのが先です。汚れたデータの分解は、誤診の量産になります。</p>
+<h2 id="s3">ボトルネックの見つけ方：3つの比較軸</h2>
+<p>5つの変数が算出できたら、どこが詰まっているかを特定します。ここで注意すべきは、変数の絶対値だけを眺めても判断できないことです。商談化率30%が高いのか低いのかは、業態や商材によって全く違います。判断の拠り所は「比較」です。比較軸は3つあります。</p>
+<ul><li><strong>チーム平均との比較</strong> — メンバー個人の各変数を、チーム平均と並べる。平均から大きく乖離している変数が、その人の詰まりの候補</li><li><strong>過去との比較</strong> — チーム全体の各変数を、四半期前・前年同期と並べる。悪化している変数が、チームの詰まりの候補</li><li><strong>メンバー間の比較</strong> — 同じ変数のばらつきを見る。トップと平均の差が大きい変数は、やり方の共有で全体を底上げできる余地が大きい</li></ul>
+<p>この3軸は役割が違います。チーム平均との比較は「個人の育成テーマ」を教えてくれます。過去との比較は「市場や体制の変化」を教えてくれます。全員の商談化率が同時に落ちているなら、それは個人の技量ではなく、リードの質の変化や競合環境の変化を疑うべきです。メンバー間のばらつきは「組織としての伸びしろ」を教えてくれます。</p>
+<p>特定の精度を上げるコツは、<strong>結果から遡って見る</strong>ことです。受注率が低いメンバーがいたら、その手前の提案転換率と商談化率も見る。提案までは順調なのに受注で落ちるのか、そもそも筋の悪い案件を提案まで進めてしまっているのか。詰まりが観測された場所と、詰まりの原因がある場所は、しばしば一段ずれています。データで場所の当たりをつけたら、商談への同行や録画の確認で原因を検証する。この二段構えは、部下育成の「観察→特定」と同じ構造です。</p>
+<h2 id="s4">詰まりの箇所別：典型的な原因と打ち手</h2>
+<p>詰まりの場所が特定できたら、打ち手を選びます。5つの変数それぞれについて、現場で頻出する原因と打ち手を整理します。</p>
+<table class="tbl"><tr><th>詰まりの箇所</th><th>典型的な原因</th><th>打ち手の方向</th></tr><tr><td>行動量が細い</td><td>既存対応や社内業務に時間を取られている。活動の優先順位が曖昧</td><td>時間の使い方の棚卸し。新規活動の時間をカレンダーで先に確保する。管理職が引き取れる業務を引き取る</td></tr><tr><td>商談化しない</td><td>アプローチ先の選定が粗い。初回接触のトークが自社都合</td><td>ターゲットリストの質の見直し。初回接触の目的を「売る」から「課題を聞く」に再設計する</td></tr><tr><td>提案に進まない</td><td>初回商談で予算・決裁・時期を把握できていない。次回の約束を取らずに終えている</td><td>初回商談の確認項目を標準化する。商談の最後に必ず次のアクションと日付を合意する</td></tr><tr><td>受注で落ちる</td><td>決裁者を押さえていない。提案が課題と接続していない。競合比較で負けている</td><td>決裁プロセスの確認をフェーズ移行の条件にする。提案書の冒頭を顧客の課題の言語化から始める</td></tr><tr><td>単価が低い</td><td>値引きで受注を作っている。上位プランや周辺提案をしていない</td><td>値引きの承認ルールを設ける。提案時に松竹梅の選択肢を標準で用意する</td></tr></table>
+<p>この表はあくまで「よくある原因」であり、自チームの原因は観察で確かめる必要があります。ただし方向感として、<strong>プロセスの前半（行動量・商談化）の詰まりは仕組みと時間配分の問題であることが多く、後半（提案・受注）の詰まりは商談の中身の問題であることが多い</strong>、という傾向は覚えておいて損がありません。前半の詰まりは管理職がルールと環境で直せますが、後半の詰まりは同行や録画で商談の中身に踏み込まないと直りません。</p>
+<p>打ち手は一度にひとつに絞ってください。5つの変数すべてに同時に手を打つと、どの打ち手が効いたのか検証できず、現場の負荷だけが上がります。最も細い一点に集中し、改善を確認してから次に移る。ボトルネック以外の改善は、ボトルネックが解消されるまで全体の数字に現れないからです。</p>
+<h2 id="s5">分解の落とし穴：指標は人を歪める</h2>
+<p>プロセス分解には副作用があります。<strong>測られた指標は、それ自体が目的化する</strong>ということです。</p>
+<p>行動量が細いと指摘されたメンバーは、行動量を増やします。ただし、数えられる行動を増やすのであって、意味のある行動を増やすとは限りません。つながらないと分かっている番号への架電、要件のない訪問。指標は満たされ、成果は変わらない。これはメンバーの怠慢ではなく、指標で管理される人間の自然な適応です。</p>
+<p>対処の原則は2つあります。第一に、<strong>単一の指標で人を評価しない</strong>こと。行動量だけを詰めれば行動の質が犠牲になり、商談化率だけを詰めれば商談のハードルを上げて件数が減ります。掛け算の全体、つまり最終成果とプロセス指標を常にセットで見ることで、一点の数字合わせの旨味を消します。</p>
+<p>第二に、<strong>指標の変化には必ず「中身の確認」を添える</strong>こと。行動量が増えたら、どこへのアプローチが増えたのかをリストで見る。商談化率が上がったら、商談の定義が緩んでいないかをサンプルで見る。数字の改善を無条件に称賛する管理職は、数字合わせを奨励しているのと同じです。</p>
+<p class="note">指標の運用が健全かどうかは、メンバーの語り方に現れます。「今週は行動量が足りないので架電を増やします」という語りは指標が目的化しかけているサインです。「ターゲットの再選定で商談化しやすい先への接触を増やします」のように、指標の先にある中身が語られているなら、分解は正しく機能しています。</p>
+<p>プロセス分解は、メンバーを監視する道具ではなく、メンバーと同じ地図を見るための道具です。この位置づけを間違えると、分解は詰める材料になり、記録は防衛のための作文になり、データの質が崩れて分解そのものが機能しなくなります。</p>
+<h2 id="s6">分解を週次の定例運用に組み込む</h2>
+<p>分解は一度やって終わりの分析ではなく、繰り返し見ることで機能する運用です。月次だけでは打ち手の検証が遅すぎるため、週次に組み込むことを推奨します。</p>
+<p>週次で見るべきものは絞ります。5変数すべてを毎週精査する必要はありません。<strong>今フォーカスしているボトルネック変数と、その先行指標だけを見る</strong>。商談化率に介入しているなら、今週の新規接触数と商談設定数、そして設定された商談の中身。それ以外の変数は月次で確認すれば十分です。</p>
+<p>週次ミーティングの構成は30分で足ります。前半15分でフォーカス指標の実績を確認し、後半15分で「来週どの行動を変えるか」を決める。重要なのは、会議の出口が必ず「行動の変更」になっていることです。数字を眺めて「引き続き頑張ります」で終わる会議は、分解を報告儀式に変えてしまいます。</p>
+<p>月次では5変数の全体を見直し、ボトルネックの位置が動いていないかを確認します。介入が効いてボトルネックが解消されると、詰まりは別の場所に移ります。商談化率が改善すれば、次は増えた商談を提案に進める力が問われる。<strong>ボトルネックは解消されるのではなく、移動する</strong>。この前提に立つと、プロセス改善は一度きりのプロジェクトではなく、終わりのない定例運用だと理解できます。</p>
+<p>最後に、始め方について。完璧なデータ基盤が整うのを待つ必要はありません。まず直近3ヶ月の案件をスプレッドシートに並べ、フェーズ定義を仮置きして、チームの5変数を一度算出してみてください。数字の精度は粗くても、「うちはどうやらここが細い」という仮説は立ちます。その仮説を持って商談に同行すれば、見えるものが変わります。売上という結果を嘆く会議から、プロセスという原因を特定する会議へ。この転換は、高価なツールではなく、分解という考え方ひとつで始められます。</p>
+<div class="faq"><h2 id="faq">よくある質問</h2><div class="faq-i"><p class="faq-q">SFAを導入していません。分解はできますか?</p><p class="faq-a">できます。必要なのはツールではなく、フェーズ定義と記録の規律です。スプレッドシートに案件を1行ずつ並べ、接触日・商談化日・提案日・受注/失注・金額を記録すれば、5変数は算出できます。むしろSFA導入前にこの運用を回しておくと、導入時に「何を記録すべきか」が明確になり、SFAが形骸化しにくくなります。</p></div><div class="faq-i"><p class="faq-q">チームの人数が少なく、率の数字がぶれます。どう見ればよいですか?</p><p class="faq-a">月次の率は母数が小さいとぶれるため、少人数チームでは四半期の移動集計で見ることを推奨します。また、率よりも個別案件の中身の確認に比重を移してください。案件が月10件のチームなら、全案件のフェーズ遷移を1件ずつ見る方が、率の統計を眺めるより速く正確です。分解の枠組みは「どの段階で落ちたか」を整理する地図として使います。</p></div><div class="faq-i"><p class="faq-q">ボトルネックが人によって違う場合、チームの打ち手はどう決めますか?</p><p class="faq-a">チーム共通の打ち手と個人別の打ち手を分けてください。過去比較で全員が同時に悪化している変数があれば、それはチーム共通のテーマとして仕組みで対処します。個人ごとの乖離は育成テーマとして、一人一点ずつ扱います。全員に同じ研修を一律にかけるのは、詰まりの場所が人によって違う以上、効率の悪い介入です。</p></div><div class="faq-i"><p class="faq-q">メンバーが記録を面倒がり、データが溜まりません</p><p class="faq-a">記録項目を減らすことが先決です。分解に必要な最小限（フェーズ移行日と金額）だけを必須にし、それ以外を任意にしてください。その上で、記録されたデータを毎週の会議で必ず使うこと。記録が使われる場面を見れば、記録は意味のある行動になります。記録させるのに使わないことが、形骸化の最大の原因です。</p></div><div class="faq-i"><p class="faq-q">行動量を増やせと言うと「質が下がる」と反発されます</p><p class="faq-a">反発は正しい可能性があります。まずデータで確認してください。その人の行動量がチーム平均を明確に下回っており、かつ商談化率が平均並みなら、量を増やす余地があります。逆に行動量が平均以上で商談化率が低いなら、必要なのは量ではなく接触先の選定や初回トークの改善です。量か質かは思想の対立ではなく、分解すれば決着がつく問いです。</p></div></div>
+<div class="recap"><p class="recap-t">この記事のまとめ</p><ul><li>「売上が足りない」は結果の記述であって診断ではない。受注=行動量×商談化率×提案転換率×受注率×単価に分解して初めて打ち手が決まる</li><li>分解の前提はフェーズ定義の統一。定義が人によって違う分解は何も測っていない。顧客側の行動で定義するとブレが減る</li><li>ボトルネックはチーム平均・過去・メンバー間の3軸比較で特定する。3軸はそれぞれ育成テーマ・環境変化・組織の伸びしろを教えてくれる</li><li>プロセス前半の詰まりは仕組みと時間配分、後半の詰まりは商談の中身の問題であることが多い。打ち手は一点に絞る</li><li>指標は目的化しやすい。最終成果とセットで見る、数字の変化に中身の確認を添える、の2つで数字合わせを防ぐ</li><li>週次はフォーカス変数だけを見て行動の変更を決め、月次で5変数の全体とボトルネックの移動を確認する</li><li>完璧なデータ基盤を待つ必要はない。スプレッドシートで直近3ヶ月を並べ、仮説を持って商談を見に行くところから始められる</li></ul></div>
+  </article>
+
+  <div class="cta"><p class="cta-t">営業管理職の育成について相談する</p><p class="cta-s">プレイングマネージャーの時間配分から部下育成の型まで、営業組織を率いる立場に必要なスキルを体系化した研修プログラムをご案内します。</p><a class="cta-b" href="/contact/?from=column-sales">営業管理職研修を相談する</a></div>
+  <div class="rel"><p class="rel-t">関連記事</p><a href="/column/yomi-seido/">案件の「読み」の精度を上げる仕組み</a><a href="/column/top-player-ikusei/">トップ営業をさらに伸ばすマネジメント</a><a href="/column/teiseki-member-taiou/">成績が上がらないメンバーへの向き合い方</a><a href="/column/shitsumon-de-kangaesaseru/">指示ではなく問いで考えさせる指導への転換</a><a href="/column/shinnin-manager-90nichi/">新任営業管理職が最初の90日にやるべきこと</a></div>
+</div>
+
+<footer>
+  <p class="f-copy">&copy; 2026 BLAZE Inc. ALL RIGHTS RESERVED.</p>
+</footer>
+
+<script>
+const bgCv = document.getElementById('bg-canvas');
+const bgCtx = bgCv.getContext('2d');
+let W, H;
+function resizeBg(){ W = bgCv.width = window.innerWidth; H = bgCv.height = window.innerHeight; }
+resizeBg();
+window.addEventListener('resize', resizeBg);
+
+const beams = [
+  { c:'rgba(30,75,220,', lw:1.8, al:.45, phase:0.0, ox:[-.05,.22,.55,1.05], oy:[.50,.28,.72,.45], ax:[0,.12,.10,0], ay:[.08,.14,.12,.07], fx:[0,.41,.37,0], fy:[.29,.38,.43,.31] },
+  { c:'rgba(20,60,200,', lw:1.4, al:.38, phase:1.3, ox:[-.05,.18,.60,1.05], oy:[.45,.70,.25,.55], ax:[0,.10,.13,0], ay:[.09,.12,.10,.08], fx:[0,.35,.44,0], fy:[.33,.40,.36,.38] },
+  { c:'rgba(40,90,235,', lw:2.2, al:.30, phase:2.5, ox:[-.05,.30,.68,1.05], oy:[.55,.35,.65,.50], ax:[0,.11,.09,0], ay:[.07,.13,.11,.09], fx:[0,.43,.39,0], fy:[.37,.34,.41,.35] },
+  { c:'rgba(15,55,195,', lw:1.2, al:.28, phase:3.8, ox:[-.05,.45,.50,1.05], oy:[.42,.58,.42,.60], ax:[0,.09,.12,0], ay:[.10,.11,.09,.08], fx:[0,.38,.45,0], fy:[.32,.42,.38,.33] },
+  { c:'rgba(50,100,240,',lw:1.8, al:.35, phase:5.1, ox:[-.05,.15,.80,1.05], oy:[.48,.75,.28,.52], ax:[0,.13,.08,0], ay:[.11,.10,.13,.09], fx:[0,.46,.36,0], fy:[.40,.35,.44,.37] },
+];
+
+function drawBg(ts){
+  bgCtx.fillStyle = '#000008';
+  bgCtx.fillRect(0, 0, W, H);
+  const t = ts * 0.001;
+  const gx = W * (.2 + .08 * Math.sin(t * .12));
+  const gy = H * (.5 + .08 * Math.cos(t * .10));
+  const gr = bgCtx.createRadialGradient(gx,gy,0, gx,gy, Math.max(W,H)*.8);
+  gr.addColorStop(0, 'rgba(10,35,170,0.4)');
+  gr.addColorStop(.4,'rgba(6,20,120,0.15)');
+  gr.addColorStop(1, 'rgba(0,0,0,0)');
+  bgCtx.fillStyle = gr;
+  bgCtx.fillRect(0, 0, W, H);
+  beams.forEach(b => {
+    const ph = b.phase;
+    const pts = [
+      [b.ox[0]*W, (b.oy[0]+b.ay[0]*Math.sin(t*b.fy[0]+ph+0.0))*H],
+      [(b.ox[1]+b.ax[1]*Math.sin(t*b.fx[1]+ph+1.0))*W, (b.oy[1]+b.ay[1]*Math.sin(t*b.fy[1]+ph+0.5))*H],
+      [(b.ox[2]+b.ax[2]*Math.sin(t*b.fx[2]+ph+2.0))*W, (b.oy[2]+b.ay[2]*Math.sin(t*b.fy[2]+ph+1.5))*H],
+      [b.ox[3]*W, (b.oy[3]+b.ay[3]*Math.sin(t*b.fy[3]+ph+0.8))*H],
+    ];
+    const [p0,p1,p2,p3] = pts;
+    bgCtx.beginPath();
+    bgCtx.moveTo(p0[0],p0[1]);
+    bgCtx.bezierCurveTo(p1[0],p1[1],p2[0],p2[1],p3[0],p3[1]);
+    const grd = bgCtx.createLinearGradient(p0[0],p0[1],p3[0],p3[1]);
+    grd.addColorStop(0, b.c+'0)');
+    grd.addColorStop(.2,b.c+b.al+')');
+    grd.addColorStop(.5,b.c+(b.al*1.3).toFixed(2)+')');
+    grd.addColorStop(.8,b.c+b.al+')');
+    grd.addColorStop(1, b.c+'0)');
+    bgCtx.strokeStyle = grd;
+    bgCtx.lineWidth = b.lw;
+    bgCtx.shadowBlur = 24;
+    bgCtx.shadowColor = b.c+'0.6)';
+    bgCtx.stroke();
+    bgCtx.shadowBlur = 0;
+  });
+  requestAnimationFrame(drawBg);
+}
+requestAnimationFrame(drawBg);
+
+window.addEventListener('scroll', function(){
+  document.getElementById('nav').classList.toggle('s', window.scrollY > 40);
+});
+function toggleMenu(){
+  document.getElementById('ham').classList.toggle('open');
+  document.getElementById('mobMenu').classList.toggle('open');
+}
+</script>
+</body>
+</html>
