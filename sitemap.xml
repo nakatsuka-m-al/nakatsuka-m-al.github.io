@@ -380,6 +380,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://blaze-ltd.com/column/ai-unyou-taisei/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://blaze-ltd.com/column/ai-tool-erabikata/</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -393,6 +399,12 @@
   </url>
   <url>
     <loc>https://blaze-ltd.com/column/ai-meru-taiou/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blaze-ltd.com/column/ai-kyouiku-shanai/</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
