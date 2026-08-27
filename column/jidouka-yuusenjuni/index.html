@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H67Y48Q10E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H67Y48Q10E');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="自動化したい業務が山ほどあるのに、どこから手をつけるべきか決められない。この状態を解消するには、効果と実現容易性の2軸で候補を評価し、マトリクスで仕分ける方法が有効です。効果の見積もり方から最初の1件の選び方、年1回の棚卸しまで、実務の手順を解説します。">
+<meta property="og:title" content="業務自動化の優先順位を費用対効果で決める方法">
+<meta property="og:description" content="自動化したい業務が山ほどあるのに、どこから手をつけるべきか決められない。この状態を解消するには、効果と実現容易性の2軸で候補を評価し、マトリクスで仕分ける方法が有効です。効果の見積もり方から最初の1件の選び方、年1回の棚卸しまで、実務の手順を解説します。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blaze-ltd.com/column/jidouka-yuusenjuni/">
+<meta property="og:image" content="https://blaze-ltd.com/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blaze-ltd.com/ogp.png">
+<meta name="robots" content="index, follow">
+<title>業務自動化の優先順位を費用対効果で決める方法</title>
+<link rel="canonical" href="https://blaze-ltd.com/column/jidouka-yuusenjuni/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"業務自動化の優先順位を費用対効果で決める方法","description":"自動化したい業務が山ほどあるのに、どこから手をつけるべきか決められない。この状態を解消するには、効果と実現容易性の2軸で候補を評価し、マトリクスで仕分ける方法が有効です。効果の見積もり方から最初の1件の選び方、年1回の棚卸しまで、実務の手順を解説します。","datePublished":"2026-08-27","dateModified":"2026-08-27","mainEntityOfPage":"https://blaze-ltd.com/column/jidouka-yuusenjuni/","image":"https://blaze-ltd.com/ogp.png","author":{"@type":"Organization","name":"株式会社BLAZE","url":"https://blaze-ltd.com"},"publisher":{"@type":"Organization","name":"株式会社BLAZE","url":"https://blaze-ltd.com","logo":{"@type":"ImageObject","url":"https://blaze-ltd.com/logo.png"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://blaze-ltd.com"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://blaze-ltd.com/column/"},{"@type":"ListItem","position":3,"name":"AI・業務自動化","item":"https://blaze-ltd.com/column/ai/"},{"@type":"ListItem","position":4,"name":"業務自動化の優先順位を費用対効果で決める方法","item":"https://blaze-ltd.com/column/jidouka-yuusenjuni/"}]}]}</script>
+<style>
+:root{
+  --bg:#03050f; --surface:#080c1c; --accent:#4DFFDF; --white:#fff;
+  --tx:rgba(255,255,255,.92); --tx2:rgba(255,255,255,.72);
+  --w5:rgba(255,255,255,.5); --w3:rgba(255,255,255,.3);
+  --w15:rgba(255,255,255,.15); --w08:rgba(255,255,255,.08); --w04:rgba(255,255,255,.04);
+  --ff-j:'Jost',sans-serif; --ff-n:'Noto Sans JP',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.wrap,.hd,.cats,.list,#nav,footer,.mob-menu{position:relative;z-index:1}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:var(--ff-n);font-weight:400;line-height:1.9;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+
+/* ヘッダーは #nav に限定して指定する。
+   目次も意味的に <nav> で書いているため、型セレクタにすると巻き込まれる */
+#nav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 52px;height:72px;z-index:200;transition:background .4s}
+#nav.s{background:rgba(3,5,15,.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--w15)}
+.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
+.logo img{height:72px;width:auto;display:block}
+.nav-links{display:flex;gap:30px;list-style:none;align-items:center}
+.nav-links a{font-family:var(--ff-j);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--w5);text-decoration:none;transition:color .3s}
+.nav-links a:hover{color:var(--white)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;z-index:300}
+.ham span{display:block;width:22px;height:1.5px;background:var(--white);transition:transform .3s,opacity .3s}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob-menu{position:fixed;inset:0;background:rgba(0,0,8,.97);z-index:250;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;opacity:0;pointer-events:none;transition:opacity .3s}
+.mob-menu.open{opacity:1;pointer-events:all}
+.mob-menu a{font-family:var(--ff-j);font-size:21px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--white);text-decoration:none}
+.mob-close{position:absolute;top:26px;right:26px;background:none;border:1px solid var(--w3);color:var(--white);font-size:18px;width:44px;height:44px;cursor:pointer}
+
+/* ── 記事 ── */
+.wrap{max-width:760px;margin:0 auto;padding:130px 24px 90px}
+.crumb{font-size:12px;color:var(--w5);margin-bottom:22px;line-height:1.7}
+.crumb a{color:var(--w5);text-decoration:none}
+.crumb a:hover{color:var(--white)}
+.a-cat{display:inline-block;font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(77,255,223,.35);padding:5px 11px;margin-bottom:18px}
+h1{font-size:clamp(24px,3.4vw,34px);font-weight:700;line-height:1.5;letter-spacing:.01em;margin-bottom:18px;text-wrap:balance}
+.a-meta{font-size:12px;color:var(--w5);letter-spacing:.04em;padding-bottom:26px;border-bottom:1px solid var(--w15)}
+.a-lead{font-size:15px;line-height:2.05;color:var(--tx2);margin:30px 0 0}
+
+.toc{background:var(--surface);border:1px solid var(--w15);padding:24px 26px;margin:38px 0}
+.toc-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:14px}
+.toc ol{list-style:none;counter-reset:t}
+.toc li{counter-increment:t;font-size:14px;line-height:1.9;padding-left:30px;position:relative}
+.toc li::before{content:counter(t,decimal-leading-zero);position:absolute;left:0;font-family:var(--ff-j);font-size:11px;font-weight:600;color:var(--w3);top:4px}
+.toc a{color:var(--tx2);text-decoration:none}
+.toc a:hover{color:var(--accent)}
+
+article h2{font-size:21px;font-weight:700;line-height:1.6;margin:56px 0 20px;padding-left:14px;border-left:3px solid var(--accent);scroll-margin-top:90px}
+article h3{font-size:17px;font-weight:600;line-height:1.6;margin:36px 0 14px;color:var(--white)}
+article p{font-size:15px;line-height:2.05;margin-bottom:20px;color:var(--tx)}
+article ul,article ol{margin:0 0 22px 1.4em}
+article li{font-size:15px;line-height:1.95;margin-bottom:9px}
+article strong{font-weight:700;color:var(--white)}
+article a.plink{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+
+.tbl{width:100%;border-collapse:collapse;margin:8px 0 26px;font-size:14px;display:block;overflow-x:auto}
+.tbl th,.tbl td{border:1px solid var(--w15);padding:11px 13px;text-align:left;line-height:1.7}
+.tbl th{background:var(--w04);font-weight:600;white-space:nowrap}
+
+.note{background:var(--w04);border-left:3px solid var(--w3);padding:18px 20px;margin:26px 0;font-size:14px;line-height:1.95;color:var(--tx2)}
+
+.faq{margin:50px 0 0}
+.faq-i{border-bottom:1px solid var(--w15);padding:20px 0}
+.faq-q{font-size:15px;font-weight:600;margin-bottom:10px;line-height:1.7}
+.faq-q::before{content:'Q.';font-family:var(--ff-j);color:var(--accent);margin-right:8px;font-weight:700}
+.faq-a{font-size:14px;line-height:1.95;color:var(--tx2)}
+
+.recap{background:var(--surface);border:1px solid var(--w15);padding:26px 28px;margin:50px 0 0}
+.recap-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:14px}
+.recap ul{margin:0 0 0 1.2em}
+.recap li{font-size:14px;line-height:1.9;margin-bottom:10px;color:var(--tx2)}
+
+/* ── セグメント別CTA ── */
+.cta{border:1px solid rgba(77,255,223,.3);background:linear-gradient(180deg,rgba(77,255,223,.05),transparent);padding:34px 30px;margin:56px 0 0;text-align:center}
+.cta-t{font-family:var(--ff-j);font-size:19px;font-weight:700;line-height:1.5;margin-bottom:12px}
+.cta-s{font-size:14px;line-height:1.95;color:var(--tx2);margin-bottom:22px}
+.cta-b{display:inline-block;font-family:var(--ff-j);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bg);background:var(--white);text-decoration:none;padding:14px 34px;transition:background .3s,transform .2s}
+.cta-b:hover{background:var(--accent);transform:translateY(-2px)}
+
+.rel{margin:60px 0 0;border-top:1px solid var(--w15);padding-top:34px}
+.rel-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:16px}
+.rel a{display:block;font-size:14px;line-height:1.75;color:var(--tx2);text-decoration:none;padding:11px 0;border-bottom:1px solid var(--w08)}
+.rel a:hover{color:var(--accent)}
+
+/* ── 一覧ページ ── */
+.hd{max-width:1000px;margin:0 auto;padding:140px 24px 0}
+.hd .s-lbl{font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--w5);margin-bottom:12px}
+.hd h1{font-family:var(--ff-j);font-size:clamp(26px,3.8vw,46px);line-height:1.15}
+.hd p{font-size:14px;line-height:1.95;color:var(--tx2);margin-top:18px;max-width:600px}
+.cats{max-width:1000px;margin:44px auto 0;padding:0 24px;display:flex;flex-wrap:wrap;gap:10px}
+.cats a{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);text-decoration:none;border:1px solid var(--w15);padding:9px 18px;transition:all .3s}
+.cats a:hover,.cats a.on{background:var(--white);color:var(--bg);border-color:var(--white)}
+.list{max-width:1000px;margin:0 auto;padding:46px 24px 100px;display:grid;gap:1px;background:var(--w15);border:1px solid var(--w15);border-radius:0}
+.list{background:transparent;border:none;gap:0}
+.card{display:block;text-decoration:none;padding:26px 4px;border-bottom:1px solid var(--w15);transition:background .3s}
+.card:hover{background:var(--w04)}
+.card-c{font-family:var(--ff-j);font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
+.card-t{font-size:16px;font-weight:600;line-height:1.65;margin-bottom:9px;color:var(--white)}
+.card-d{font-size:13px;line-height:1.85;color:var(--tx2)}
+.empty{padding:60px 4px;color:var(--w5);font-size:14px}
+
+footer{padding:30px 52px;border-top:1px solid var(--w15);text-align:center}
+.f-copy{font-family:var(--ff-j);font-size:10px;font-weight:300;color:var(--w3);letter-spacing:.18em}
+
+@media(max-width:768px){
+  #nav{padding:0 20px;height:64px}
+  .logo img{height:48px}
+  .nav-links{display:none}
+  .ham{display:flex}
+  .wrap{padding:110px 20px 70px}
+  .hd{padding:110px 20px 0}
+  .cats,.list{padding-left:20px;padding-right:20px}
+  article h2{font-size:19px;margin:44px 0 16px}
+  footer{padding:26px 20px}
+}
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+
+<nav id="nav">
+  <a href="/" class="logo"><img src="/logo.png" alt="BLAZE"></a>
+  <ul class="nav-links">
+    <li><a href="/service/">Service</a></li>
+    <li><a href="/company/">Company</a></li>
+    <li><a href="/column/">Column</a></li>
+    <li><a href="/news/">News</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+  <div class="ham" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="toggleMenu()">✕</button>
+  <a href="/service/" onclick="toggleMenu()">Service</a>
+  <a href="/company/" onclick="toggleMenu()">Company</a>
+  <a href="/column/"  onclick="toggleMenu()">Column</a>
+  <a href="/news/"    onclick="toggleMenu()">News</a>
+  <a href="/contact/" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="wrap">
+  <p class="crumb"><a href="/">ホーム</a> ／ <a href="/column/">コラム</a> ／ <a href="/column/ai/">AI・業務自動化</a></p>
+  <span class="a-cat">AI Automation</span>
+  <h1>業務自動化の優先順位を費用対効果で決める方法</h1>
+  <p class="a-meta">最終更新 2026-08-27</p>
+  <p class="a-lead">「自動化したい業務はいくらでもある。ただ、どれからやるべきかが決められない」。業務自動化の相談で最も多いのは、技術の質問ではなくこの優先順位の質問です。候補が多いこと自体は健全です。問題は、優先順位を決める物差しがないまま、声の大きい部署の要望や、目についた業務から着手してしまうこと。その結果、労力の割に効果が出ず、「自動化は思ったほど使えない」という誤った結論だけが社内に残ります。この記事では、自動化候補を「効果」と「実現容易性」の2軸で評価し、費用対効果で優先順位を決める実務的な手順を解説します。</p>
+
+  <nav class="toc"><p class="toc-t">目次</p><ol><li><a href="#s1">「AIで何かやりたい」から始まるプロジェクトは失敗する</a></li><li><a href="#s2">優先順位は「効果」と「実現容易性」の2軸で評価する</a></li><li><a href="#s3">効果の見積もり方：体感ではなく実測から始める</a></li><li><a href="#s4">実現容易性の見極め：判断が入らない定型作業ほど易しい</a></li><li><a href="#s5">2軸マトリクスで4象限に仕分ける</a></li><li><a href="#s6">最初の1件は「成功が見えやすいもの」を選ぶ</a></li><li><a href="#s7">優先順位は年1回見直す：「難しい」は変わり続ける</a></li></ol></nav>
+
+  <article>
+<h2 id="s1">「AIで何かやりたい」から始まるプロジェクトは失敗する</h2>
+<p>優先順位の話に入る前に、前提をひとつ確認します。自動化プロジェクトの成否は、着手する前の「始まり方」でほぼ決まっています。</p>
+<p>失敗するプロジェクトの典型は、「AIで何かやりたい」「他社もやっているからうちも」という技術起点の始まり方です。手段が先に決まっているため、後から無理やり適用先の業務を探すことになります。探して見つかる業務は、たいてい「自動化できそうな業務」であって「自動化すべき業務」ではありません。できそうだからやってみたが、そもそも大した工数がかかっていなかった。動くものはできたが、誰も困っていなかったので使われない。技術起点のプロジェクトは、この形で静かに消えていきます。</p>
+<p>成功するプロジェクトは、業務の困りごとから始まります。「毎月の請求書処理に3人で丸2日かかっている」「転記ミスが月に数件起きて、その都度顧客に謝罪している」。困りごとが起点にあれば、自動化の目的も、成功の判定基準も、最初から明確です。処理時間が2日から2時間になったか。転記ミスがゼロになったか。答え合わせができるプロジェクトだけが、次の投資につながります。</p>
+<p>つまり優先順位づけとは、技術の適用先を探す作業ではなく、<strong>社内の困りごとを棚卸しして、解消する順番を決める作業</strong>です。この視点の転換が、以降のすべての手順の土台になります。</p>
+<h2 id="s2">優先順位は「効果」と「実現容易性」の2軸で評価する</h2>
+<p>候補業務を洗い出したら、それぞれを2つの軸で評価します。どちらか片方では判断を誤ります。効果だけで選ぶと、難易度の高い業務に挑んで頓挫します。容易性だけで選ぶと、簡単だが誰も助からない自動化が量産されます。</p>
+<p>第1の軸は<strong>効果</strong>です。その業務を自動化すると、何がどれだけ良くなるか。効果は主に3種類あります。</p>
+<ul><li><strong>時間の削減</strong> — 削減できる時間 × 発生頻度 × 関わる人数。効果の中核であり、金額換算が可能</li><li><strong>ミスの削減</strong> — 転記ミス、送付先間違い、計算誤り。発生時の後処理コストと信用毀損まで含めて評価する</li><li><strong>速度の向上</strong> — 見積り回答が3日から即日になる等。時間削減とは別の価値で、受注率や顧客満足に効く</li></ul>
+<p>第2の軸は<strong>実現容易性</strong>です。同じ効果でも、実現までの距離は業務によってまったく違います。容易性を左右する要素は主に4つです。</p>
+<ul><li><strong>業務の定型度</strong> — 手順が毎回同じか、人の判断が途中に入るか</li><li><strong>データの整備状況</strong> — 入力がデータ化されているか、紙や口頭やバラバラの書式か</li><li><strong>例外の多さ</strong> — 全体の何割が「いつも通り」で処理でき、何割がイレギュラー対応か</li><li><strong>システム連携の複雑さ</strong> — 完結するシステムの数。またぐシステムが増えるほど難しくなる</li></ul>
+<p>候補業務を一覧表にして、この2軸をそれぞれ大中小の3段階で粗く評価するだけでも、優先順位の議論は劇的に前に進みます。精密な点数化は不要です。目的は正確な序列ではなく、「明らかに先にやるべきもの」と「明らかに後回しでよいもの」を仕分けることだからです。</p>
+<h2 id="s3">効果の見積もり方：体感ではなく実測から始める</h2>
+<p>効果の評価で最も重要な原則は、<strong>現状の所要時間を体感ではなく実測する</strong>ことです。</p>
+<p>「あの作業、結構時間かかってるよね」という体感は、ほぼ確実に不正確です。まとまった作業時間は過大に見積もられ、細切れに発生する作業は過小に見積もられます。1回15分のデータ転記が毎日発生していれば月5時間ですが、細切れの15分は本人の記憶にすら残りません。逆に、月に1度の締め作業は「丸1日つぶれる大変な仕事」として記憶されますが、実測すると4時間だったりします。</p>
+<p>実測といっても大げさな調査は不要です。対象業務について、担当者に1〜2週間だけ作業の開始と終了を記録してもらう。それだけで、体感との差は十分に見えます。</p>
+<p>実測した時間は、<strong>年間換算し、人件費換算</strong>します。ここまでやって初めて、投資判断の土俵に乗ります。計算例を示します。</p>
+<table class="tbl"><tr><th>項目</th><th>値</th><th>備考</th></tr><tr><td>1人あたり月間作業時間</td><td>5時間</td><td>実測ベース</td></tr><tr><td>関わる人数</td><td>3人</td><td>営業事務2名＋経理1名</td></tr><tr><td>年間の総作業時間</td><td>180時間</td><td>5時間 × 3人 × 12ヶ月</td></tr><tr><td>人件費換算</td><td>約54万円/年</td><td>時間単価3,000円で計算</td></tr><tr><td>ミス対応の追加コスト</td><td>約12万円/年</td><td>月1件 × 対応3時間強 × 関係者分</td></tr><tr><td>年間効果の合計</td><td>約66万円</td><td>自動化に投じられる予算の目安になる</td></tr></table>
+<p>時間単価は、給与だけでなく社会保険料等を含めた会社負担の総額を労働時間で割った値を使います。粗くは月給の1.4倍程度を月間労働時間で割れば十分です。</p>
+<p>この計算をすると、直感と逆の結果がよく出ます。誰もが「大変だ」と言う業務が年間30時間しかなく、誰も話題にしない細切れ作業が年間200時間を超えている。<strong>優先順位を体感で決めてはいけない理由が、この逆転にあります</strong>。</p>
+<h2 id="s4">実現容易性の見極め：判断が入らない定型作業ほど易しい</h2>
+<p>容易性の見極めは、突き詰めると一つの問いに集約されます。<strong>その業務の途中に、人の判断が入るか</strong>。</p>
+<p>「このシステムからデータを取り出し、この書式に転記し、このフォルダに保存する」。手順が完全に決まっていて、誰がやっても同じ結果になる業務は、自動化の難易度が低い。逆に、「内容を見て、ケースに応じて対応を変える」業務は、その判断の基準を明文化できない限り難しくなります。</p>
+<p>難易度を上げる典型的な要因は次の3つです。</p>
+<ol><li><strong>例外処理の多さ</strong> — 8割は定型でも、残り2割のイレギュラーが「この場合は電話で確認」「あの取引先だけ書式が違う」という形で存在すると、その分岐の洗い出しと設計に本体以上の工数がかかる</li><li><strong>暗黙知への依存</strong> — 「ベテランの田中さんなら見ればわかる」という判断基準は、明文化されるまで自動化できない。自動化の前に、業務の言語化という別の仕事が挟まる</li><li><strong>紙・手書き・非構造データ</strong> — 入力がデータ化されていない業務は、読み取りの工程が加わる。近年のAIで精度は大きく上がったが、確認の運用設計が必要になる分、完全定型のデータ処理よりは難しい</li></ol>
+<p class="note">容易性の評価は、担当者へのヒアリングだけで済ませず、実際の作業を一度見せてもらうことを推奨します。担当者は定型部分を説明し、例外は「たまにあるくらいです」と省略しがちです。実際に横で見ると、「たまに」が3件に1件だったと判明することは珍しくありません。例外の頻度こそが難易度を決めるため、ここの見立てを誤ると見積り全体が崩れます。</p>
+<p>なお、「難しい」の判定は業務全体に対して下す必要はありません。業務を工程に分解すると、判断が入るのは一部の工程だけで、前後の転記や集計は完全な定型作業、というケースが大半です。難しい業務を丸ごと諦めるのではなく、定型部分だけを切り出して自動化する。この分解の発想が、後述する「段階を刻む」戦略につながります。</p>
+<h2 id="s5">2軸マトリクスで4象限に仕分ける</h2>
+<p>効果と容易性の評価が出そろったら、候補業務を4つの象限に仕分けます。それぞれの象限で、取るべき方針は明確に異なります。</p>
+<table class="tbl"><tr><th>象限</th><th>方針</th><th>考え方</th></tr><tr><td>易しい × 効果大</td><td>最初にやる</td><td>投資対効果が最も高い本命。ここに最初のリソースを集中する</td></tr><tr><td>易しい × 効果小</td><td>ついでにやる</td><td>本命の実装と同じ仕組み・同じ担当者で片づくものだけ拾う。単独では着手しない</td></tr><tr><td>難しい × 効果大</td><td>段階を刻む</td><td>業務を工程分解し、定型部分から着手する。数年がかりの本丸として中期計画に載せる</td></tr><tr><td>難しい × 効果小</td><td>やらない</td><td>明示的に「やらない」と決めて一覧から外す。判断の保留がいちばん高くつく</td></tr></table>
+<p>運用上の要点を2つ補足します。</p>
+<p>第一に、「やらない」を決めることの価値です。優先順位づけの実務で最も消耗するのは、効果の小さい要望を「いつかやるリスト」に積み上げ続けることです。要望を出した部署には「効果と難易度を評価した結果、優先度を下げた」と根拠つきで返す。断る根拠を持てることが、2軸評価の隠れた効用です。</p>
+<p>第二に、「難しい × 効果大」の扱いです。この象限は効果が大きいだけに、いきなり挑みたくなります。しかし最初の案件としては不適切です。難しい案件は途中で仕様変更や例外対応が噴出し、期間もコストも膨らみます。最初の1件が長期化すると、社内の期待が冷め、プロジェクト全体が推進力を失います。この象限は、易しい案件で実績と知見を積んだ後に、工程分解して段階的に攻める対象です。</p>
+<h2 id="s6">最初の1件は「成功が見えやすいもの」を選ぶ</h2>
+<p>「易しい × 効果大」の象限に複数の候補が残ったとき、最初の1件をどう選ぶか。ここでの判断基準は、ROIの数字の大小だけではありません。<strong>成功が社内から見えやすいか</strong>を重視してください。</p>
+<p>自動化の最初の1件が果たす役割は、削減時間そのものよりも、「自動化はうちの会社でも機能する」という社内の共通認識を作ることにあります。2件目以降の予算も、現場の協力も、この最初の成功体験があって初めて得られます。逆に、最初の1件が失敗するか、成功しても誰にも気づかれなければ、2件目の稟議は通りません。</p>
+<p>成功が見えやすい案件には、共通する特徴があります。</p>
+<ul><li><strong>効果が短期間で出る</strong> — 稼働から1〜2ヶ月で数字の変化が確認できる。半年後に効いてくる案件は最初の1件に向かない</li><li><strong>ビフォーアフターが数字で語れる</strong> — 「毎月2日かかっていた処理が2時間になった」のように、一文で説明できる</li><li><strong>複数の部署が恩恵を実感する</strong> — 一部署だけの効率化より、営業と経理の両方が楽になる案件のほうが、話が社内に広がる</li><li><strong>現場の担当者が協力的</strong> — 自動化される業務の担当者が前向きな案件を選ぶ。抵抗のある現場との調整は、実績ができた後のほうが圧倒的に楽</li></ul>
+<p>着手前にもうひとつ、必ずやっておくべきことがあります。<strong>ビフォーの数字をその時点で記録しておく</strong>ことです。自動化が動き始めてから「以前は何時間かかっていたか」を再現しようとしても、正確な数字は残っていません。効果を実測した時点の記録が、そのまま成果報告の比較対象になります。最初の成功を「見えやすく」するのは、案件選びと同時に、この記録の準備です。</p>
+<h2 id="s7">優先順位は年1回見直す：「難しい」は変わり続ける</h2>
+<p>最後に、一度決めた優先順位を固定しないことの重要性です。</p>
+<p>2軸のうち「効果」の軸は、業務量が大きく変わらない限り安定しています。しかし「実現容易性」の軸は、技術の進歩によって毎年動きます。特にこの数年は、動き方が急です。かつては「非定型だから無理」と判定された業務——手書き書類の読み取り、問い合わせメールの内容判別と振り分け、報告書の下書き作成——の多くが、現在のAIでは現実的なコストで自動化の対象に入ってきています。</p>
+<p>つまり、過去に「難しい × 効果大」や「やらない」に仕分けた案件が、いまは「易しい」側に移動している可能性が常にあります。3年前の判定を根拠に「あれは無理」と言い続けている組織は、効果の大きい機会をリストの中で眠らせていることになります。</p>
+<p class="note">推奨する運用は、年1回の棚卸しです。候補一覧を捨てずに残しておき、年に一度、「見送り」「やらない」と判定した案件の容易性だけを再評価する。効果の評価は使い回せるため、再評価の負荷は初回よりずっと軽く済みます。予算編成の1〜2ヶ月前に実施すると、翌年度の投資計画にそのまま接続できます。</p>
+<p>整理します。業務自動化の優先順位づけは、次の手順で進めます。困りごとを起点に候補を洗い出す。効果を実測ベースで年間換算し、容易性を判断の有無と例外の多さで見極める。2軸マトリクスで4象限に仕分け、「やらない」を明示的に決める。最初の1件は成功が見えやすいものを選び、ビフォーの数字を記録してから着手する。そして年1回、技術の進歩を反映して仕分けを更新する。</p>
+<p>この手順に特別な技術知識は必要ありません。必要なのは、自社の業務を数字で把握する手間を惜しまないことだけです。まずは、社内で「時間がかかっている」と噂される業務を3つ選び、来週から実測を始めてください。2週間後には、どこから手をつけるべきかを、体感ではなく数字で語れるようになっているはずです。</p>
+<div class="faq"><h2 id="faq">よくある質問</h2><div class="faq-i"><p class="faq-q">候補業務の洗い出しは、誰がどうやって行うべきですか?</p><p class="faq-a">各部署の現場担当者から「時間を取られている作業」「間違いが怖い作業」を挙げてもらう形が基本です。ただし現場からは自部署の困りごとしか出てこないため、部署をまたぐ業務（受注から請求までの流れ等）は、経営側・管理部門側が俯瞰して補う必要があります。洗い出しの段階では実現可能性を考えず、量を集めることを優先してください。ふるいにかけるのは2軸評価の役割です。</p></div><div class="faq-i"><p class="faq-q">効果の実測を現場にお願いすると、負担だと嫌がられませんか?</p><p class="faq-a">目的を伝えずに記録だけ求めると嫌がられます。「この作業を自動化して楽にするための材料であり、監視ではない」ことを明確に伝えてください。記録の形式も、分単位の詳細なログではなく、作業の開始・終了時刻をメモする程度で十分です。期間も1〜2週間と区切ります。実際には、自分の作業が楽になる可能性がある調査には、現場は概ね協力的です。</p></div><div class="faq-i"><p class="faq-q">効果を金額換算しても、社内で「削減した時間は本当に成果なのか」と言われます</p><p class="faq-a">正当な指摘です。時間を削減しても、空いた時間が何にも使われなければ人件費は1円も減りません。効果報告では「180時間削減した」で止めず、「削減した時間で何をしたか」まで示してください。営業事務が顧客フォローに時間を回せた、残業が減った、増員せずに業務量の増加を吸収できた、など。特に「採用せずに済んだ」は、採用難の現在、経営に最も伝わる成果の語り方です。</p></div><div class="faq-i"><p class="faq-q">小さな会社で「月5時間×3人」のような規模の効果が出ません。それでもやる価値はありますか?</p><p class="faq-a">時間換算の効果が小さくても、ミス削減と速度向上の効果は会社の規模に比例しません。少人数の会社ほど、1人の担当者が休むと業務が止まり、1件のミスが顧客との関係に直結します。属人化の解消やミスの根絶を効果として評価すれば、小規模な組織でも優先すべき案件は見つかります。また、小さい会社は意思決定が速く例外ルールが少ないため、実現容易性はむしろ高いことが多いです。</p></div><div class="faq-i"><p class="faq-q">最初の1件が失敗してしまいました。どう立て直すべきですか?</p><p class="faq-a">まず失敗の原因を「効果の見積り違い」「容易性の見立て違い」「案件選定は正しかったが実装の問題」のどれかに切り分けてください。多くの場合、容易性の見立て違い、特に例外処理の過小評価が原因です。立て直しの2件目は、前回より明確に易しい案件、つまり例外がほぼなく1〜2ヶ月で効果が確認できる案件を選び、小さくても確実な成功を作ることを優先してください。社内の信頼は、大きな成功ではなく確実な成功で回復します。</p></div></div>
+<div class="recap"><p class="recap-t">この記事のまとめ</p><ul><li>自動化は「AIで何かやりたい」という技術起点ではなく、業務の困りごとを起点に始める。答え合わせのできるプロジェクトだけが次の投資につながる</li><li>優先順位は「効果」と「実現容易性」の2軸で評価する。片方だけで選ぶと、頓挫するか、誰も助からない自動化が生まれる</li><li>効果は体感ではなく実測から。所要時間を年間換算・人件費換算（例：月5時間×3人×12ヶ月＝180時間・約54万円）して投資判断の土俵に乗せる</li><li>容易性の核心は「人の判断が入るか」。例外処理の多さと暗黙知への依存が難易度を決める。難しい業務も工程分解すれば定型部分を切り出せる</li><li>4象限の方針は、易×大＝最初にやる／易×小＝ついでに／難×大＝段階を刻む／難×小＝やらないと明示的に決める</li><li>最初の1件はROIだけでなく「成功が見えやすいこと」で選ぶ。着手前にビフォーの数字を記録しておくことが成果報告の生命線になる</li><li>技術の進歩で「難しい」は毎年「易しい」に変わる。候補一覧を残し、年1回の棚卸しで見送り案件の容易性を再評価する</li></ul></div>
+  </article>
+
+  <div class="cta"><p class="cta-t">自社の業務をAIで自動化する</p><p class="cta-s">ヒアリングから開発・運用まで一気通貫。既存システムはそのままに、御社の業務に合わせたAIツールを設計・導入します。</p><a class="cta-b" href="https://hakadoruai.blaze-ltd.com/?utm_source=blaze-column" target="_blank" rel="noopener">Hakadoru AI を見る</a></div>
+  <div class="rel"><p class="rel-t">関連記事</p><a href="/column/jidouka-roi/">自動化投資のROIをどう計算するか</a><a href="/column/jidouka-mukanai-gyoumu/">自動化に向かない業務の見分け方</a><a href="/column/gyoumu-tanaoroshi/">自動化の前にやるべき業務の棚卸し手順</a></div>
+</div>
+
+<footer>
+  <p class="f-copy">&copy; 2026 BLAZE Inc. ALL RIGHTS RESERVED.</p>
+</footer>
+
+<script>
+const bgCv = document.getElementById('bg-canvas');
+const bgCtx = bgCv.getContext('2d');
+let W, H;
+function resizeBg(){ W = bgCv.width = window.innerWidth; H = bgCv.height = window.innerHeight; }
+resizeBg();
+window.addEventListener('resize', resizeBg);
+
+const beams = [
+  { c:'rgba(30,75,220,', lw:1.8, al:.45, phase:0.0, ox:[-.05,.22,.55,1.05], oy:[.50,.28,.72,.45], ax:[0,.12,.10,0], ay:[.08,.14,.12,.07], fx:[0,.41,.37,0], fy:[.29,.38,.43,.31] },
+  { c:'rgba(20,60,200,', lw:1.4, al:.38, phase:1.3, ox:[-.05,.18,.60,1.05], oy:[.45,.70,.25,.55], ax:[0,.10,.13,0], ay:[.09,.12,.10,.08], fx:[0,.35,.44,0], fy:[.33,.40,.36,.38] },
+  { c:'rgba(40,90,235,', lw:2.2, al:.30, phase:2.5, ox:[-.05,.30,.68,1.05], oy:[.55,.35,.65,.50], ax:[0,.11,.09,0], ay:[.07,.13,.11,.09], fx:[0,.43,.39,0], fy:[.37,.34,.41,.35] },
+  { c:'rgba(15,55,195,', lw:1.2, al:.28, phase:3.8, ox:[-.05,.45,.50,1.05], oy:[.42,.58,.42,.60], ax:[0,.09,.12,0], ay:[.10,.11,.09,.08], fx:[0,.38,.45,0], fy:[.32,.42,.38,.33] },
+  { c:'rgba(50,100,240,',lw:1.8, al:.35, phase:5.1, ox:[-.05,.15,.80,1.05], oy:[.48,.75,.28,.52], ax:[0,.13,.08,0], ay:[.11,.10,.13,.09], fx:[0,.46,.36,0], fy:[.40,.35,.44,.37] },
+];
+
+function drawBg(ts){
+  bgCtx.fillStyle = '#000008';
+  bgCtx.fillRect(0, 0, W, H);
+  const t = ts * 0.001;
+  const gx = W * (.2 + .08 * Math.sin(t * .12));
+  const gy = H * (.5 + .08 * Math.cos(t * .10));
+  const gr = bgCtx.createRadialGradient(gx,gy,0, gx,gy, Math.max(W,H)*.8);
+  gr.addColorStop(0, 'rgba(10,35,170,0.4)');
+  gr.addColorStop(.4,'rgba(6,20,120,0.15)');
+  gr.addColorStop(1, 'rgba(0,0,0,0)');
+  bgCtx.fillStyle = gr;
+  bgCtx.fillRect(0, 0, W, H);
+  beams.forEach(b => {
+    const ph = b.phase;
+    const pts = [
+      [b.ox[0]*W, (b.oy[0]+b.ay[0]*Math.sin(t*b.fy[0]+ph+0.0))*H],
+      [(b.ox[1]+b.ax[1]*Math.sin(t*b.fx[1]+ph+1.0))*W, (b.oy[1]+b.ay[1]*Math.sin(t*b.fy[1]+ph+0.5))*H],
+      [(b.ox[2]+b.ax[2]*Math.sin(t*b.fx[2]+ph+2.0))*W, (b.oy[2]+b.ay[2]*Math.sin(t*b.fy[2]+ph+1.5))*H],
+      [b.ox[3]*W, (b.oy[3]+b.ay[3]*Math.sin(t*b.fy[3]+ph+0.8))*H],
+    ];
+    const [p0,p1,p2,p3] = pts;
+    bgCtx.beginPath();
+    bgCtx.moveTo(p0[0],p0[1]);
+    bgCtx.bezierCurveTo(p1[0],p1[1],p2[0],p2[1],p3[0],p3[1]);
+    const grd = bgCtx.createLinearGradient(p0[0],p0[1],p3[0],p3[1]);
+    grd.addColorStop(0, b.c+'0)');
+    grd.addColorStop(.2,b.c+b.al+')');
+    grd.addColorStop(.5,b.c+(b.al*1.3).toFixed(2)+')');
+    grd.addColorStop(.8,b.c+b.al+')');
+    grd.addColorStop(1, b.c+'0)');
+    bgCtx.strokeStyle = grd;
+    bgCtx.lineWidth = b.lw;
+    bgCtx.shadowBlur = 24;
+    bgCtx.shadowColor = b.c+'0.6)';
+    bgCtx.stroke();
+    bgCtx.shadowBlur = 0;
+  });
+  requestAnimationFrame(drawBg);
+}
+requestAnimationFrame(drawBg);
+
+window.addEventListener('scroll', function(){
+  document.getElementById('nav').classList.toggle('s', window.scrollY > 40);
+});
+function toggleMenu(){
+  document.getElementById('ham').classList.toggle('open');
+  document.getElementById('mobMenu').classList.toggle('open');
+}
+</script>
+</body>
+</html>
