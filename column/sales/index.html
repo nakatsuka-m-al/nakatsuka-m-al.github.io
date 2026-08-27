@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H67Y48Q10E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H67Y48Q10E');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="営業組織のマネジメント、部下育成、事業成長に関する記事です。">
+<meta property="og:title" content="営業育成・事業成長｜コラム | 株式会社BLAZE">
+<meta property="og:description" content="営業組織のマネジメント、部下育成、事業成長に関する記事です。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blaze-ltd.com/column/sales/">
+<meta property="og:image" content="https://blaze-ltd.com/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blaze-ltd.com/ogp.png">
+<meta name="robots" content="index, follow">
+<title>営業育成・事業成長｜コラム | 株式会社BLAZE</title>
+<link rel="canonical" href="https://blaze-ltd.com/column/sales/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#03050f; --surface:#080c1c; --accent:#4DFFDF; --white:#fff;
+  --tx:rgba(255,255,255,.92); --tx2:rgba(255,255,255,.72);
+  --w5:rgba(255,255,255,.5); --w3:rgba(255,255,255,.3);
+  --w15:rgba(255,255,255,.15); --w08:rgba(255,255,255,.08); --w04:rgba(255,255,255,.04);
+  --ff-j:'Jost',sans-serif; --ff-n:'Noto Sans JP',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:var(--ff-n);font-weight:400;line-height:1.9;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+
+/* ヘッダーは #nav に限定して指定する。
+   目次も意味的に <nav> で書いているため、型セレクタにすると巻き込まれる */
+#nav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 52px;height:72px;z-index:200;transition:background .4s}
+#nav.s{background:rgba(3,5,15,.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--w15)}
+.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
+.logo img{height:72px;width:auto;display:block}
+.nav-links{display:flex;gap:30px;list-style:none;align-items:center}
+.nav-links a{font-family:var(--ff-j);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--w5);text-decoration:none;transition:color .3s}
+.nav-links a:hover{color:var(--white)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;z-index:300}
+.ham span{display:block;width:22px;height:1.5px;background:var(--white);transition:transform .3s,opacity .3s}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob-menu{position:fixed;inset:0;background:rgba(0,0,8,.97);z-index:250;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;opacity:0;pointer-events:none;transition:opacity .3s}
+.mob-menu.open{opacity:1;pointer-events:all}
+.mob-menu a{font-family:var(--ff-j);font-size:21px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--white);text-decoration:none}
+.mob-close{position:absolute;top:26px;right:26px;background:none;border:1px solid var(--w3);color:var(--white);font-size:18px;width:44px;height:44px;cursor:pointer}
+
+/* ── 記事 ── */
+.wrap{max-width:760px;margin:0 auto;padding:130px 24px 90px}
+.crumb{font-size:12px;color:var(--w5);margin-bottom:22px;line-height:1.7}
+.crumb a{color:var(--w5);text-decoration:none}
+.crumb a:hover{color:var(--white)}
+.a-cat{display:inline-block;font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(77,255,223,.35);padding:5px 11px;margin-bottom:18px}
+h1{font-size:clamp(24px,3.4vw,34px);font-weight:700;line-height:1.5;letter-spacing:.01em;margin-bottom:18px;text-wrap:balance}
+.a-meta{font-size:12px;color:var(--w5);letter-spacing:.04em;padding-bottom:26px;border-bottom:1px solid var(--w15)}
+.a-lead{font-size:15px;line-height:2.05;color:var(--tx2);margin:30px 0 0}
+
+.toc{background:var(--surface);border:1px solid var(--w15);padding:24px 26px;margin:38px 0}
+.toc-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:14px}
+.toc ol{list-style:none;counter-reset:t}
+.toc li{counter-increment:t;font-size:14px;line-height:1.9;padding-left:30px;position:relative}
+.toc li::before{content:counter(t,decimal-leading-zero);position:absolute;left:0;font-family:var(--ff-j);font-size:11px;font-weight:600;color:var(--w3);top:4px}
+.toc a{color:var(--tx2);text-decoration:none}
+.toc a:hover{color:var(--accent)}
+
+article h2{font-size:21px;font-weight:700;line-height:1.6;margin:56px 0 20px;padding-left:14px;border-left:3px solid var(--accent);scroll-margin-top:90px}
+article h3{font-size:17px;font-weight:600;line-height:1.6;margin:36px 0 14px;color:var(--white)}
+article p{font-size:15px;line-height:2.05;margin-bottom:20px;color:var(--tx)}
+article ul,article ol{margin:0 0 22px 1.4em}
+article li{font-size:15px;line-height:1.95;margin-bottom:9px}
+article strong{font-weight:700;color:var(--white)}
+article a.plink{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+
+.tbl{width:100%;border-collapse:collapse;margin:8px 0 26px;font-size:14px;display:block;overflow-x:auto}
+.tbl th,.tbl td{border:1px solid var(--w15);padding:11px 13px;text-align:left;line-height:1.7}
+.tbl th{background:var(--w04);font-weight:600;white-space:nowrap}
+
+.note{background:var(--w04);border-left:3px solid var(--w3);padding:18px 20px;margin:26px 0;font-size:14px;line-height:1.95;color:var(--tx2)}
+
+.faq{margin:50px 0 0}
+.faq-i{border-bottom:1px solid var(--w15);padding:20px 0}
+.faq-q{font-size:15px;font-weight:600;margin-bottom:10px;line-height:1.7}
+.faq-q::before{content:'Q.';font-family:var(--ff-j);color:var(--accent);margin-right:8px;font-weight:700}
+.faq-a{font-size:14px;line-height:1.95;color:var(--tx2)}
+
+.recap{background:var(--surface);border:1px solid var(--w15);padding:26px 28px;margin:50px 0 0}
+.recap-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:14px}
+.recap ul{margin:0 0 0 1.2em}
+.recap li{font-size:14px;line-height:1.9;margin-bottom:10px;color:var(--tx2)}
+
+/* ── セグメント別CTA ── */
+.cta{border:1px solid rgba(77,255,223,.3);background:linear-gradient(180deg,rgba(77,255,223,.05),transparent);padding:34px 30px;margin:56px 0 0;text-align:center}
+.cta-t{font-family:var(--ff-j);font-size:19px;font-weight:700;line-height:1.5;margin-bottom:12px}
+.cta-s{font-size:14px;line-height:1.95;color:var(--tx2);margin-bottom:22px}
+.cta-b{display:inline-block;font-family:var(--ff-j);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bg);background:var(--white);text-decoration:none;padding:14px 34px;transition:background .3s,transform .2s}
+.cta-b:hover{background:var(--accent);transform:translateY(-2px)}
+
+.rel{margin:60px 0 0;border-top:1px solid var(--w15);padding-top:34px}
+.rel-t{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);margin-bottom:16px}
+.rel a{display:block;font-size:14px;line-height:1.75;color:var(--tx2);text-decoration:none;padding:11px 0;border-bottom:1px solid var(--w08)}
+.rel a:hover{color:var(--accent)}
+
+/* ── 一覧ページ ── */
+.hd{max-width:1000px;margin:0 auto;padding:140px 24px 0}
+.hd .s-lbl{font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--w5);margin-bottom:12px}
+.hd h1{font-family:var(--ff-j);font-size:clamp(26px,3.8vw,46px);line-height:1.15}
+.hd p{font-size:14px;line-height:1.95;color:var(--tx2);margin-top:18px;max-width:600px}
+.cats{max-width:1000px;margin:44px auto 0;padding:0 24px;display:flex;flex-wrap:wrap;gap:10px}
+.cats a{font-family:var(--ff-j);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);text-decoration:none;border:1px solid var(--w15);padding:9px 18px;transition:all .3s}
+.cats a:hover,.cats a.on{background:var(--white);color:var(--bg);border-color:var(--white)}
+.list{max-width:1000px;margin:0 auto;padding:46px 24px 100px;display:grid;gap:1px;background:var(--w15);border:1px solid var(--w15);border-radius:0}
+.list{background:transparent;border:none;gap:0}
+.card{display:block;text-decoration:none;padding:26px 4px;border-bottom:1px solid var(--w15);transition:background .3s}
+.card:hover{background:var(--w04)}
+.card-c{font-family:var(--ff-j);font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
+.card-t{font-size:16px;font-weight:600;line-height:1.65;margin-bottom:9px;color:var(--white)}
+.card-d{font-size:13px;line-height:1.85;color:var(--tx2)}
+.empty{padding:60px 4px;color:var(--w5);font-size:14px}
+
+footer{padding:30px 52px;border-top:1px solid var(--w15);text-align:center}
+.f-copy{font-family:var(--ff-j);font-size:10px;font-weight:300;color:var(--w3);letter-spacing:.18em}
+
+@media(max-width:768px){
+  #nav{padding:0 20px;height:64px}
+  .logo img{height:48px}
+  .nav-links{display:none}
+  .ham{display:flex}
+  .wrap{padding:110px 20px 70px}
+  .hd{padding:110px 20px 0}
+  .cats,.list{padding-left:20px;padding-right:20px}
+  article h2{font-size:19px;margin:44px 0 16px}
+  footer{padding:26px 20px}
+}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="/" class="logo"><img src="/logo.png" alt="BLAZE"></a>
+  <ul class="nav-links">
+    <li><a href="/service/">Service</a></li>
+    <li><a href="/company/">Company</a></li>
+    <li><a href="/column/">Column</a></li>
+    <li><a href="/news/">News</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+  <div class="ham" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="toggleMenu()">✕</button>
+  <a href="/service/" onclick="toggleMenu()">Service</a>
+  <a href="/company/" onclick="toggleMenu()">Company</a>
+  <a href="/column/"  onclick="toggleMenu()">Column</a>
+  <a href="/news/"    onclick="toggleMenu()">News</a>
+  <a href="/contact/" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="hd">
+  <p class="s-lbl">Column</p>
+  <h1>営業育成・事業成長</h1>
+  <p>営業組織のマネジメント、部下育成、事業成長に関する記事です。</p>
+</div>
+<div class="cats"><a href="/column/">すべて</a><a href="/column/recruit/">採用・組織</a><a href="/column/sales/" class=on>営業育成・事業成長</a><a href="/column/career/">キャリア・転職</a><a href="/column/ai/">AI・業務自動化</a></div>
+<div class="list"><a class="card" href="/column/playing-manager-jikan-haibun/"><p class="card-c">営業育成・事業成長</p><p class="card-t">プレイングマネージャーの時間配分｜自分の数字とチームの数字を両立させる方法</p><p class="card-d">営業のプレイングマネージャーが陥る時間配分の問題を、構造から解説します。プレイヤー業務の適正比率、任せる範囲の決め方、移行期の数字の落ち込みへの備えまで、現場で使える判断基準をまとめました。</p></a></div>
+
+<footer>
+  <p class="f-copy">&copy; 2026 BLAZE Inc. ALL RIGHTS RESERVED.</p>
+</footer>
+
+<script>
+window.addEventListener('scroll', function(){
+  document.getElementById('nav').classList.toggle('s', window.scrollY > 40);
+});
+function toggleMenu(){
+  document.getElementById('ham').classList.toggle('open');
+  document.getElementById('mobMenu').classList.toggle('open');
+}
+</script>
+</body>
+</html>
