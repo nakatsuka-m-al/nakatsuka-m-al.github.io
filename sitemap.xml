@@ -104,6 +104,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://blaze-ltd.com/column/skill-tsubushi/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://blaze-ltd.com/column/shoukibo-kigyou-ai/</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -117,6 +123,18 @@
   </url>
   <url>
     <loc>https://blaze-ltd.com/column/shijou-kachi-hakaru/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blaze-ltd.com/column/shanai-hyouka-shijou-hyouka/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blaze-ltd.com/column/senmonsei-hanyousei/</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
