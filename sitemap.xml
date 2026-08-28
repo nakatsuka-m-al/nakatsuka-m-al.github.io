@@ -200,6 +200,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://blaze-ltd.com/column/riferaru-seido-sekkei/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://blaze-ltd.com/column/onboarding-sekkei/</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -207,6 +213,12 @@
   </url>
   <url>
     <loc>https://blaze-ltd.com/column/nenrei-kouseihi-soshiki/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blaze-ltd.com/column/naitei-jitai-kouzou/</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -303,6 +315,12 @@
   </url>
   <url>
     <loc>https://blaze-ltd.com/column/customer-support-ai/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blaze-ltd.com/column/culture-fit-kiken/</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
