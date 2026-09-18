@@ -66,7 +66,7 @@ E = lambda s: html.escape(str(s), quote=True)
 
 
 # ── 共通パーツ ───────────────────────────────────────────
-def head(title, desc, canonical, extra_ld=''):
+def head(title, desc, canonical, extra_ld='', src='corporate'):
     return f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -99,7 +99,7 @@ def head(title, desc, canonical, extra_ld=''):
 {extra_ld}<style>{CSS}</style>
 </head>
 <body>
-{NAV}
+{nav(src)}
 """
 
 NAV = """<canvas id="bg-canvas"></canvas>
@@ -124,6 +124,12 @@ NAV = """<canvas id="bg-canvas"></canvas>
   <a href="/news/"    onclick="toggleMenu()">News</a>
   <a href="/contact/" onclick="toggleMenu()">Contact</a>
 </div>"""
+
+
+def nav(src):
+    """ナビの Contact リンクに流入元(?from=)を埋め込む。"""
+    return NAV.replace('/contact/', f'/contact/?from={src}')
+
 
 FOOT = """<footer>
   <p class="f-copy">&copy; 2026 BLAZE Inc. ALL RIGHTS RESERVED.</p>
@@ -392,7 +398,8 @@ def render_article(a, all_by_cat):
 
     extra = f'<script type="application/ld+json">{ld}</script>\n'
 
-    return head(a['title'], a['description'], url, extra) + f"""
+    return head(a['title'], a['description'], url, extra,
+                src=f"column-{a['category']}") + f"""
 <div class="wrap">
   <p class="crumb"><a href="/">ホーム</a> ／ <a href="/column/">コラム</a> ／ <a href="/column/{E(a['category'])}/">{E(cat['label'])}</a></p>
   <span class="a-cat">{E(cat['en'])}</span>
@@ -467,7 +474,8 @@ def render_list(arts, cat_key=None):
     else:
         cards = '<p class="empty">この分類の記事は準備中です。</p>'
 
-    return head(title, desc, canon) + f"""
+    return head(title, desc, canon,
+                src=f'column-{cat_key}' if cat_key else 'column-index') + f"""
 <div class="hd">
   <p class="s-lbl">Column</p>
   <h1>{E(h1)}</h1>
