@@ -206,6 +206,18 @@ section.dark-panel{
 .na{position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:13px}
 
 
+/* ── COLUMN ── */
+.col-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--w15);margin-top:36px}
+.col-card{background:rgba(3,5,15,0.25);backdrop-filter:blur(4px);padding:30px 24px 26px;position:relative;overflow:hidden;display:block;text-decoration:none;color:inherit;transition:background .35s}
+.col-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,rgba(255,255,255,.5),transparent);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.col-card:hover{background:rgba(15,25,80,0.6)}
+.col-card:hover::before{transform:scaleX(1)}
+.col-card:hover .col-arr{opacity:.7;transform:translate(3px,-3px)}
+.col-cat{font-family:var(--ff-j);font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--white);border:1px solid var(--w3);padding:3px 7px;display:inline-block;margin-bottom:14px}
+.col-ttl{font-size:15px;font-weight:400;line-height:1.55;margin-bottom:10px}
+.col-desc{font-size:12px;font-weight:300;line-height:1.75;color:var(--w8);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.col-arr{position:absolute;top:28px;right:22px;font-size:13px;opacity:.35;transition:opacity .3s,transform .3s}
+
 /* ── ACCESS ── */
 .acc-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:44px;align-items:stretch}
 .acc-dl dt{font-family:var(--ff-j);font-size:9px;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--w5);margin-top:16px;margin-bottom:4px}
@@ -279,6 +291,7 @@ footer{padding:30px 52px;border-top:1px solid var(--w15);display:flex;align-item
   .svc-hd { flex-direction: column; gap: 16px; align-items: flex-start; }
   .svc-note { max-width: 100%; }
   .svc-grid { grid-template-columns: 1fr 1fr; }
+  .col-grid { grid-template-columns: 1fr 1fr; }
   .svc-card.dim { display: none; }
 
   /* WHY */
@@ -310,6 +323,7 @@ footer{padding:30px 52px;border-top:1px solid var(--w15);display:flex;align-item
 
 @media (max-width: 480px) {
   .svc-grid { grid-template-columns: 1fr; }
+  .col-grid { grid-template-columns: 1fr; }
   .h-title { font-size: clamp(28px, 9vw, 44px); }
 }
 
@@ -453,6 +467,7 @@ footer{padding:30px 52px;border-top:1px solid var(--w15);display:flex;align-item
   /* services */
   .svc-hd { flex-direction: column; gap: 12px; }
   .svc-grid { grid-template-columns: 1fr 1fr; }
+  .col-grid { grid-template-columns: 1fr 1fr; }
 
   /* why */
   .why-grid { grid-template-columns: 1fr; }
@@ -477,6 +492,7 @@ footer{padding:30px 52px;border-top:1px solid var(--w15);display:flex;align-item
 
 @media (max-width: 480px) {
   .svc-grid { grid-template-columns: 1fr; }
+  .col-grid { grid-template-columns: 1fr; }
   .h-title { font-size: clamp(28px, 8vw, 44px); }
   .vis-txt, .val-box { font-size: 14px; }
 }
@@ -606,6 +622,7 @@ nav.s {
 
   .svc-hd { flex-direction: column; gap: 12px; }
   .svc-grid { grid-template-columns: 1fr 1fr; gap: 10px; background: transparent; }
+  .col-grid { grid-template-columns: 1fr; gap: 10px; background: transparent; }
   .svc-card { padding: 20px 14px; min-height: 200px; }
 
   .why-grid { grid-template-columns: 1fr; gap: 16px; }
@@ -628,6 +645,7 @@ nav.s {
 
 @media (max-width: 480px) {
   .svc-grid { grid-template-columns: 1fr; }
+  .col-grid { grid-template-columns: 1fr; }
   .h-title { font-size: clamp(24px, 8vw, 38px); }
   .co-grid { grid-template-columns: 1fr; }
 }
@@ -863,6 +881,54 @@ a.news-row .na { transition: opacity .25s, transform .25s; }
   </div>
   <div style="margin-top:36px;">
     <a href="/news/" class="reveal d2" style="display:inline-block;font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);text-decoration:none;border:1px solid var(--w15);padding:10px 20px;transition:all .3s;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,.5)'" onmouseout="this.style.color='rgba(255,255,255,.5)';this.style.borderColor='rgba(255,255,255,.15)'">ニュース一覧 →</a>
+  </div>
+</section>
+
+<!-- COLUMN -->
+<div class="divider"></div>
+<section id="column">
+  <div class="s-lbl reveal">Column</div>
+  <h2 class="s-ttl reveal d1">コラム</h2>
+  <div class="col-grid">
+    <a href="/column/keiri-ai-katsuyou/" class="col-card reveal">
+      <span class="col-cat">AI・業務自動化</span>
+      <p class="col-ttl">経理業務におけるAI活用の現実的な範囲</p>
+      <p class="col-desc">経理は定型処理が多く効果が出やすい一方、正確性が絶対条件の領域です。記帳・請求・経費・月次決算まで、任せられる範囲と人が担うべき判断を切り分けます。</p>
+      <span class="col-arr">↗</span>
+    </a>
+    <a href="/column/ikuji-career-ryouritsu/" class="col-card reveal d1">
+      <span class="col-cat">キャリア・転職</span>
+      <p class="col-ttl">育児とキャリアの両立を構造から考える</p>
+      <p class="col-desc">両立の難しさは、意志や工夫の不足ではなく構造にあります。両立を阻む4つの構造と、時間軸を長く取る発想を整理します。</p>
+      <span class="col-arr">↗</span>
+    </a>
+    <a href="/column/rpa-ai-chigai/" class="col-card reveal d2">
+      <span class="col-cat">AI・業務自動化</span>
+      <p class="col-ttl">RPAとAIの違いと、使い分けの基準</p>
+      <p class="col-desc">RPAは決められた手順を正確に繰り返し、AIは曖昧な入力を解釈して判断する。この違いを理解しないままツール選定を進めると、投資は高い確率で失敗します。</p>
+      <span class="col-arr">↗</span>
+    </a>
+    <a href="/column/senmonsei-hanyousei/" class="col-card reveal d1">
+      <span class="col-cat">キャリア・転職</span>
+      <p class="col-ttl">専門性と汎用性のバランスをどう取るか</p>
+      <p class="col-desc">専門を深めるか、幅を広げるか。この二者択一に見える問いは、順序と組み合わせの問題です。T字型・π字型の考え方まで解説します。</p>
+      <span class="col-arr">↗</span>
+    </a>
+    <a href="/column/saiyo-kettei-kengen/" class="col-card reveal d2">
+      <span class="col-cat">採用・組織</span>
+      <p class="col-ttl">採用の最終決定権は誰が持つべきか</p>
+      <p class="col-desc">経営者か、人事か、配属先の現場か。決定権の設計を曖昧にしたまま運営される選考は、責任の空白と判断の遅れを生みます。</p>
+      <span class="col-arr">↗</span>
+    </a>
+    <a href="/column/skill-tsubushi/" class="col-card reveal d3">
+      <span class="col-cat">キャリア・転職</span>
+      <p class="col-ttl">「潰しが効く」スキルの正体</p>
+      <p class="col-desc">「潰しが効く仕事」という言葉の中身を分解します。誤解されやすい3つの通説と、実際に汎用性の高い能力の条件を整理します。</p>
+      <span class="col-arr">↗</span>
+    </a>
+  </div>
+  <div style="margin-top:36px;">
+    <a href="/column/" class="reveal d2" style="display:inline-block;font-family:var(--ff-j);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--w5);text-decoration:none;border:1px solid var(--w15);padding:10px 20px;transition:all .3s;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,.5)'" onmouseout="this.style.color='rgba(255,255,255,.5)';this.style.borderColor='rgba(255,255,255,.15)'">コラム一覧 →</a>
   </div>
 </section>
 
