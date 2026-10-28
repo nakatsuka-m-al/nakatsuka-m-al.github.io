@@ -38,29 +38,23 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 #bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
-.wrap,.hd,.cats,.list,#nav,footer,.mob-menu{position:relative;z-index:1}
+.wrap,.hd,.cats,.list,footer{position:relative;z-index:1}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--tx);font-family:var(--ff-n);font-weight:400;line-height:1.9;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 
 /* ヘッダーは #nav に限定して指定する。
    目次も意味的に <nav> で書いているため、型セレクタにすると巻き込まれる */
-#nav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 52px;height:72px;z-index:200;transition:background .4s}
-#nav.s{background:rgba(3,5,15,.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--w15)}
+#nav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:16px 40px;z-index:200;background:rgba(255,255,255,.86);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
 .logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
-.logo img{height:72px;width:auto;display:block}
+.logo img{height:26px;width:auto;display:block}
+.nav-r{display:flex;align-items:center;gap:30px}
 .nav-links{display:flex;gap:30px;list-style:none;align-items:center}
-.nav-links a{font-family:var(--ff-j);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--w5);text-decoration:none;transition:color .3s}
-.nav-links a:hover{color:var(--white)}
-.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;z-index:300}
-.ham span{display:block;width:22px;height:1.5px;background:var(--white);transition:transform .3s,opacity .3s}
-.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
-.ham.open span:nth-child(2){opacity:0}
-.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-.mob-menu{position:fixed;inset:0;background:rgba(0,0,8,.97);z-index:250;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;opacity:0;pointer-events:none;transition:opacity .3s}
-.mob-menu.open{opacity:1;pointer-events:all}
-.mob-menu a{font-family:var(--ff-j);font-size:21px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--white);text-decoration:none}
-.mob-close{position:absolute;top:26px;right:26px;background:none;border:1px solid var(--w3);color:var(--white);font-size:18px;width:44px;height:44px;cursor:pointer}
+.nav-links a{font-family:var(--ff-j);font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#5B6272;text-decoration:none;transition:color .3s}
+.nav-links a:hover{color:#0B1020}
+.nav-cta{display:inline-flex;align-items:center;gap:10px;background:#0B1020;color:#fff;text-decoration:none;border-radius:999px;padding:12px 22px;font-family:var(--ff-n);font-size:13px;font-weight:700;letter-spacing:.08em;line-height:1.2;transition:transform .3s}
+.nav-cta span{font-family:var(--ff-j);font-weight:500;color:#4A6FC2}
+.nav-cta:hover{transform:translateX(2px)}
 
 /* ── 記事 ── */
 .wrap{max-width:760px;margin:0 auto;padding:130px 24px 90px}
@@ -134,19 +128,35 @@ article a.plink{color:var(--accent);text-decoration:underline;text-underline-off
 .card-d{font-size:13px;line-height:1.85;color:var(--tx2)}
 .empty{padding:60px 4px;color:var(--w5);font-size:14px}
 
-footer{padding:30px 52px;border-top:1px solid var(--w15);text-align:center}
-.f-copy{font-family:var(--ff-j);font-size:10px;font-weight:300;color:var(--w3);letter-spacing:.18em}
+#ft{background:#0F2459;color:#fff;padding:120px 56px 40px;display:flex;flex-direction:column;gap:72px}
+.ft-top{display:flex;justify-content:space-between;align-items:center;gap:40px}
+.ft-k{font-family:var(--ff-j);font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:#4A6FC2;margin-bottom:28px;line-height:1.6}
+.ft-h{font-family:var(--ff-j);font-weight:600;font-size:clamp(44px,7vw,84px);letter-spacing:-.04em;line-height:1}
+.ft-btn{flex:none;width:200px;height:200px;border-radius:50%;background:#fff;color:#0B1020;display:flex;align-items:center;justify-content:center;text-decoration:none;font-family:var(--ff-n);font-weight:700;font-size:16px;transition:transform .4s}
+.ft-btn:hover{transform:scale(1.05)}
+.ft-links{display:flex;justify-content:space-between;align-items:center;gap:16px 48px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,.15)}
+.ft-row{display:flex;gap:40px;flex-wrap:wrap}
+.ft-row a{font-family:var(--ff-j);font-weight:500;font-size:15px;letter-spacing:.08em;color:#fff;text-decoration:none}
+.ft-row a:hover{color:#4A6FC2}
+.ft-addr{font-size:12px;color:rgba(255,255,255,.6);line-height:1.6}
+.ft-mark{font-family:var(--ff-j);font-weight:700;letter-spacing:-.02em;line-height:.8;font-size:calc((100vw - 112px) / 3.1);text-align:center;white-space:nowrap;overflow:hidden}
+.f-copy{font-family:var(--ff-j);font-size:12px;letter-spacing:.08em;color:rgba(255,255,255,.5)}
 
 @media(max-width:768px){
-  #nav{padding:0 20px;height:64px}
-  .logo img{height:48px}
+  #nav{padding:12px 20px}
   .nav-links{display:none}
-  .ham{display:flex}
+  .nav-cta{padding:10px 16px}
   .wrap{padding:110px 20px 70px}
   .hd{padding:110px 20px 0}
   .cats,.list{padding-left:20px;padding-right:20px}
   article h2{font-size:19px;margin:44px 0 16px}
-  footer{padding:26px 20px}
+  #ft{padding:72px 20px 32px;gap:48px}
+  .ft-top{flex-direction:column;align-items:flex-start;gap:36px}
+  .ft-h{font-size:44px}
+  .ft-btn{width:132px;height:132px;font-size:14px}
+  .ft-links{flex-direction:column;align-items:flex-start;gap:20px}
+  .ft-row{flex-direction:column;gap:14px}
+  .ft-mark{font-size:calc((100vw - 40px) / 3.1)}
 }
 </style>
 </head>
@@ -154,25 +164,17 @@ footer{padding:30px 52px;border-top:1px solid var(--w15);text-align:center}
 <canvas id="bg-canvas"></canvas>
 
 <nav id="nav">
-  <a href="/" class="logo"><img src="/logo.png" alt="BLAZE"></a>
-  <ul class="nav-links">
-    <li><a href="/service/">Service</a></li>
-    <li><a href="/company/">Company</a></li>
-    <li><a href="/column/">Column</a></li>
-    <li><a href="/news/">News</a></li>
-    <li><a href="/contact/?from=column-career">Contact</a></li>
-  </ul>
-  <div class="ham" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  <a href="/" class="logo"><img src="/logo-dark.png" alt="BLAZE" width="117" height="26"></a>
+  <div class="nav-r">
+    <ul class="nav-links">
+      <li><a href="/#vision">Vision</a></li>
+      <li><a href="/service/">Service</a></li>
+      <li><a href="/column/">Column</a></li>
+      <li><a href="/company/">Company</a></li>
+    </ul>
+    <a class="nav-cta" href="/contact/?from=column-career">お問い合わせ <span>→</span></a>
+  </div>
 </nav>
-
-<div class="mob-menu" id="mobMenu">
-  <button class="mob-close" onclick="toggleMenu()">✕</button>
-  <a href="/service/" onclick="toggleMenu()">Service</a>
-  <a href="/company/" onclick="toggleMenu()">Company</a>
-  <a href="/column/"  onclick="toggleMenu()">Column</a>
-  <a href="/news/"    onclick="toggleMenu()">News</a>
-  <a href="/contact/?from=column-career" onclick="toggleMenu()">Contact</a>
-</div>
 
 <div class="wrap">
   <p class="crumb"><a href="/">ホーム</a> ／ <a href="/column/">コラム</a> ／ <a href="/column/career/">キャリア・転職</a></p>
@@ -236,8 +238,22 @@ footer{padding:30px 52px;border-top:1px solid var(--w15);text-align:center}
   <div class="rel"><p class="rel-t">関連記事</p><a href="/column/u-turn-i-turn/">UターンIターン転職の判断材料</a><a href="/column/tenshoku-timing/">転職に適したタイミングを、市場と自分の両面から考える</a><a href="/column/tenshoku-suru-beki-ka/">転職すべきかどうかを、感情ではなく構造で判断する</a><a href="/column/tenshoku-shijou-doukou/">転職市場の動向を、個人がどう読むか</a><a href="/column/tenshoku-koukai-riyu/">転職して後悔する人に共通する事前の見落とし</a></div>
 </div>
 
-<footer>
-  <p class="f-copy">&copy; 2026 BLAZE Inc. ALL RIGHTS RESERVED.</p>
+<footer id="ft">
+  <div class="ft-top">
+    <div>
+      <p class="ft-k">Contact</p>
+      <p class="ft-h">Let’s ignite<br>your next action.</p>
+    </div>
+    <a class="ft-btn" href="/contact/?from=column-career">お問い合わせ →</a>
+  </div>
+  <div class="ft-links">
+    <div class="ft-row">
+      <a href="/company/">About</a><a href="/service/">Service</a><a href="/column/">Column</a><a href="/news/">News</a><a href="/privacy/">Privacy</a>
+    </div>
+    <p class="ft-addr">〒160-0022 東京都新宿区新宿3-5-6 キュープラザ新宿三丁目4F</p>
+  </div>
+  <p class="ft-mark" aria-hidden="true">BLAZE</p>
+  <p class="f-copy">&copy; 2026 BLAZE Inc. All rights reserved.</p>
 </footer>
 
 <script>
@@ -297,13 +313,6 @@ function drawBg(ts){
 }
 requestAnimationFrame(drawBg);
 
-window.addEventListener('scroll', function(){
-  document.getElementById('nav').classList.toggle('s', window.scrollY > 40);
-});
-function toggleMenu(){
-  document.getElementById('ham').classList.toggle('open');
-  document.getElementById('mobMenu').classList.toggle('open');
-}
 </script>
 </body>
 </html>
