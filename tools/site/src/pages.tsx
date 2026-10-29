@@ -24,7 +24,7 @@ const BUSINESS = [
 const INDEX = [
     { no: "01", title: "Vision", sub: "ビジョン・理念", href: "/#vision", image: "" },
     { no: "02", title: "Service", sub: "事業一覧", href: "/service/", image: "" },
-    { no: "03", title: "Column", sub: "実務記事 160本", href: "/column/", image: "" },
+    { no: "03", title: "Column", sub: "コラム", href: "/column/", image: "" },
     { no: "04", title: "News", sub: "お知らせ・メディア掲載", href: "/news/", image: "" },
     { no: "05", title: "Company", sub: "会社概要・アクセス", href: "/company/", image: "" },
     { no: "06", title: "Contact", sub: "お問い合わせ", href: "/contact/", image: "" },
