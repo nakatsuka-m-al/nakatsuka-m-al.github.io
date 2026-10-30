@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { addPropertyControls, ControlType, RenderTarget } from "framer"
 
 type Item = { word: string; label: string; desc: string; href: string; color: string; stat?: string; statLabel?: string; points?: string }
-interface Props { data: string; kicker: string; heading: string; interval: number; style?: CSSProperties }
+interface Props { data: string; kicker: string; heading: string; style?: CSSProperties }
 
 const INK = "#0B1020", SUB = "#5B6272", LINE = "rgba(11,16,32,0.12)"
 const oct = (r: number) => Array.from({ length: 8 }, (_, k) => { const a = (-90 + k * 45) * Math.PI / 180; return `${(r * Math.cos(a)).toFixed(2)},${(r * Math.sin(a)).toFixed(2)}` }).join(" ")
@@ -20,27 +20,21 @@ const useW = (ref: any) => {
  * @framerSupportedLayoutHeight auto
  */
 export default function BusinessTabs(props: Props) {
-    const { kicker = "Our Business", heading = "Four ways\nto move forward.", interval = 6, style } = props
+    const { kicker = "Our Business", heading = "Four ways\nto move forward.", style } = props
     let items: Item[] = []
     try { items = JSON.parse(props.data || "[]") } catch { items = [] }
     const isCanvas = RenderTarget.current() === RenderTarget.canvas
     const rootRef = useRef<HTMLDivElement>(null)
     const w = useW(rootRef), m = w < 760
     const [i, setI] = useState(0)
-    const [paused, setPaused] = useState(false)
-    const [tick, setTick] = useState(0)
-    useEffect(() => {
-        if (isCanvas || paused || items.length < 2) return
-        const t = setTimeout(() => { setI((v) => (v + 1) % items.length); setTick((v) => v + 1) }, interval * 1000)
-        return () => clearTimeout(t)
-    }, [i, paused, tick, items.length, interval, isCanvas])
-    const go = (k: number) => { setI(k); setTick((v) => v + 1) }
+    // 自動切り替えはしない（読んでいる途中で変わらないように）。タブを押したときだけ切り替える
+    const go = (k: number) => setI(k)
     const it = items[i] || ({ word: "", label: "", desc: "", href: "#", color: "#1B3B8F" } as Item)
     const ease = [0.22, 1, 0.36, 1] as any
     const points = String(it.points || "").split("|").filter(Boolean)
 
     return (
-        <div ref={rootRef} onPointerEnter={() => setPaused(true)} onPointerLeave={() => setPaused(false)}
+        <div ref={rootRef}
             style={{ ...style, background: "#fff", color: INK, fontFamily: "'Noto Sans JP', sans-serif" }}>
             <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 40, marginBottom: 48 }}>
                 <div>
@@ -57,8 +51,8 @@ export default function BusinessTabs(props: Props) {
                         <span style={{ fontFamily: "Jost, sans-serif", fontWeight: 600, fontSize: m ? 16 : 20, letterSpacing: "-0.01em" }}>{t.word}</span>
                         <span style={{ position: "absolute", left: 0, right: 0, top: -1, height: 2, background: "transparent" }}>
                             {k === i && (
-                                <motion.span key={"bar" + tick} initial={{ width: isCanvas || paused ? "100%" : "0%" }} animate={{ width: "100%" }}
-                                    transition={{ duration: isCanvas || paused ? 0 : interval, ease: "linear" }}
+                                <motion.span key={"bar" + k} initial={{ width: isCanvas ? "100%" : "0%" }} animate={{ width: "100%" }}
+                                    transition={{ duration: isCanvas ? 0 : 0.5, ease }}
                                     style={{ display: "block", height: 2, background: t.color }} />
                             )}
                         </span>
@@ -99,10 +93,9 @@ export default function BusinessTabs(props: Props) {
         </div>
     )
 }
-BusinessTabs.defaultProps = { data: "[]", kicker: "Our Business", heading: "Four ways\nto move forward.", interval: 6 }
+BusinessTabs.defaultProps = { data: "[]", kicker: "Our Business", heading: "Four ways\nto move forward." }
 addPropertyControls(BusinessTabs, {
     kicker: { type: ControlType.String, title: "Kicker" },
     heading: { type: ControlType.String, title: "Heading", displayTextArea: true },
     data: { type: ControlType.String, title: "Items JSON", displayTextArea: true },
-    interval: { type: ControlType.Number, title: "Seconds", min: 2, max: 20, step: 0.5, defaultValue: 6 },
 })
