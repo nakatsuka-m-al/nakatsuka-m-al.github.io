@@ -94,9 +94,9 @@ export function HomeNews() {
         <section className="news">
             <Appear className="news-in" y={36} stiffness={180} damping={40} amount={0.15}>
                 <NewsBlock title="ニュース" more="/news/" rows={[
+                    { a: "2026.11.01", tag: "Notice", title: "ホームページリニューアル", href: "/news/" },
                     { a: "2026.08.06", tag: "Notice", title: "「Oubo Pay」取引社数50社突破、アライアンスパートナー募集を開始", href: "https://prtimes.jp/main/html/rd/p/000000006.000181457.html" },
                     { a: "2026.07.31", tag: "Media", title: "経営メディア「ビジョン図鑑」に代表 中塚のインタビューが掲載", href: "https://vision-zukan.com/posts/blaze-ltd/" },
-                    { a: "2026.07.08", tag: "Release", title: "AIキャリアアシスタント「Cocopath」をリリース", href: "https://prtimes.jp/main/html/rd/p/000000005.000181457.html" },
                 ]} />
                 <NewsBlock title="コラム新着" more="/column/" rows={[
                     { a: "AI", tag: "業務自動化", title: "経理業務におけるAI活用の現実的な範囲", href: "/column/keiri-ai-katsuyou/" },
