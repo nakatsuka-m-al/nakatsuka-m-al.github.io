@@ -54,11 +54,11 @@ CATEGORIES = {
         'label': 'AI・業務自動化',
         'en': 'AI Automation',
         'desc': 'AIによる業務自動化、生成AIの実務活用に関する記事です。',
-        'cta_title': '自社の業務をAIで自動化する',
-        'cta_text': 'ヒアリングから開発・運用まで一気通貫。既存システムはそのままに、御社の業務に合わせたAIツールを設計・導入します。',
-        'cta_label': 'Hakadoru AI を見る',
-        'cta_href': 'https://hakadoruai.blaze-ltd.com/?utm_source=blaze-column',
-        'cta_external': True,
+        'cta_title': 'BLAZEに相談する',
+        'cta_text': '採用・組織づくりや営業組織の育成など、事業の課題についてお気軽にご相談ください。',
+        'cta_label': 'お問い合わせ',
+        'cta_href': '/contact/?from=column-ai',
+        'cta_external': False,
     },
 }
 
