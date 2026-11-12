@@ -59,7 +59,7 @@ img { display: block; }
 .ft-row { display: flex; gap: 40px; }
 .ft-row a { font-family: Jost, sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0.08em; line-height: 1.6em; color: #fff; text-decoration: none; }
 .ft-addr { margin: 0; font-family: 'Noto Sans JP', sans-serif; font-size: 12px; line-height: 1.6em; color: rgba(255,255,255,0.6); }
-.ft-mark-wrap { width: 100%; container-type: inline-size; }
+.ft-mark-wrap { width: 100%; container-type: inline-size; pointer-events: none; }
 .ft-mark { margin: 0; font-family: Jost, sans-serif; font-weight: 700; font-size: calc(100cqw / 3.078); letter-spacing: -0.02em; line-height: 0.8em; color: #fff; white-space: nowrap; }
 .ft-copy { margin: 0; font-family: Jost, sans-serif; font-size: 12px; letter-spacing: 0.08em; line-height: 1.6em; color: rgba(255,255,255,0.5); }
 
